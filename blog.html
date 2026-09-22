@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Journal & Practical Care Guides | WashHub Laundromat</title>
+  <meta name="description" content="An editorial knowledge hub for everyday laundry care, fabric sorting, stain removal techniques, temperature settings, and self-service laundromat tips.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#mainContent" class="skip-link">Skip to main content</a>
+
+<!-- ============ GLOBAL HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="WashHub home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">WashHub</span>
+        <span class="brand-sub">LAUNDROMAT &amp; SELF-SERVICE</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="blog.html" class="nav-link is-active" aria-current="page">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" aria-label="Search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="icon-btn dir-toggle" id="dirToggle" type="button" aria-label="Switch to right-to-left layout">
+        <span class="dir-toggle-label">RTL</span>
+      </button>
+      <a href="login.html" class="btn btn-primary btn-compact header-cta">
+        Login
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav-scrim" id="mobileScrim" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-nav-head">
+    <span class="brand-name" style="font-family:var(--font-display);font-size:18px;">WashHub</span>
+    <button class="icon-btn" id="mobileClose" aria-label="Close navigation menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home-2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="blog.html" class="is-active" aria-current="page">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-foot">
+    <div class="mobile-nav-foot-row">
+      <button class="icon-btn theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle dark mode" style="width:auto;padding-inline:var(--sp-3);border-radius:var(--radius-md);flex:1;justify-content:flex-start;gap:var(--sp-2);">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        <span>Theme</span>
+      </button>
+      <button class="dir-toggle" id="dirToggleMobile" type="button" aria-label="Toggle direction" style="border-radius:var(--radius-md);flex:1;justify-content:center;">
+        <span class="dir-toggle-label">RTL</span>
+      </button>
+    </div>
+    <a href="login.html" class="btn btn-primary" style="width:100%;justify-content:center;">Login</a>
+  </div>
+</nav>
+
+<main id="mainContent">
+
+  <!-- ============ 1. EDITORIAL INTRO SECTION ============ -->
+  <section class="blg-hero-section" aria-labelledby="blogHeroTitle">
+    <div class="container">
+      <div class="blg-hero-grid">
+        <div class="blg-hero-copy">
+          <span class="eyebrow" style="color:var(--accent-primary);">Laundry Journal</span>
+          <h1 class="blg-hero-h1" id="blogHeroTitle">Better laundry starts with knowing what your clothes need.</h1>
+          <p class="blg-hero-desc">
+            A practical knowledge hub curated by our wash specialists. Learn how to select gentle wash temperatures, preserve delicate fibers, lift stubborn stains, and get more efficiency out of modern self-service laundromats.
+          </p>
+        </div>
+
+        <div class="blg-hero-collage" aria-hidden="true">
+          <div class="blg-collage-main">
+            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=700&q=80" alt="Neatly folded freshly washed towels on a clean surface">
+          </div>
+          <div class="blg-collage-stack">
+            <div class="blg-collage-thumb">
+              <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=400&q=80" alt="Stainless steel commercial washing machine drum interior">
+            </div>
+            <div class="blg-collage-thumb">
+              <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=400&q=80" alt="Natural woven laundry hamper with sorted clothes">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. CATEGORY NAVIGATION ============ -->
+  <section class="blg-cat-section" aria-label="Journal category filters">
+    <div class="container">
+      <div class="blg-cat-nav" role="toolbar" aria-label="Filter journal articles by topic">
+        <button class="blg-cat-btn is-active" type="button" data-category="all" aria-pressed="true">All Guides</button>
+        <button class="blg-cat-btn" type="button" data-category="washing" aria-pressed="false">Washing Guides</button>
+        <button class="blg-cat-btn" type="button" data-category="drying" aria-pressed="false">Drying &amp; Care</button>
+        <button class="blg-cat-btn" type="button" data-category="stains" aria-pressed="false">Stain Removal</button>
+        <button class="blg-cat-btn" type="button" data-category="fabric" aria-pressed="false">Fabric Care</button>
+        <button class="blg-cat-btn" type="button" data-category="tips" aria-pressed="false">Laundromat Tips</button>
+        <button class="blg-cat-btn" type="button" data-category="business" aria-pressed="false">Business Laundry</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. DOMINANT FEATURED ARTICLE ============ -->
+  <section class="blg-featured-section" aria-labelledby="featuredHeading">
+    <div class="container">
+      <article class="blg-featured-card" data-category="washing" aria-labelledby="featArtTitle">
+        <div class="blg-featured-img-wrap">
+          <img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?auto=format&fit=crop&w=900&q=80" alt="Modern clean laundry facility with warm light and washers">
+        </div>
+        <div class="blg-featured-info">
+          <div>
+            <span class="blg-tag">Featured • Washing Guide</span>
+            <h2 class="blg-featured-title" id="featArtTitle">How to Get a Cleaner Wash Without Using More Detergent</h2>
+          </div>
+          <p class="blg-featured-desc">
+            Pouring extra detergent into a machine doesn't make clothes cleaner—it traps soap residue in fibers, dims bright tones, and creates stiff towels. Learn how softened water and correct drum agitation clean deeper with half the soap.
+          </p>
+          <div class="blg-meta">
+            <span>8 min read</span>
+            <span class="blg-meta-dot" aria-hidden="true"></span>
+            <span>September 18, 2026</span>
+          </div>
+          <a href="#" class="blg-read-link" aria-label="Read featured guide: How to Get a Cleaner Wash Without Using More Detergent">
+            Read Full Guide
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 4. ASYMMETRIC EDITORIAL ARTICLE GRID ============ -->
+  <section class="blg-grid-section" aria-label="Journal article collection">
+    <div class="container">
+      <div class="blg-grid">
+
+        <!-- Article 1: Large Horizontal Card (Span 8) -->
+        <article class="blg-card blg-card-horizontal" data-category="washing">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=650&q=80" alt="Close-up of washing machine control dial and settings">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Washing Guides</span>
+              <h3 class="blg-card-title">How to Choose the Right Wash Cycle for Everyday Clothes</h3>
+              <p class="blg-card-desc">A practical guide to selecting water temperatures, cycle duration, and drum spin speed without overcomplicating laundry day.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>6 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Sep 14, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: Compact Vertical Card (Span 4) -->
+        <article class="blg-card blg-card-vertical" data-category="drying">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=500&q=80" alt="Tumble dryer interior with clean airflow">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Drying &amp; Care</span>
+              <h3 class="blg-card-title">Why Some Clothes Should Never Go Through a Hot Dryer</h3>
+              <p class="blg-card-desc">Understand how excessive heat degrades elastane in activewear, shrinks natural cottons, and how to use modern moisture-sensor dryers safely.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>5 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Sep 11, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: Square Card (Span 4) -->
+        <article class="blg-card blg-card-square" data-category="stains">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=500&q=80" alt="Hands treating a fabric mark with gentle eco soap">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Stain Removal</span>
+              <h3 class="blg-card-title">Treat the Stain Before It Sets: The Emergency Guide</h3>
+              <p class="blg-card-desc">What to do immediately when coffee, cooking oil, red wine, or grass lands on your favorite clothes before bringing them to the wash center.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>7 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Sep 08, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4: Wide Card (Span 8) -->
+        <article class="blg-card blg-card-wide" data-category="fabric">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=650&q=80" alt="Close-up of premium denim and woven textile textures">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Fabric Care</span>
+              <h3 class="blg-card-title">From Denim to Delicates: A Smarter Fabric-Care Routine</h3>
+              <p class="blg-card-desc">Different fiber weaves demand different extraction speeds. Learn why raw denim, merino wool, and microfiber gym gear should never share the same cycle.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>8 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Sep 04, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5: Text-Focused Editorial Card (Span 4) -->
+        <article class="blg-card blg-card-textonly" data-category="tips">
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Laundromat Tips</span>
+              <h3 class="blg-card-title">How to Finish a Full Laundry Load More Efficiently</h3>
+              <p class="blg-card-desc">Simple pre-arrival sorting habits, parallel washer loading, and optimal drying transfers that cut your weekly laundry routine down to 45 minutes flat.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>4 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Aug 29, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6: Large Horizontal Card (Span 8) -->
+        <article class="blg-card blg-card-horizontal" data-category="business">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=650&q=80" alt="Neatly stacked commercial towels and linens for hospitality">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Business Laundry</span>
+              <h3 class="blg-card-title">What Businesses Should Consider Before Outsourcing Laundry</h3>
+              <p class="blg-card-desc">A practical overview of volume thresholds, turnaround schedules, hygiene certifications, and GST input tax credit for commercial hospitality and salon linens.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>7 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Aug 25, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. MID-PAGE EDITORIAL SPREAD ============ -->
+  <section class="blg-spread-section" aria-labelledby="spreadTitle">
+    <div class="container">
+      <div class="blg-spread-box">
+        <div class="blg-spread-left">
+          <span class="eyebrow" style="color:var(--accent-primary);">Wash Center Principles</span>
+          <h2 class="blg-spread-statement" id="spreadTitle">Small laundry habits make a big difference.</h2>
+          <p class="blg-spread-sub">
+            Great laundry isn't about complicated machines. It’s about five simple, deliberate habits that protect fiber texture, preserve vibrant color, and double garment lifespan.
+          </p>
+        </div>
+
+        <div class="blg-spread-right">
+          <div class="blg-habit-item">
+            <div class="blg-habit-num" aria-hidden="true">01</div>
+            <div class="blg-habit-text">
+              <h4>Pre-Sort by Weight &amp; Color Before You Arrive</h4>
+              <p>Keep heavy hoodies away from lightweight shirts, and separate dark dyes from crisp whites to eliminate friction pilling and color transfer.</p>
+            </div>
+          </div>
+
+          <div class="blg-habit-item">
+            <div class="blg-habit-num" aria-hidden="true">02</div>
+            <div class="blg-habit-text">
+              <h4>Select Temperature Based on Soil, Not Tradition</h4>
+              <p>Modern softened water cleans everyday clothes at 30°C–40°C. Reserve 60°C thermal sanitization for bed linens and bath towels.</p>
+            </div>
+          </div>
+
+          <div class="blg-habit-item">
+            <div class="blg-habit-num" aria-hidden="true">03</div>
+            <div class="blg-habit-text">
+              <h4>Respect the Drum Breathing Room</h4>
+              <p>Leave a hand's span between the top of your laundry and the drum crown so clothing has space to agitate and rinse freely.</p>
+            </div>
+          </div>
+
+          <div class="blg-habit-item">
+            <div class="blg-habit-num" aria-hidden="true">04</div>
+            <div class="blg-habit-text">
+              <h4>Match Dryer Temperature to Fabric Fiber</h4>
+              <p>Use low heat for activewear and synthetics to avoid fiber melting, and medium-high heat for dense 100% cotton linens.</p>
+            </div>
+          </div>
+
+          <div class="blg-habit-item">
+            <div class="blg-habit-num" aria-hidden="true">05</div>
+            <div class="blg-habit-text">
+              <h4>Remove and Shake Out Promptly</h4>
+              <p>Unloading clothes while warm and giving each piece a quick shake releases 90% of set wrinkles, virtually eliminating the need to iron.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. ADDITIONAL EDITORIAL ARTICLES ============ -->
+  <section class="blg-grid-section" aria-label="Additional journal articles">
+    <div class="container">
+      <div class="blg-grid">
+
+        <article class="blg-card blg-card-vertical" data-category="fabric">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1578932750294-f5075e85f44a?auto=format&fit=crop&w=500&q=80" alt="Clean fabric hanging gently in fresh air">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Fabric Care</span>
+              <h3 class="blg-card-title">The Cold-Wash Revolution: Why Lower Heat Cleans Better</h3>
+              <p class="blg-card-desc">How bio-enzymatic detergents combined with high-torque extraction lift grime without the heat-wear of hot cycles.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>5 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Aug 20, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blg-card blg-card-vertical" data-category="tips">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Large duvet folded cleanly on a bench">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Laundromat Tips</span>
+              <h3 class="blg-card-title">Bulky Duvets and Comforters: Step-by-Step Laundromat Guide</h3>
+              <p class="blg-card-desc">Why home washers struggle with king duvets, and how our 18 kg commercial drums wash, sanitize, and refluff them safely.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>6 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Aug 15, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blg-card blg-card-vertical" data-category="stains">
+          <div class="blg-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=500&q=80" alt="Fabric inspection and care details">
+          </div>
+          <div class="blg-card-body">
+            <div>
+              <span class="blg-tag">Stain Removal</span>
+              <h3 class="blg-card-title">Enzyme Cleaning Science: Breaking Down Organic Marks</h3>
+              <p class="blg-card-desc">Learn how proteases, amylases, and lipases dissolve protein and starch stains before setting into delicate cotton fibers.</p>
+            </div>
+            <div>
+              <div class="blg-meta">
+                <span>5 min read</span>
+                <span class="blg-meta-dot" aria-hidden="true"></span>
+                <span>Aug 10, 2026</span>
+              </div>
+              <a href="#" class="blg-read-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. INTERACTIVE QUICK GUIDE (ACCORDION) ============ -->
+  <section class="blg-accordion-section" aria-labelledby="quickGuideTitle">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Practical Reference</span>
+        <h2 class="prc-section-h2" id="quickGuideTitle">Laundry Quick Guide</h2>
+        <p class="prc-section-desc">
+          Common wash decisions answered in seconds. Expand each item for quick guidelines from our wash technicians.
+        </p>
+      </div>
+
+      <div class="blg-accordion">
+        <div class="blg-acc-item is-open">
+          <button class="blg-acc-btn" type="button" aria-expanded="true" id="qg1Btn">
+            <span>What temperature should I wash everyday cotton clothing?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="blg-acc-content" id="qg1Ans" role="region" aria-labelledby="qg1Btn">
+            For everyday cotton shirts, jeans, and casual garments, 30°C to 40°C is the golden standard. It provides thorough cleaning power, prevents color fading, and drastically reduces shrinkage compared to hotter water cycles.
+          </div>
+        </div>
+
+        <div class="blg-acc-item">
+          <button class="blg-acc-btn" type="button" aria-expanded="false" id="qg2Btn">
+            <span>Can I dry heavy bath towels together with everyday clothing?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="blg-acc-content" id="qg2Ans" role="region" aria-labelledby="qg2Btn">
+            We strongly advise against it. Towels absorb far more moisture and dry at a much slower rate. Mixing them causes lighter garments to over-dry and heat-bake, while your towels may still feel damp inside.
+          </div>
+        </div>
+
+        <div class="blg-acc-item">
+          <button class="blg-acc-btn" type="button" aria-expanded="false" id="qg3Btn">
+            <span>How full should a laundromat washing machine drum actually be?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="blg-acc-content" id="qg3Ans" role="region" aria-labelledby="qg3Btn">
+            The ideal load occupies about 75% to 80% of the drum capacity. You should be able to slide your palm easily over the top of the dry load. Packing it tightly prevents water and soap from circulating properly.
+          </div>
+        </div>
+
+        <div class="blg-acc-item">
+          <button class="blg-acc-btn" type="button" aria-expanded="false" id="qg4Btn">
+            <span>What is the safest way to wash wool, silk, and activewear?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="blg-acc-content" id="qg4Ans" role="region" aria-labelledby="qg4Btn">
+            Always select our gentle Delicates cycle (cold water, low mechanical agitation, and a 600–800 RPM spin). Never use fabric softener on activewear, as it clogs the moisture-wicking synthetic pores.
+          </div>
+        </div>
+
+        <div class="blg-acc-item">
+          <button class="blg-acc-btn" type="button" aria-expanded="false" id="qg5Btn">
+            <span>How long does a typical drying cycle take for mixed fabrics?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="blg-acc-content" id="qg5Ans" role="region" aria-labelledby="qg5Btn">
+            Thanks to our washers' high-speed 1,200 RPM water extraction, most daily loads require only 20 to 25 minutes in our high-airflow dryers. Heavy winter blankets and dense towels take 30 to 35 minutes.
+          </div>
+        </div>
+
+        <div class="blg-acc-item">
+          <button class="blg-acc-btn" type="button" aria-expanded="false" id="qg6Btn">
+            <span>Can I bring oversized items like king duvets and drapes?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="blg-acc-content" id="qg6Ans" role="region" aria-labelledby="qg6Btn">
+            Yes! That is one of the best uses of a modern wash center. Our 18 kg Maxi Heavy-Duty washers are designed specifically for king-size comforters, sleeping bags, and heavy curtains that would burn out home residential washers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. COMPACT NEWSLETTER SIGNUP ============ -->
+  <section class="blg-newsletter-section" aria-labelledby="nlTitle">
+    <div class="container">
+      <div class="blg-newsletter-card">
+        <div>
+          <span class="eyebrow" style="color:var(--accent-primary);">Wash Center Gazette</span>
+          <h2 class="blg-nl-title" id="nlTitle">Useful Laundry Advice. No Laundry Spam.</h2>
+          <p class="blg-nl-desc">
+            Receive concise, practical fabric care insights, new stain guides, and seasonal updates directly from our laundry specialists twice a month.
+          </p>
+        </div>
+
+        <form class="blg-nl-form" action="#" method="post">
+          <input type="email" class="blg-nl-input" placeholder="Enter your email address" aria-label="Email address for laundry newsletter" required>
+          <button type="submit" class="btn btn-primary" style="white-space:nowrap;">
+            Subscribe
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <div class="blg-nl-status" role="status" aria-live="polite"></div>
+        <span class="blg-nl-privacy">We respect your inbox. Unsubscribe with one click at any time.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. EDITORIAL PAGINATION ============ -->
+  <section class="blg-pagination-section" aria-label="Journal pagination">
+    <div class="container">
+      <nav class="blg-pagination" aria-label="Articles pagination">
+        <button class="blg-page-btn" type="button" disabled aria-label="Previous page">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          Previous
+        </button>
+        <button class="blg-page-btn is-active" type="button" data-page="1" aria-current="page">1</button>
+        <button class="blg-page-btn" type="button" data-page="2">2</button>
+        <button class="blg-page-btn" type="button" data-page="3">3</button>
+        <button class="blg-page-btn" type="button" data-page="4">4</button>
+        <button class="blg-page-btn" type="button" aria-label="Next page">
+          Next
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============ 10. EDITORIAL SERVICE CTA ============ -->
+  <section class="blg-service-cta" aria-labelledby="blogCtaTitle">
+    <div class="container">
+      <div class="blg-cta-box">
+        <div class="blg-cta-copy">
+          <h2 id="blogCtaTitle">Ready for your next wash?</h2>
+          <p>
+            Put our practical advice to work at any WashHub location. Enjoy high-speed 30-minute wash cycles, touchless digital pay, and comfortable work lounges.
+          </p>
+        </div>
+        <div class="blg-cta-actions">
+          <a href="index.html#locations" class="btn btn-primary">
+            Find a Location
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="pricing.html" class="btn btn-secondary">
+            View Wash Rates
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="WashHub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
+            <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">WashHub</span></span>
+      </a>
+      <p>Clean spaces, modern machines and the freedom to wash on your terms.</p>
+      <ul class="social-links" aria-label="Social media">
+        <li><a href="#" aria-label="WashHub on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v6h3v-6h2.2l.8-3H14v-1.5A1 1 0 0 1 15 8Z"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10.5 9.5 5 2.5-5 2.5Z" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M8 10.5V17M8 7.2v.1M12.2 17v-4a2 2 0 0 1 4 0v4"/></svg></a></li>
+      </ul>
+    </div>
+
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Our services">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Self-Service Wash</a></li>
+        <li><a href="#">Dryer Use</a></li>
+        <li><a href="#">Drop &amp; Collect</a></li>
+        <li><a href="#">Business Laundry</a></li>
+        <li><a href="#">Commercial Laundry</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p class="hours">Mon – Sun<br>6:00 AM – 11:00 PM<br><span>(Varies by location)</span></p>
+      <div class="footer-contact-item" style="margin-block-start:var(--sp-4);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 6 9 7 9-7"/></svg>
+        <span>hello@washhub.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.5 22 2 14.5 2 7a2 2 0 0 1 2-2Z"/></svg>
+        <span>+1 234 567 8900</span>
+      </div>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Stay Connected</h4>
+      <p style="font-size:13.5px;color:var(--text-secondary);">Get the latest news and offers.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup" novalidate>
+        <label class="visually-hidden" for="blogNewsletterEmail">Email address</label>
+        <input type="email" id="blogNewsletterEmail" placeholder="Your email address" required autocomplete="email">
+        <button type="submit" aria-label="Subscribe to newsletter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <p class="newsletter-status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 WashHub. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <a href="#" class="back-to-top" aria-label="Back to top of page">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

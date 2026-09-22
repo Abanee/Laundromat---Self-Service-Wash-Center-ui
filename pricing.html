@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Wash Rates | WashHub Laundromat & Self-Service Wash Center</title>
+  <meta name="description" content="Transparent, predictable pricing for self-service washing, high-velocity drying, and drop-and-collect laundry care. Instant card and UPI pay with zero hidden fees.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#mainContent" class="skip-link">Skip to main content</a>
+
+<!-- ============ GLOBAL HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="WashHub home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">WashHub</span>
+        <span class="brand-sub">LAUNDROMAT &amp; SELF-SERVICE</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="pricing.html" class="nav-link is-active" aria-current="page">Pricing</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" aria-label="Search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="icon-btn dir-toggle" id="dirToggle" type="button" aria-label="Switch to right-to-left layout">
+        <span class="dir-toggle-label">RTL</span>
+      </button>
+      <a href="login.html" class="btn btn-primary btn-compact header-cta">
+        Login
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav-scrim" id="mobileScrim" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-nav-head">
+    <span class="brand-name" style="font-family:var(--font-display);font-size:18px;">WashHub</span>
+    <button class="icon-btn" id="mobileClose" aria-label="Close navigation menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home-2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html" class="is-active" aria-current="page">Pricing</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-foot">
+    <div class="mobile-nav-foot-row">
+      <button class="icon-btn theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle dark mode" style="width:auto;padding-inline:var(--sp-3);border-radius:var(--radius-md);flex:1;justify-content:flex-start;gap:var(--sp-2);">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        <span>Theme</span>
+      </button>
+      <button class="dir-toggle" id="dirToggleMobile" type="button" aria-label="Toggle direction" style="border-radius:var(--radius-md);flex:1;justify-content:center;">
+        <span class="dir-toggle-label">RTL</span>
+      </button>
+    </div>
+    <a href="login.html" class="btn btn-primary" style="width:100%;justify-content:center;">Login</a>
+  </div>
+</nav>
+
+<main id="mainContent">
+
+  <!-- ============ 1. PRICING INTRODUCTION & LIVE SNAPSHOT ============ -->
+  <section class="prc-hero-section" aria-labelledby="prcHeroTitle">
+    <div class="container">
+      <div class="prc-hero-grid">
+        <div class="prc-hero-copy">
+          <span class="eyebrow" style="color:var(--accent-primary);">Simple Rates. No Guesswork.</span>
+          <h1 class="prc-hero-h1" id="prcHeroTitle">Know the exact cost before you start.</h1>
+          <p class="prc-hero-desc">
+            Pay strictly for the drum capacity you use or the dry weight of your drop-and-collect load. 
+            Every WashHub facility features contactless tap-to-pay, clear digital timers on every machine, and zero membership barriers.
+          </p>
+          <div class="prc-hero-badges">
+            <span class="prc-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Card, UPI & Mobile Tap
+            </span>
+            <span class="prc-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              No Minimum Load
+            </span>
+            <span class="prc-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              Softened Water Included
+            </span>
+          </div>
+        </div>
+
+        <div class="prc-snapshot-card">
+          <div class="prc-snapshot-header">
+            <span class="prc-snapshot-title">
+              <span class="prc-live-dot" aria-hidden="true"></span>
+              Live Rate Snapshot
+            </span>
+            <span class="prc-snapshot-currency">INR (₹) / All Branches</span>
+          </div>
+          <div class="prc-snapshot-list">
+            <div class="prc-snapshot-item">
+              <div class="prc-snap-left">
+                <span class="prc-snap-label">Self-Service Wash</span>
+                <span class="prc-snap-sub">Standard 8 kg cycle (30 mins)</span>
+              </div>
+              <div class="prc-snap-right">
+                <span class="prc-snap-price">₹80</span>
+                <span class="prc-snap-unit"> / cycle</span>
+              </div>
+            </div>
+            <div class="prc-snapshot-item">
+              <div class="prc-snap-left">
+                <span class="prc-snap-label">Express Dryer</span>
+                <span class="prc-snap-sub">Standard 10 kg cycle (25 mins)</span>
+              </div>
+              <div class="prc-snap-right">
+                <span class="prc-snap-price">₹60</span>
+                <span class="prc-snap-unit"> / cycle</span>
+              </div>
+            </div>
+            <div class="prc-snapshot-item">
+              <div class="prc-snap-left">
+                <span class="prc-snap-label">Drop &amp; Collect</span>
+                <span class="prc-snap-sub">Washed, dried, and hand-folded</span>
+              </div>
+              <div class="prc-snap-right">
+                <span class="prc-snap-price">₹45</span>
+                <span class="prc-snap-unit"> / kg</span>
+              </div>
+            </div>
+            <div class="prc-snapshot-item">
+              <div class="prc-snap-left">
+                <span class="prc-snap-label">Commercial / Bulk</span>
+                <span class="prc-snap-sub">Hotels, salons &amp; weekly uniforms</span>
+              </div>
+              <div class="prc-snap-right">
+                <span class="prc-snap-price">Custom</span>
+                <span class="prc-snap-unit"> / quote</span>
+              </div>
+            </div>
+          </div>
+          <p class="prc-snapshot-note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            All washers include automatic pre-wash drum sanitization and high-speed water extraction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. PRICING MODE SELECTOR BAR ============ -->
+  <section class="prc-mode-section" aria-label="Pricing category selector">
+    <div class="container">
+      <div class="prc-mode-nav" role="tablist" aria-label="Service category tabs">
+        <button class="prc-mode-tab is-active" role="tab" aria-selected="true" aria-controls="prcModeSelf" data-target="prcModeSelf" id="tabSelf">
+          Self-Service Wash &amp; Dry
+        </button>
+        <button class="prc-mode-tab" role="tab" aria-selected="false" aria-controls="prcModeDrop" data-target="prcModeDrop" id="tabDrop">
+          Drop &amp; Collect (By Weight)
+        </button>
+        <button class="prc-mode-tab" role="tab" aria-selected="false" aria-controls="prcModeBusiness" data-target="prcModeBusiness" id="tabBusiness">
+          Commercial &amp; Bulk
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. SELF-SERVICE PRICING MATRIX ============ -->
+  <section class="prc-matrix-section prc-tab-panel is-active" id="prcModeSelf" aria-labelledby="matrixHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Cycle Rates Matrix</span>
+        <h2 class="prc-section-h2" id="matrixHeading">Self-Service Machine Rates</h2>
+        <p class="prc-section-desc">
+          Operated directly via touchless digital terminals. Select your drum capacity, tap your phone or card, and track your cycle live.
+        </p>
+      </div>
+
+      <!-- Desktop Data Table -->
+      <div class="prc-table-wrapper" role="region" aria-label="Self-service wash and dry rates table">
+        <div class="prc-table-header">
+          <span class="prc-table-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+            High-Efficiency Washing Drums
+          </span>
+          <span class="prc-table-subtitle">Includes softened water + high-spin extraction</span>
+        </div>
+        <table class="prc-table">
+          <thead>
+            <tr>
+              <th scope="col">Machine Type</th>
+              <th scope="col">Drum Capacity</th>
+              <th scope="col">Typical Load</th>
+              <th scope="col">Cycle Duration</th>
+              <th scope="col">Rate per Cycle</th>
+              <th scope="col">Terminal Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="prc-machine-cell">
+                  <div class="prc-machine-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="12" cy="13" r="5"/></svg>
+                  </div>
+                  <div>
+                    <span class="prc-machine-name">Standard Washer</span>
+                    <span class="prc-machine-sub">Stainless Steel Drum</span>
+                  </div>
+                </div>
+              </td>
+              <td><strong>8 kg</strong></td>
+              <td>1–2 people / ~20-25 daily garments</td>
+              <td>30 minutes</td>
+              <td>
+                <span class="prc-rate-val">₹80</span>
+                <span class="prc-rate-unit"> / cycle</span>
+              </td>
+              <td><span class="prc-pill-tag">Available all branches</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="prc-machine-cell">
+                  <div class="prc-machine-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="12" cy="13" r="6"/></svg>
+                  </div>
+                  <div>
+                    <span class="prc-machine-name">Large Washer</span>
+                    <span class="prc-machine-sub">Heavy Inverter Drive</span>
+                  </div>
+                </div>
+              </td>
+              <td><strong>14 kg</strong></td>
+              <td>Family laundry / Queen bed sheets &amp; towels</td>
+              <td>38 minutes</td>
+              <td>
+                <span class="prc-rate-val">₹140</span>
+                <span class="prc-rate-unit"> / cycle</span>
+              </td>
+              <td><span class="prc-pill-tag">Available all branches</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="prc-machine-cell">
+                  <div class="prc-machine-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="12" cy="13" r="7"/></svg>
+                  </div>
+                  <div>
+                    <span class="prc-machine-name">Maxi Heavy-Duty</span>
+                    <span class="prc-machine-sub">Commercial Suspension</span>
+                  </div>
+                </div>
+              </td>
+              <td><strong>18 kg</strong></td>
+              <td>King comforters, duvets, blankets &amp; drapes</td>
+              <td>42 minutes</td>
+              <td>
+                <span class="prc-rate-val">₹190</span>
+                <span class="prc-rate-unit"> / cycle</span>
+              </td>
+              <td><span class="prc-pill-tag">Available all branches</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Dryers Table -->
+      <div class="prc-table-wrapper" role="region" aria-label="Self-service dryer rates table">
+        <div class="prc-table-header">
+          <span class="prc-table-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            High-Velocity Tumble Dryers
+          </span>
+          <span class="prc-table-subtitle">Moisture sensors + anti-crease cool down</span>
+        </div>
+        <table class="prc-table">
+          <thead>
+            <tr>
+              <th scope="col">Machine Type</th>
+              <th scope="col">Drum Capacity</th>
+              <th scope="col">Typical Load</th>
+              <th scope="col">Cycle Duration</th>
+              <th scope="col">Rate per Cycle</th>
+              <th scope="col">Terminal Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="prc-machine-cell">
+                  <div class="prc-machine-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="12" cy="12" r="6"/><path d="M12 8v4l3 2"/></svg>
+                  </div>
+                  <div>
+                    <span class="prc-machine-name">Express Dryer</span>
+                    <span class="prc-machine-sub">Multi-temperature control</span>
+                  </div>
+                </div>
+              </td>
+              <td><strong>10 kg</strong></td>
+              <td>Standard daily wash &amp; light fabrics</td>
+              <td>25 minutes</td>
+              <td>
+                <span class="prc-rate-val">₹60</span>
+                <span class="prc-rate-unit"> / cycle</span>
+              </td>
+              <td><span class="prc-pill-tag">Available all branches</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="prc-machine-cell">
+                  <div class="prc-machine-icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="12" cy="12" r="7"/><path d="M12 7v5l4 2"/></svg>
+                  </div>
+                  <div>
+                    <span class="prc-machine-name">Maxi High-Airflow Dryer</span>
+                    <span class="prc-machine-sub">High CFM axial airflow</span>
+                  </div>
+                </div>
+              </td>
+              <td><strong>16 kg</strong></td>
+              <td>Heavy blankets, towels &amp; duvet inserts</td>
+              <td>35 minutes</td>
+              <td>
+                <span class="prc-rate-val">₹100</span>
+                <span class="prc-rate-unit"> / cycle</span>
+              </td>
+              <td><span class="prc-pill-tag">Available all branches</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Cards Fallback (shown on screens < 768px to eliminate horizontal scroll) -->
+      <div class="prc-mobile-matrix" aria-label="Mobile friendly machine rate cards">
+        <div class="prc-matrix-card">
+          <div class="prc-mcard-header">
+            <div>
+              <h3 class="prc-mcard-title">Standard Washer</h3>
+              <span class="prc-pill-tag">8 kg Drum</span>
+            </div>
+            <div class="prc-mcard-price">
+              ₹80
+              <small>/ 30 min cycle</small>
+            </div>
+          </div>
+          <div class="prc-mcard-specs">
+            <div><span class="prc-spec-label">Ideal For:</span> <span class="prc-spec-val">1–2 persons</span></div>
+            <div><span class="prc-spec-label">Capacity:</span> <span class="prc-spec-val">~25 garments</span></div>
+            <div><span class="prc-spec-label">Extraction:</span> <span class="prc-spec-val">1,200 RPM</span></div>
+            <div><span class="prc-spec-label">Water:</span> <span class="prc-spec-val">Softened</span></div>
+          </div>
+        </div>
+
+        <div class="prc-matrix-card">
+          <div class="prc-mcard-header">
+            <div>
+              <h3 class="prc-mcard-title">Large Washer</h3>
+              <span class="prc-pill-tag">14 kg Drum</span>
+            </div>
+            <div class="prc-mcard-price">
+              ₹140
+              <small>/ 38 min cycle</small>
+            </div>
+          </div>
+          <div class="prc-mcard-specs">
+            <div><span class="prc-spec-label">Ideal For:</span> <span class="prc-spec-val">Families (2–4)</span></div>
+            <div><span class="prc-spec-label">Capacity:</span> <span class="prc-spec-val">Weekly load + linens</span></div>
+            <div><span class="prc-spec-label">Extraction:</span> <span class="prc-spec-val">1,100 RPM</span></div>
+            <div><span class="prc-spec-label">Water:</span> <span class="prc-spec-val">Softened</span></div>
+          </div>
+        </div>
+
+        <div class="prc-matrix-card">
+          <div class="prc-mcard-header">
+            <div>
+              <h3 class="prc-mcard-title">Maxi Heavy-Duty Washer</h3>
+              <span class="prc-pill-tag">18 kg Drum</span>
+            </div>
+            <div class="prc-mcard-price">
+              ₹190
+              <small>/ 42 min cycle</small>
+            </div>
+          </div>
+          <div class="prc-mcard-specs">
+            <div><span class="prc-spec-label">Ideal For:</span> <span class="prc-spec-val">Bulky Textiles</span></div>
+            <div><span class="prc-spec-label">Capacity:</span> <span class="prc-spec-val">King duvets &amp; drapes</span></div>
+            <div><span class="prc-spec-label">Extraction:</span> <span class="prc-spec-val">1,000 RPM</span></div>
+            <div><span class="prc-spec-label">Water:</span> <span class="prc-spec-val">Softened</span></div>
+          </div>
+        </div>
+
+        <div class="prc-matrix-card">
+          <div class="prc-mcard-header">
+            <div>
+              <h3 class="prc-mcard-title">Express Tumble Dryer</h3>
+              <span class="prc-pill-tag">10 kg Drum</span>
+            </div>
+            <div class="prc-mcard-price">
+              ₹60
+              <small>/ 25 min cycle</small>
+            </div>
+          </div>
+          <div class="prc-mcard-specs">
+            <div><span class="prc-spec-label">Heat Levels:</span> <span class="prc-spec-val">Low, Med, High</span></div>
+            <div><span class="prc-spec-label">Airflow:</span> <span class="prc-spec-val">Axial forced-air</span></div>
+            <div><span class="prc-spec-label">Feature:</span> <span class="prc-spec-val">Anti-crease tumble</span></div>
+            <div><span class="prc-spec-label">Status:</span> <span class="prc-spec-val">Instant tap pay</span></div>
+          </div>
+        </div>
+
+        <div class="prc-matrix-card">
+          <div class="prc-mcard-header">
+            <div>
+              <h3 class="prc-mcard-title">Maxi High-Airflow Dryer</h3>
+              <span class="prc-pill-tag">16 kg Drum</span>
+            </div>
+            <div class="prc-mcard-price">
+              ₹100
+              <small>/ 35 min cycle</small>
+            </div>
+          </div>
+          <div class="prc-mcard-specs">
+            <div><span class="prc-spec-label">Ideal For:</span> <span class="prc-spec-val">Duvets &amp; heavy towels</span></div>
+            <div><span class="prc-spec-label">Airflow:</span> <span class="prc-spec-val">High-CFM blower</span></div>
+            <div><span class="prc-spec-label">Feature:</span> <span class="prc-spec-val">Moisture sensor</span></div>
+            <div><span class="prc-spec-label">Status:</span> <span class="prc-spec-val">Instant tap pay</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. LOAD SIZE VISUALIZATION ============ -->
+  <section class="prc-loads-section" aria-labelledby="loadsHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Sizing Guide</span>
+        <h2 class="prc-section-h2" id="loadsHeading">Match Your Laundry to the Right Drum</h2>
+        <p class="prc-section-desc">
+          Avoid paying for extra capacity you don’t need, or overcrowding smaller machines which slows down cleaning efficiency.
+        </p>
+      </div>
+
+      <div class="prc-loads-grid">
+        <!-- Small Load -->
+        <article class="prc-load-card">
+          <div class="prc-load-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3 class="prc-load-title">Small Load</h3>
+          <span class="prc-load-weight">Up to 8 kg capacity</span>
+          <ul class="prc-load-details">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Household Size:</strong> 1–2 individuals</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Fits Approximately:</strong> 20 shirts, 2 pairs of jeans, underwear &amp; gym apparel</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Recommended Setup:</strong> Standard Washer (8 kg) + Express Dryer</span>
+            </li>
+          </ul>
+          <div class="prc-load-footer">
+            <span class="prc-load-price-label">Typical Combined Wash &amp; Dry:</span>
+            <span class="prc-load-total">₹140</span>
+          </div>
+        </article>
+
+        <!-- Medium Load -->
+        <article class="prc-load-card is-popular">
+          <span class="prc-card-badge">Most Popular</span>
+          <div class="prc-load-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 9 6 6m0-6-6 6"/></svg>
+          </div>
+          <h3 class="prc-load-title">Medium Load</h3>
+          <span class="prc-load-weight">9 kg to 14 kg capacity</span>
+          <ul class="prc-load-details">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Household Size:</strong> 2–4 family members</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Fits Approximately:</strong> Full weekly hamper, 4 sets of towels, and double bedsheets</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Recommended Setup:</strong> Large Washer (14 kg) + Maxi Dryer</span>
+            </li>
+          </ul>
+          <div class="prc-load-footer">
+            <span class="prc-load-price-label">Typical Combined Wash &amp; Dry:</span>
+            <span class="prc-load-total">₹240</span>
+          </div>
+        </article>
+
+        <!-- Large Load -->
+        <article class="prc-load-card">
+          <div class="prc-load-icon-wrap" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 class="prc-load-title">Large / Bulky Load</h3>
+          <span class="prc-load-weight">15 kg to 18+ kg capacity</span>
+          <ul class="prc-load-details">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Household Size:</strong> Large homes (4+ people) or seasonal cleaning</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Fits Approximately:</strong> King duvets, heavy fleece blankets, drapes, or multi-week loads</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><strong>Recommended Setup:</strong> Maxi Washer (18 kg) + Maxi Dryer</span>
+            </li>
+          </ul>
+          <div class="prc-load-footer">
+            <span class="prc-load-price-label">Typical Combined Wash &amp; Dry:</span>
+            <span class="prc-load-total">₹290</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. WEIGHT-BASED DROP-AND-COLLECT SCALE ============ -->
+  <section class="prc-weight-section prc-tab-panel" id="prcModeDrop" aria-labelledby="dropScaleHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Drop &amp; Collect Rates</span>
+        <h2 class="prc-section-h2" id="dropScaleHeading">Predictable Weight-Based Pricing</h2>
+        <p class="prc-section-desc">
+          Drop off your laundry hamper at any branch counter. We weigh it digitally in plain sight, separate by color and fabric, wash, dry, and crisp-fold it ready for collection.
+        </p>
+      </div>
+
+      <!-- Continuous Weight Scale Track -->
+      <div class="prc-scale-container" role="region" aria-label="Drop and collect weight tiers">
+        <div class="prc-scale-track">
+          <div class="prc-scale-step is-active" tabindex="0" role="button" aria-pressed="true">
+            <span class="prc-scale-badge">Express Basket</span>
+            <h3 class="prc-scale-weight">0 kg – 5 kg</h3>
+            <p class="prc-scale-type">Daily personal wardrobe &amp; shirts</p>
+            <div class="prc-scale-price">₹250 <span style="font-size:12px;color:var(--text-muted);font-weight:normal;">flat rate</span></div>
+            <div class="prc-scale-turnaround">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Ready in ~4 hours
+            </div>
+          </div>
+
+          <div class="prc-scale-step" tabindex="0" role="button" aria-pressed="false">
+            <span class="prc-scale-badge">Standard Hamper</span>
+            <h3 class="prc-scale-weight">5 kg – 10 kg</h3>
+            <p class="prc-scale-type">Weekly couple wash &amp; bedsheets</p>
+            <div class="prc-scale-price">₹420 <span style="font-size:12px;color:var(--text-muted);font-weight:normal;">(₹42/kg avg)</span></div>
+            <div class="prc-scale-turnaround">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Ready in ~5 hours
+            </div>
+          </div>
+
+          <div class="prc-scale-step" tabindex="0" role="button" aria-pressed="false">
+            <span class="prc-scale-badge">Family Basket</span>
+            <h3 class="prc-scale-weight">10 kg – 15 kg</h3>
+            <p class="prc-scale-type">Multi-person family laundry load</p>
+            <div class="prc-scale-price">₹600 <span style="font-size:12px;color:var(--text-muted);font-weight:normal;">(₹40/kg avg)</span></div>
+            <div class="prc-scale-turnaround">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Ready in ~6 hours
+            </div>
+          </div>
+
+          <div class="prc-scale-step" tabindex="0" role="button" aria-pressed="false">
+            <span class="prc-scale-badge">Bulk / Volume</span>
+            <h3 class="prc-scale-weight">15 kg +</h3>
+            <p class="prc-scale-type">Seasonal linens or business linen</p>
+            <div class="prc-scale-price">From ₹38 <span style="font-size:12px;color:var(--text-muted);font-weight:normal;">/ kg</span></div>
+            <div class="prc-scale-turnaround">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Same-day / scheduled
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quality Pipeline -->
+      <div class="prc-drop-features">
+        <div class="prc-drop-feat-card">
+          <div class="prc-drop-feat-num" aria-hidden="true">01</div>
+          <div class="prc-drop-feat-text">
+            <h4>Digital Counter Scale</h4>
+            <p>Laundry is weighed right in front of you on certified high-precision digital scales so you verify the exact billing weight before handoff.</p>
+          </div>
+        </div>
+
+        <div class="prc-drop-feat-card">
+          <div class="prc-drop-feat-num" aria-hidden="true">02</div>
+          <div class="prc-drop-feat-text">
+            <h4>Never Mixed With Other Orders</h4>
+            <p>Your garments are processed inside individual dedicated wash drums with professional temperature and detergent protocols.</p>
+          </div>
+        </div>
+
+        <div class="prc-drop-feat-card">
+          <div class="prc-drop-feat-num" aria-hidden="true">03</div>
+          <div class="prc-drop-feat-text">
+            <h4>Folded, Packaged &amp; SMS Alert</h4>
+            <p>Clothes are tumble-dried with anti-crease cycles, crisply hand-folded, sealed in eco totes, and you receive an SMS when ready.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. INTERACTIVE LAUNDRY COST ESTIMATOR ============ -->
+  <section class="prc-calc-section" aria-labelledby="calcHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Interactive Calculator</span>
+        <h2 class="prc-section-h2" id="calcHeading">Estimate Your Laundry Cost</h2>
+        <p class="prc-section-desc">
+          Plan your laundry visit with complete precision. Adjust the service type, load weight, dryer options, and add-ons below for an immediate cost breakdown.
+        </p>
+      </div>
+
+      <div class="prc-calc-card" id="prcEstimator">
+        <!-- Controls Column -->
+        <div class="prc-calc-controls">
+          <!-- Service Mode -->
+          <div class="prc-control-group">
+            <span class="prc-control-label">1. Choose Service Mode</span>
+            <div class="prc-btn-group">
+              <button type="button" class="prc-opt-btn is-active" data-prc-service="self">
+                <strong>Self-Service</strong>
+                <span class="opt-sub">Wash &amp; dry on-site</span>
+              </button>
+              <button type="button" class="prc-opt-btn" data-prc-service="drop">
+                <strong>Drop &amp; Collect</strong>
+                <span class="opt-sub">We wash &amp; fold</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Load Size -->
+          <div class="prc-control-group">
+            <span class="prc-control-label">2. Select Drum / Load Size</span>
+            <div class="prc-btn-group">
+              <button type="button" class="prc-opt-btn is-active" data-prc-load="8">
+                <strong>8 kg Standard</strong>
+                <span class="opt-sub">1–2 persons (~25 pcs)</span>
+              </button>
+              <button type="button" class="prc-opt-btn" data-prc-load="14">
+                <strong>14 kg Large</strong>
+                <span class="opt-sub">Family load (~40 pcs)</span>
+              </button>
+              <button type="button" class="prc-opt-btn" data-prc-load="18">
+                <strong>18 kg Maxi</strong>
+                <span class="opt-sub">Bulky duvets &amp; rugs</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dryer Option -->
+          <div class="prc-control-group">
+            <span class="prc-control-label">3. Tumble Drying Cycle</span>
+            <div class="prc-btn-group">
+              <button type="button" class="prc-opt-btn" data-prc-dry="none">
+                <strong>No Drying</strong>
+                <span class="opt-sub">Take home damp</span>
+              </button>
+              <button type="button" class="prc-opt-btn is-active" data-prc-dry="std">
+                <strong>Standard Dry</strong>
+                <span class="opt-sub">25–30 mins (₹60)</span>
+              </button>
+              <button type="button" class="prc-opt-btn" data-prc-dry="deep">
+                <strong>Deep Dry</strong>
+                <span class="opt-sub">35–45 mins (₹100)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div class="prc-control-group">
+            <span class="prc-control-label">4. Optional Products &amp; Services</span>
+            <div class="prc-addon-list">
+              <label class="prc-addon-check">
+                <span class="prc-addon-left">
+                  <input type="checkbox" id="prcAddonEco">
+                  <span>Botanical Hypoallergenic Detergent Pod</span>
+                </span>
+                <span class="prc-addon-price">+ ₹20</span>
+              </label>
+              <label class="prc-addon-check">
+                <span class="prc-addon-left">
+                  <input type="checkbox" id="prcAddonSoft">
+                  <span>Fabric Softener &amp; Scent Booster</span>
+                </span>
+                <span class="prc-addon-price">+ ₹15</span>
+              </label>
+              <label class="prc-addon-check">
+                <span class="prc-addon-left">
+                  <input type="checkbox" id="prcAddonFold">
+                  <span>Professional Hand-Folding &amp; Sealed Pack</span>
+                </span>
+                <span class="prc-addon-price">+ ₹50</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Output Column -->
+        <div class="prc-calc-output">
+          <div>
+            <div class="prc-out-head">
+              <span class="prc-out-badge">Calculated Estimate</span>
+              <span style="font-size:12px;color:var(--text-muted);">INR (₹)</span>
+            </div>
+            <div class="prc-out-price-wrap">
+              <span class="prc-out-label">Estimated Total Rate</span>
+              <div class="prc-out-total" id="prcOutTotal">₹140</div>
+            </div>
+
+            <ul class="prc-out-breakdown">
+              <li>
+                <span>Wash / Base Cycle</span>
+                <span class="item-val" id="prcOutBase">₹80</span>
+              </li>
+              <li>
+                <span>Tumble Dryer</span>
+                <span class="item-val" id="prcOutDry">₹60</span>
+              </li>
+              <li>
+                <span>Selected Add-ons</span>
+                <span class="item-val" id="prcOutAddons">₹0</span>
+              </li>
+            </ul>
+
+            <div class="prc-out-time" id="prcOutTime">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Approx. 55 minutes total cycle
+            </div>
+          </div>
+
+          <div>
+            <p class="prc-out-disclaimer">
+              * Estimate based on standard retail branch pricing. Final price reflects the actual machine selection or scale weights recorded at the branch terminal.
+            </p>
+            <a href="index.html#locations" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Find Nearest Available Machine
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. INCLUDED VS ADDITIONAL SERVICE GUIDE ============ -->
+  <section class="prc-inclusions-section" aria-labelledby="incHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Price Transparency</span>
+        <h2 class="prc-section-h2" id="incHeading">Know Exactly What’s Included</h2>
+        <p class="prc-section-desc">
+          We pride ourselves on zero hidden fees. Here is a full breakdown of what every cycle includes versus optional upgrades you can request.
+        </p>
+      </div>
+
+      <div class="prc-inc-grid">
+        <!-- Always Included -->
+        <div class="prc-inc-card is-base">
+          <div class="prc-inc-header">
+            <h3 style="font-size:18px;font-weight:600;color:var(--text-primary);margin:0;">Always Included in Every Cycle</h3>
+            <span class="prc-inc-badge">Base Rate</span>
+          </div>
+          <ul class="prc-inc-list">
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Automatic Drum Sanitization</strong>
+                <span>Every washer performs an ultra-hygienic hot water flush before your laundry begins.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Softened &amp; Filtered Water</strong>
+                <span>Multi-stage mineral filtration prevents stiffness, fabric wear, and dull whites.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>High-Speed Water Extraction (Up to 1,200 RPM)</strong>
+                <span>Removes maximum moisture during final spin, reducing drying time and heat damage by 40%.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>High-Speed Wi-Fi &amp; Workstations</strong>
+                <span>Complimentary fiber Wi-Fi, ergonomic bench seating, and device charging stations in lounge.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Real-Time Cycle Completion SMS</strong>
+                <span>Enter your mobile number at the terminal to receive a polite text 5 minutes before completion.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Optional Add-ons -->
+        <div class="prc-inc-card is-addon">
+          <div class="prc-inc-header">
+            <h3 style="font-size:18px;font-weight:600;color:var(--text-primary);margin:0;">Optional Extras &amp; Upgrades</h3>
+            <span class="prc-inc-badge">Available On Request</span>
+          </div>
+          <ul class="prc-inc-list">
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Hypoallergenic Botanical Pods (+₹20)</strong>
+                <span>Zero dye, zero synthetic perfume detergent pods engineered for sensitive skin and infant wear.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Enzyme Stain Pretreating (+₹30)</strong>
+                <span>Targeted pre-soak treatment for tough grease, coffee, ink, or collar grime.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Extended Dryer Increment (+₹20 / 10 mins)</strong>
+                <span>Add quick 10-minute top-ups directly from terminal if you have heavy winter blankets.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Reusable Waterproof Laundry Hamper (+₹120)</strong>
+                <span>Durable high-capacity WashHub totes with breathable moisture barrier.</span>
+              </div>
+            </li>
+            <li class="prc-inc-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <div class="prc-inc-item-text">
+                <strong>Express 2-Hour Drop-and-Collect (+₹100)</strong>
+                <span>Priority queue processing for last-minute business travel or emergency uniform cleaning.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. BUSINESS & BULK LAUNDRY PRICING ============ -->
+  <section class="prc-business-section prc-tab-panel" id="prcModeBusiness" aria-labelledby="b2bHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Commercial Service</span>
+        <h2 class="prc-section-h2" id="b2bHeading">B2B &amp; Recurring Bulk Laundry Pricing</h2>
+        <p class="prc-section-desc">
+          Structured wholesale laundry for local businesses. Consistent quality, dedicated delivery windows, and full GST invoice compliance.
+        </p>
+      </div>
+
+      <!-- Sector Badges -->
+      <div class="prc-b2b-sectors" aria-label="Industries served">
+        <span class="prc-sector-pill">Hotels &amp; Boutique Stays</span>
+        <span class="prc-sector-pill">Salons &amp; Wellness Spas</span>
+        <span class="prc-sector-pill">Fitness Centers &amp; Gyms</span>
+        <span class="prc-sector-pill">Medical Clinics &amp; Scrubs</span>
+        <span class="prc-sector-pill">Restaurants &amp; Catering</span>
+        <span class="prc-sector-pill">Airbnb &amp; Rental Hosts</span>
+      </div>
+
+      <!-- 4-step B2B Pipeline -->
+      <div class="prc-b2b-pipeline">
+        <div class="prc-pipe-step">
+          <div class="prc-pipe-num" aria-hidden="true">01</div>
+          <h3 class="prc-pipe-title">Volume Assessment</h3>
+          <p class="prc-pipe-desc">We review your estimated weekly laundry weight (starting from 40 kg/week) and linen turnaround needs.</p>
+        </div>
+
+        <div class="prc-pipe-step">
+          <div class="prc-pipe-num" aria-hidden="true">02</div>
+          <h3 class="prc-pipe-title">Care Specifications</h3>
+          <p class="prc-pipe-desc">Custom thermal sanitization temperatures, color isolation protocols, and specialized anti-stain formulations.</p>
+        </div>
+
+        <div class="prc-pipe-step">
+          <div class="prc-pipe-num" aria-hidden="true">03</div>
+          <h3 class="prc-pipe-title">Locked Wholesale Rate</h3>
+          <p class="prc-pipe-desc">Predictable per-kg contract rates locked for 6 or 12 months with zero surge pricing or hidden fuel levies.</p>
+        </div>
+
+        <div class="prc-pipe-step">
+          <div class="prc-pipe-num" aria-hidden="true">04</div>
+          <h3 class="prc-pipe-title">Scheduled Pickup</h3>
+          <p class="prc-pipe-desc">Designated morning or evening courier windows with digital delivery receipts and monthly consolidated billing.</p>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="prc-b2b-cta-card">
+        <div class="prc-b2b-cta-copy">
+          <h3>Need a custom commercial quote for your business?</h3>
+          <p>Tell us your estimated weekly volume, fabric types, and delivery schedules. Our commercial manager will supply an itemized proposal within 24 hours.</p>
+        </div>
+        <a href="about.html#contact" class="btn btn-primary" style="white-space:nowrap;">
+          Request a Business Quote
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. PRICE TRANSPARENCY PRINCIPLES ============ -->
+  <section class="prc-transparency-section" aria-labelledby="principlesHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">The WashHub Standard</span>
+        <h2 class="prc-section-h2" id="principlesHeading">Four Pricing Promises We Always Keep</h2>
+        <p class="prc-section-desc">
+          Modern self-service laundry should be simple, welcoming, and completely honest.
+        </p>
+      </div>
+
+      <div class="prc-transp-grid">
+        <div class="prc-transp-card">
+          <span class="prc-transp-index">PROMISE 01</span>
+          <h3>Exact Metered Cycles</h3>
+          <p>You only pay for the exact machine cycle you select. No monthly fees, no recurring club subscriptions, no forced auto-renewals.</p>
+        </div>
+
+        <div class="prc-transp-card">
+          <span class="prc-transp-index">PROMISE 02</span>
+          <h3>Digital Contactless Pay</h3>
+          <p>Pay with credit/debit card, UPI, or phone wallet. No token coin machines, no tricky card balances, and zero payment processing surcharges.</p>
+        </div>
+
+        <div class="prc-transp-card">
+          <span class="prc-transp-index">PROMISE 03</span>
+          <h3>Open Digital Scales</h3>
+          <p>For drop-and-collect orders, laundry is weighed openly on commercial digital scales in your presence before confirmation.</p>
+        </div>
+
+        <div class="prc-transp-card">
+          <span class="prc-transp-index">PROMISE 04</span>
+          <h3>Cross-Branch Consistency</h3>
+          <p>Our standard per-cycle and per-kg pricing is uniform across all neighborhood branches so you never pay more because of location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. PRICING FAQ ACCORDION ============ -->
+  <section class="prc-faq-section" aria-labelledby="faqHeading">
+    <div class="container">
+      <div class="prc-section-header">
+        <span class="prc-section-eyebrow">Common Questions</span>
+        <h2 class="prc-section-h2" id="faqHeading">Frequently Asked Pricing Questions</h2>
+        <p class="prc-section-desc">
+          Clear answers about payment methods, washer operations, drying times, and drop-and-collect billing.
+        </p>
+      </div>
+
+      <div class="prc-faq-accordion">
+        <div class="prc-faq-item is-open">
+          <button class="prc-faq-btn" type="button" aria-expanded="true" id="prcFaq1Btn">
+            <span>Can I bring my own laundry detergent and fabric softener?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq1Ans" role="region" aria-labelledby="prcFaq1Btn">
+            Yes, absolutely. You are welcome to bring your favorite detergents and conditioners at no extra charge. If you prefer not to carry supplies, our automated dispenser stocks premium hypoallergenic pods, fabric softeners, and color catchers starting at just ₹15.
+          </div>
+        </div>
+
+        <div class="prc-faq-item">
+          <button class="prc-faq-btn" type="button" aria-expanded="false" id="prcFaq2Btn">
+            <span>How does dryer pricing work if my clothes need a few extra minutes?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq2Ans" role="region" aria-labelledby="prcFaq2Btn">
+            Our high-velocity dryers are priced in standard 25–35 minute cycles (₹60 for 10 kg, ₹100 for 16 kg). If you are drying dense bedding or heavy denim, you can easily tap to add 10-minute incremental top-ups for ₹20 at the machine terminal before the cycle finishes.
+          </div>
+        </div>
+
+        <div class="prc-faq-item">
+          <button class="prc-faq-btn" type="button" aria-expanded="false" id="prcFaq3Btn">
+            <span>For drop-and-collect, is laundry weighed dry or wet?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq3Ans" role="region" aria-labelledby="prcFaq3Btn">
+            All laundry is weighed dry at our intake counter when you hand it in. You are billed strictly according to the dry weight recorded on our digital counter scales, ensuring complete fairness and total transparency.
+          </div>
+        </div>
+
+        <div class="prc-faq-item">
+          <button class="prc-faq-btn" type="button" aria-expanded="false" id="prcFaq4Btn">
+            <span>Are wash and dry rates the same at every location?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq4Ans" role="region" aria-labelledby="prcFaq4Btn">
+            Yes. WashHub maintains a single, uniform retail pricing schedule across all of our wash centers. You will never encounter branch surge pricing, weekend premiums, or unexpected holiday markups.
+          </div>
+        </div>
+
+        <div class="prc-faq-item">
+          <button class="prc-faq-btn" type="button" aria-expanded="false" id="prcFaq5Btn">
+            <span>What payment methods are supported at the machines?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq5Ans" role="region" aria-labelledby="prcFaq5Btn">
+            Every machine is equipped with a digital tap-to-pay reader supporting all major credit and debit cards (Visa, Mastercard, RuPay), UPI QR codes (Google Pay, PhonePe, Paytm), and NFC mobile wallets (Apple Pay / Google Wallet). Cash is also accepted at our counter kiosks.
+          </div>
+        </div>
+
+        <div class="prc-faq-item">
+          <button class="prc-faq-btn" type="button" aria-expanded="false" id="prcFaq6Btn">
+            <span>Is there a minimum order weight for drop-and-collect?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq6Ans" role="region" aria-labelledby="prcFaq6Btn">
+            Our minimum drop-and-collect billing tier is the Express Basket (up to 5 kg) at ₹250 flat. You are welcome to drop off fewer items, but the minimum base charge of ₹250 applies to cover dedicated drum allocation and specialized hand folding.
+          </div>
+        </div>
+
+        <div class="prc-faq-item">
+          <button class="prc-faq-btn" type="button" aria-expanded="false" id="prcFaq7Btn">
+            <span>How do invoices and GST work for corporate accounts?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="prc-faq-content" id="prcFaq7Ans" role="region" aria-labelledby="prcFaq7Btn">
+            All registered commercial and B2B clients receive formal tax invoices with input tax credit (ITC) eligibility. We support monthly consolidated billing, Net 15/30 payment terms, and automated PDF delivery directly to your accounts department.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11. FINAL SPLIT CTA ============ -->
+  <section class="prc-final-cta" aria-labelledby="ctaHeading">
+    <div class="container">
+      <div class="prc-cta-box">
+        <div class="prc-cta-left">
+          <h2 id="ctaHeading">Ready to wash with zero guesswork?</h2>
+          <p>
+            Experience pristine laundry machines, fast 30-minute cycles, comfortable lounges with fiber Wi-Fi, and total price transparency today.
+          </p>
+        </div>
+        <div class="prc-cta-right">
+          <a href="index.html#locations" class="btn btn-primary">
+            Find a Location
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="about.html#contact" class="btn btn-secondary">
+            Request Corporate Rates
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="WashHub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
+            <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">WashHub</span></span>
+      </a>
+      <p>Clean spaces, modern machines and the freedom to wash on your terms.</p>
+      <ul class="social-links" aria-label="Social media">
+        <li><a href="#" aria-label="WashHub on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v6h3v-6h2.2l.8-3H14v-1.5A1 1 0 0 1 15 8Z"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10.5 9.5 5 2.5-5 2.5Z" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M8 10.5V17M8 7.2v.1M12.2 17v-4a2 2 0 0 1 4 0v4"/></svg></a></li>
+      </ul>
+    </div>
+
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Our services">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Self-Service Wash</a></li>
+        <li><a href="#">Dryer Use</a></li>
+        <li><a href="#">Drop &amp; Collect</a></li>
+        <li><a href="#">Business Laundry</a></li>
+        <li><a href="#">Commercial Laundry</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p class="hours">Mon – Sun<br>6:00 AM – 11:00 PM<br><span>(Varies by location)</span></p>
+      <div class="footer-contact-item" style="margin-block-start:var(--sp-4);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 6 9 7 9-7"/></svg>
+        <span>hello@washhub.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.5 22 2 14.5 2 7a2 2 0 0 1 2-2Z"/></svg>
+        <span>+1 234 567 8900</span>
+      </div>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Stay Connected</h4>
+      <p style="font-size:13.5px;color:var(--text-secondary);">Get the latest news and offers.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup" novalidate>
+        <label class="visually-hidden" for="pricingNewsletterEmail">Email address</label>
+        <input type="email" id="pricingNewsletterEmail" placeholder="Your email address" required autocomplete="email">
+        <button type="submit" aria-label="Subscribe to newsletter">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <p class="newsletter-status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 WashHub. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <a href="#" class="back-to-top" aria-label="Back to top of page">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

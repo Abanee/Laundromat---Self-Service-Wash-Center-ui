@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — WashHub Laundromat &amp; Self-Service Wash Center</title>
+<meta name="description" content="Explore WashHub laundry services: self-service washing, commercial drying, drop-and-collect laundry care, and recurring business laundry services.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="WashHub home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">WashHub</span>
+        <span class="brand-sub">LAUNDROMAT &amp; SELF-SERVICE</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link is-active" aria-current="page">Services</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" aria-label="Search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="icon-btn dir-toggle" id="dirToggle" type="button" aria-label="Switch to right-to-left layout">
+        <span class="dir-toggle-label">RTL</span>
+      </button>
+      <a href="login.html" class="btn btn-primary btn-compact header-cta">
+        Login
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav-scrim" id="mobileScrim" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-nav-head">
+    <span class="brand-name" style="font-family:var(--font-display);font-size:18px;">WashHub</span>
+    <button class="icon-btn" id="mobileClose" aria-label="Close navigation menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="home-2.html">Home 2</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="is-active" aria-current="page">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-foot">
+    <div class="mobile-nav-foot-row">
+      <button class="icon-btn theme-toggle" id="themeToggleMobile" type="button" aria-label="Toggle dark mode" style="width:auto;padding-inline:var(--sp-3);border-radius:var(--radius-md);flex:1;justify-content:flex-start;gap:var(--sp-2);">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        <span>Theme</span>
+      </button>
+      <button class="dir-toggle" id="dirToggleMobile" type="button" aria-label="Toggle direction" style="border-radius:var(--radius-md);flex:1;justify-content:center;">
+        <span class="dir-toggle-label">RTL</span>
+      </button>
+    </div>
+    <a href="login.html" class="btn btn-primary" style="width:100%;justify-content:center;">Login</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============ 01. SERVICES HERO ============ -->
+  <section class="svc-hero" aria-label="Services Overview">
+    <div class="container svc-hero-grid">
+      <div class="svc-hero-copy" data-reveal>
+        <p class="eyebrow">Services</p>
+        <h1>Laundry That Fits Your Routine.</h1>
+        <p class="svc-hero-desc">Wash it yourself, dry it on-site, or let our team handle the entire process. Choose the service that fits around your schedule and textile care needs.</p>
+        <div class="svc-hero-actions">
+          <a href="#selfService" class="btn btn-primary btn-lg">
+            Explore Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="index.html#pricing" class="btn btn-secondary btn-lg">View Pricing</a>
+        </div>
+        <div class="svc-hero-badges">
+          <div class="svc-hero-mini-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>No Membership Required</span>
+          </div>
+          <div class="svc-hero-mini-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Open 7 Days a Week</span>
+          </div>
+          <div class="svc-hero-mini-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Contactless Card &amp; App Pay</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-hero-collage" data-reveal>
+        <div class="svc-collage-main">
+          <img
+            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1000&q=80&auto=format&fit=crop"
+            alt="Modern commercial front-loading washing machines in a bright, clean laundromat center"
+            width="1000" height="800"
+            loading="eager"
+          >
+          <div class="svc-floating-label svc-float-1">
+            <span class="svc-status-dot" aria-hidden="true"></span>
+            <strong>SELF-SERVICE</strong>
+            <span>Open daily 6am &ndash; 11pm</span>
+          </div>
+        </div>
+        <div class="svc-collage-stack">
+          <div class="svc-collage-sub">
+            <img
+              src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=600&q=80&auto=format&fit=crop"
+              alt="High-capacity commercial dryers with digital controls"
+              width="600" height="400"
+              loading="eager"
+            >
+            <div class="svc-floating-label svc-float-2">
+              <strong>DROP &amp; COLLECT</strong>
+              <span>Convenient laundry care</span>
+            </div>
+          </div>
+          <div class="svc-collage-sub">
+            <img
+              src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=600&q=80&auto=format&fit=crop"
+              alt="Crisp, cleanly folded white cotton towels on a folding table"
+              width="600" height="400"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02. SERVICE NAVIGATION STRIP ============ -->
+  <nav class="svc-nav-strip" aria-label="Service directory anchor navigation">
+    <div class="container">
+      <div class="svc-strip-inner">
+        <a href="#selfService" class="svc-strip-link is-active">
+          <span class="num">01</span>
+          <span>Self-Service Wash</span>
+        </a>
+        <a href="#drying" class="svc-strip-link">
+          <span class="num">02</span>
+          <span>Drying</span>
+        </a>
+        <a href="#dropCollect" class="svc-strip-link">
+          <span class="num">03</span>
+          <span>Drop &amp; Collect</span>
+        </a>
+        <a href="#business" class="svc-strip-link">
+          <span class="num">04</span>
+          <span>Bulk &amp; Business</span>
+        </a>
+        <a href="#comparison" class="svc-strip-link">
+          <span class="num">&bull;</span>
+          <span>Compare Services</span>
+        </a>
+        <a href="#faq" class="svc-strip-link">
+          <span class="num">?</span>
+          <span>FAQs</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ 03. FEATURE: SELF-SERVICE WASHING ============ -->
+  <section class="section bordered-top" id="selfService" aria-labelledby="washHeading">
+    <div class="container svc-wash-grid">
+      <div class="svc-wash-media" data-reveal>
+        <img
+          src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1000&q=80&auto=format&fit=crop"
+          alt="Customer loading laundry into a modern commercial front-loading washing machine"
+          width="1000" height="900"
+          loading="lazy"
+        >
+        <div class="svc-machine-overlay">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <div>
+            <strong>WASHER 06</strong>
+            <span>AVAILABLE NOW</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-wash-copy" data-reveal>
+        <p class="eyebrow">01 &mdash; Self-Service</p>
+        <h2 id="washHeading">Wash On Your Schedule.</h2>
+        <p>Choose the machine size that fits your load, add your preferred detergent, select the cycle, and let the commercial equipment handle the hard work. Fast, reliable cycles mean your laundry gets done in half the usual home cycle time.</p>
+
+        <div class="svc-steps-grid" role="list" aria-label="Self-service wash steps">
+          <div class="svc-step-card" role="listitem">
+            <div class="svc-step-top">
+              <span class="svc-step-num">STEP 01</span>
+              <span class="svc-step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17h16M6 17V9l2-4h8l2 4v8M9 17v3M15 17v3"/></svg>
+              </span>
+            </div>
+            <h4>Load</h4>
+            <p>Place your clothes loosely into the drum, leaving hand width at the top for proper water flow.</p>
+          </div>
+
+          <div class="svc-step-card" role="listitem">
+            <div class="svc-step-top">
+              <span class="svc-step-num">STEP 02</span>
+              <span class="svc-step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+              </span>
+            </div>
+            <h4>Select</h4>
+            <p>Pick your water temperature and cycle &mdash; Normal, Warm, Gentle, or Heavy Duty.</p>
+          </div>
+
+          <div class="svc-step-card" role="listitem">
+            <div class="svc-step-top">
+              <span class="svc-step-num">STEP 03</span>
+              <span class="svc-step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </span>
+            </div>
+            <h4>Pay</h4>
+            <p>Tap your contactless bank card, phone wallet, or laundry app to start the machine instantly.</p>
+          </div>
+
+          <div class="svc-step-card" role="listitem">
+            <div class="svc-step-top">
+              <span class="svc-step-num">STEP 04</span>
+              <span class="svc-step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+            </div>
+            <h4>Collect</h4>
+            <p>Unload fresh, clean garments when the chime sounds. Ready to fold or move directly to drying.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:var(--sp-4);align-items:center;flex-wrap:wrap;">
+          <a href="index.html#pricing" class="btn btn-primary">
+            See Washing Prices
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#sizeGuide" class="link-text">
+            Compare machine sizes
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04. MACHINE SIZE GUIDE ============ -->
+  <section class="section bg-secondary" id="sizeGuide" aria-labelledby="sizeGuideHeading">
+    <div class="container" data-reveal>
+      <div style="max-width:620px;">
+        <p class="eyebrow">Interactive Guide</p>
+        <h2 id="sizeGuideHeading">Choose the Right Machine for the Load.</h2>
+        <p>Selecting the correct capacity prevents overcrowding, guarantees superior wash quality, and uses water and detergent efficiently.</p>
+      </div>
+
+      <div class="svc-size-grid" role="tablist" aria-label="Machine capacity selector">
+        <!-- Small Load -->
+        <div class="svc-size-card" role="tab" tabindex="0" aria-selected="false" data-capacity="small">
+          <div class="svc-size-drum" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+          </div>
+          <span class="svc-size-pill">Single &bull; Daily</span>
+          <h3>Small Load</h3>
+          <p>Ideal for personal mid-week loads, gym attire, delicates, or light everyday apparel.</p>
+          <ul role="list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> 1&ndash;2 standard laundry baskets</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Everyday shirts, t-shirts, socks &amp; trousers</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> High-speed gentle spin cycle</li>
+          </ul>
+        </div>
+
+        <!-- Medium Load (Default Selected) -->
+        <div class="svc-size-card is-selected" role="tab" tabindex="0" aria-selected="true" data-capacity="medium">
+          <div class="svc-size-drum" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <span class="svc-size-pill">Most Popular &bull; Family</span>
+          <h3>Medium Load</h3>
+          <p>The everyday workhorse for couples and households. Perfect for regular weekly laundry hampers.</p>
+          <ul role="list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> 2&ndash;3 full laundry baskets</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Towels, bedsheets &amp; mixed casual wear</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Optimized water &amp; cycle balance</li>
+          </ul>
+        </div>
+
+        <!-- Large Load -->
+        <div class="svc-size-card" role="tab" tabindex="0" aria-selected="false" data-capacity="large">
+          <div class="svc-size-drum" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/></svg>
+          </div>
+          <span class="svc-size-pill">Bulky &bull; Multi-Bedding</span>
+          <h3>Large Load</h3>
+          <p>Heavy-duty capacity engineered specifically for thick comforters, duvets, blankets, and bulk items.</p>
+          <ul role="list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> King &amp; Queen duvets, curtains &amp; quilts</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> 4+ full baskets in a single cycle</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Commercial heavy-soil agitation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05. FEATURE: DRYING SERVICE ============ -->
+  <section class="section" id="drying" aria-labelledby="dryingHeading">
+    <div class="container" data-reveal>
+      <div class="svc-drying-panel">
+        <img
+          class="svc-drying-bg"
+          src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=1400&q=80&auto=format&fit=crop"
+          alt="Rows of commercial laundry dryers inside WashHub facility"
+          width="1400" height="700"
+          loading="lazy"
+        >
+        <div class="svc-drying-gradient" aria-hidden="true"></div>
+        <div class="svc-drying-content">
+          <p class="eyebrow">02 &mdash; Drying</p>
+          <h2 id="dryingHeading">Dry. Fold. Move On.</h2>
+          <p>Finish your entire laundry cycle in the same visit. Our commercial multi-temperature dryers are engineered to handle everyday fabrics, dense cotton towels, and heavy bedding with speed and fabric-safe moisture control.</p>
+
+          <div class="svc-drying-pillars">
+            <div class="svc-pillar">
+              <strong>Controlled Heat</strong>
+              <span>Gentle, Low, Medium, and High cycles for all garment types.</span>
+            </div>
+            <div class="svc-pillar">
+              <strong>Fast Cycles</strong>
+              <span>Powerful airflow delivers dry clothes in approximately 20&ndash;30 minutes.</span>
+            </div>
+            <div class="svc-pillar">
+              <strong>Easy Operation</strong>
+              <span>Simple controls with top-up minutes available at any time.</span>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;">
+            <a href="index.html#pricing" class="btn btn-primary">Check Dryer Pricing</a>
+            <a href="#careGuide" class="btn btn-ghost-inverse">Drying Best Practices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06. DRYING CARE GUIDE ============ -->
+  <section class="section-sm bg-secondary" id="careGuide" aria-labelledby="careGuideHeading">
+    <div class="container" data-reveal>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:var(--sp-4);flex-wrap:wrap;">
+        <div>
+          <p class="eyebrow">Pro Tips</p>
+          <h2 id="careGuideHeading" style="font-size:clamp(22px,2.6vw,30px);">Before You Start the Dryer.</h2>
+        </div>
+        <p style="font-size:14px;color:var(--text-secondary);max-width:36ch;">A few simple habits prevent garment shrinkage, protect elastics, and cut drying time significantly.</p>
+      </div>
+
+      <div class="svc-care-grid" role="list">
+        <div class="svc-care-item" role="listitem">
+          <div class="svc-care-top">
+            <div class="svc-care-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <span class="svc-care-num">01</span>
+          </div>
+          <strong>Check Care Labels</strong>
+          <span>Verify tumble dry compatibility before transferring garments into the machine.</span>
+        </div>
+
+        <div class="svc-care-item" role="listitem">
+          <div class="svc-care-top">
+            <div class="svc-care-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <span class="svc-care-num">02</span>
+          </div>
+          <strong>Separate Fabrics</strong>
+          <span>Dry lightweight synthetics separately from thick towels to avoid over-drying delicates.</span>
+        </div>
+
+        <div class="svc-care-item" role="listitem">
+          <div class="svc-care-top">
+            <div class="svc-care-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <span class="svc-care-num">03</span>
+          </div>
+          <strong>Avoid Overloading</strong>
+          <span>Leave sufficient space in the drum so hot air can circulate freely through every layer.</span>
+        </div>
+
+        <div class="svc-care-item" role="listitem">
+          <div class="svc-care-top">
+            <div class="svc-care-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <span class="svc-care-num">04</span>
+          </div>
+          <strong>Select Proper Heat</strong>
+          <span>Use Low heat for synthetics/sportswear and Medium/High for durable 100% cottons.</span>
+        </div>
+
+        <div class="svc-care-item" role="listitem">
+          <div class="svc-care-top">
+            <div class="svc-care-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="svc-care-num">05</span>
+          </div>
+          <strong>Remove Promptly</strong>
+          <span>Take laundry out when the cycle ends to prevent settling wrinkles and ease folding.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07. FEATURE: DROP & COLLECT ============ -->
+  <section class="section" id="dropCollect" aria-labelledby="dropHeading">
+    <div class="container" data-reveal>
+      <div style="max-width:640px;">
+        <p class="eyebrow">03 &mdash; Drop &amp; Collect</p>
+        <h2 id="dropHeading">Leave the Laundry With Us.</h2>
+        <p>For customers who would rather spend their day elsewhere, our drop-and-collect service takes care of the entire laundry process from check-in to collection &mdash; washed, dried, and neatly packed.</p>
+      </div>
+
+      <div class="svc-journey-track" role="list" aria-label="Drop and collect workflow">
+        <div class="svc-journey-step" role="listitem">
+          <div class="svc-journey-circle">01</div>
+          <h4>Drop Off</h4>
+          <p>Bring your laundry bag to the reception counter at your chosen WashHub center.</p>
+        </div>
+
+        <div class="svc-journey-step" role="listitem">
+          <div class="svc-journey-circle">02</div>
+          <h4>Sort &amp; Check</h4>
+          <p>Our team checks fabric tags, sorts colors from whites, and assigns cycle instructions.</p>
+        </div>
+
+        <div class="svc-journey-step" role="listitem">
+          <div class="svc-journey-circle">03</div>
+          <h4>Care &amp; Wash</h4>
+          <p>Clothes are thoroughly washed with premium detergents and gently tumble-dried.</p>
+        </div>
+
+        <div class="svc-journey-step" role="listitem">
+          <div class="svc-journey-circle">04</div>
+          <h4>Collect Fresh</h4>
+          <p>You receive an SMS when ready. Pick up your clean, crisp laundry packed and ready to put away.</p>
+        </div>
+      </div>
+
+      <div style="margin-block-start:var(--sp-7);text-align:center;">
+        <a href="index.html#pricing" class="btn btn-primary">View Drop &amp; Collect Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08. SERVICE DETAIL PANEL ============ -->
+  <section class="section bg-secondary" aria-labelledby="handOverHeading">
+    <div class="container" data-reveal>
+      <div style="max-width:620px;">
+        <p class="eyebrow">Accepted Items</p>
+        <h2 id="handOverHeading">What Can You Hand Over?</h2>
+        <p>We process a wide range of household and personal textiles daily. Review the common categories below:</p>
+      </div>
+
+      <div class="svc-detail-grid" role="list">
+        <div class="svc-detail-card" role="listitem">
+          <div class="svc-detail-info">
+            <strong>Everyday Clothing</strong>
+            <span>T-shirts, shirts, jeans, socks, underwear &amp; day-to-day wear</span>
+          </div>
+          <span class="svc-detail-badge">Accepted</span>
+        </div>
+
+        <div class="svc-detail-card" role="listitem">
+          <div class="svc-detail-info">
+            <strong>Towels &amp; Bath Linens</strong>
+            <span>Bath sheets, hand towels, washcloths &amp; bath mats</span>
+          </div>
+          <span class="svc-detail-badge">Accepted</span>
+        </div>
+
+        <div class="svc-detail-card" role="listitem">
+          <div class="svc-detail-info">
+            <strong>Bedding &amp; Pillowcases</strong>
+            <span>Sheets, duvet covers, pillowcases &amp; light blankets</span>
+          </div>
+          <span class="svc-detail-badge">Accepted</span>
+        </div>
+
+        <div class="svc-detail-card" role="listitem">
+          <div class="svc-detail-info">
+            <strong>Household Textiles</strong>
+            <span>Tablecloths, cloth napkins, sofa throws &amp; washable drapery</span>
+          </div>
+          <span class="svc-detail-badge">Accepted</span>
+        </div>
+
+        <div class="svc-detail-card" role="listitem">
+          <div class="svc-detail-info">
+            <strong>Selected Delicates</strong>
+            <span>Gentle-cycle wools, silk accents &amp; synthetics (marked care only)</span>
+          </div>
+          <span class="svc-detail-badge">Special Care</span>
+        </div>
+
+        <div class="svc-detail-card" role="listitem">
+          <div class="svc-detail-info">
+            <strong>Bulky Items</strong>
+            <span>Heavy duvets, sleeping bags &amp; mattress protectors</span>
+          </div>
+          <span class="svc-detail-badge">Large Drum</span>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);flex-wrap:wrap;border-block-start:1px solid var(--border-color);padding-block-start:var(--sp-4);">
+        <p style="font-size:13.5px;color:var(--text-muted);margin:0;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-inline-end:4px;"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Please note: Service turnaround and specialty care options may vary by location.
+        </p>
+        <a href="#faq" class="link-text">Ask About Your Specific Items</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 09. FEATURE: BULK & BUSINESS LAUNDRY ============ -->
+  <section class="section" id="business" aria-labelledby="bizHeading">
+    <div class="container svc-biz-grid">
+      <div class="svc-biz-copy" data-reveal>
+        <p class="eyebrow">04 &mdash; Business Laundry</p>
+        <h2 id="bizHeading">Laundry Support for Larger Loads.</h2>
+        <p>Need recurring, high-standard laundry support for a commercial business, rental property, or local organization? We offer dedicated volume washing, scheduled collection, and transparent invoice billing for commercial clients.</p>
+
+        <div class="svc-biz-pills" aria-label="Industries we serve">
+          <span class="svc-biz-pill">&bull; Caf&eacute;s &amp; Restaurants</span>
+          <span class="svc-biz-pill">&bull; Salons &amp; Barbershops</span>
+          <span class="svc-biz-pill">&bull; Fitness Studios &amp; Gyms</span>
+          <span class="svc-biz-pill">&bull; Short-Term Rentals &amp; Airbnb</span>
+          <span class="svc-biz-pill">&bull; Boutique Hospitality</span>
+          <span class="svc-biz-pill">&bull; Small Businesses &amp; Offices</span>
+          <span class="svc-biz-pill">&bull; Clinics &amp; Wellness Centers</span>
+          <span class="svc-biz-pill">&bull; Property Managers</span>
+        </div>
+
+        <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;">
+          <a href="#" class="btn btn-primary">Request a Bulk Quote</a>
+          <a href="#" class="btn btn-secondary">Contact Our Team</a>
+        </div>
+      </div>
+
+      <div class="svc-biz-media" data-reveal>
+        <img
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1000&q=80&auto=format&fit=crop"
+          alt="WashHub staff handling neatly organized commercial linen batches"
+          width="1000" height="850"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. SERVICE COMPARISON TABLE ============ -->
+  <section class="section bg-secondary" id="comparison" aria-labelledby="compHeading">
+    <div class="container" data-reveal>
+      <div style="max-width:620px;">
+        <p class="eyebrow">Service Breakdown</p>
+        <h2 id="compHeading">Which Service Fits You?</h2>
+        <p>Compare our core laundry options side by side to choose the optimal balance of time, price, and convenience.</p>
+      </div>
+
+      <!-- Desktop / Tablet Table -->
+      <div class="svc-table-wrapper" role="region" aria-label="Services Comparison Table" tabindex="0">
+        <table class="svc-table">
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Best For</th>
+              <th scope="col">Customer Involvement</th>
+              <th scope="col">Turnaround</th>
+              <th scope="col">Pricing Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <strong>Self-Service Washing</strong>
+              </th>
+              <td>Everyday household wash &amp; quick loads</td>
+              <td><span class="svc-table-pill">Self-directed</span> (load, select &amp; collect)</td>
+              <td>Customer-selected cycle (~30 min)</td>
+              <td>Flat rate per machine cycle</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <strong>Dryer Use</strong>
+              </th>
+              <td>Post-wash drying or home-washed damp loads</td>
+              <td><span class="svc-table-pill">Self-directed</span> (load &amp; set heat)</td>
+              <td>Customer-selected (~20&ndash;30 min)</td>
+              <td>Timed blocks (add minutes as needed)</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <strong>Drop &amp; Collect</strong>
+              </th>
+              <td>Busy professionals, students, vacationers</td>
+              <td><span class="svc-table-pill">Zero effort</span> (drop off &amp; pick up)</td>
+              <td>Same-day or next-day turnaround</td>
+              <td>Per kg / load weight basis</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <strong>Bulk &amp; Business</strong>
+              </th>
+              <td>Hospitality, salons, gyms &amp; rentals</td>
+              <td><span class="svc-table-pill">Managed</span> (scheduled drop or pickup)</td>
+              <td>Agreed contract turnaround</td>
+              <td>Custom volume contract / invoice</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Fallback Cards (<768px) -->
+      <div class="svc-mobile-cards" aria-label="Services Comparison Summary">
+        <div class="svc-mcard">
+          <div class="svc-mcard-header">
+            <h4>Self-Service Washing</h4>
+            <span class="svc-table-pill">Per Cycle</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Best For</span>
+            <span>Everyday loads &amp; quick washes</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Involvement</span>
+            <span>Load, select &amp; collect</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Time</span>
+            <span>~30 minutes</span>
+          </div>
+        </div>
+
+        <div class="svc-mcard">
+          <div class="svc-mcard-header">
+            <h4>Dryer Use</h4>
+            <span class="svc-table-pill">Timed Blocks</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Best For</span>
+            <span>Drying wet laundry</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Involvement</span>
+            <span>Load &amp; select heat</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Time</span>
+            <span>~20&ndash;30 minutes</span>
+          </div>
+        </div>
+
+        <div class="svc-mcard">
+          <div class="svc-mcard-header">
+            <h4>Drop &amp; Collect</h4>
+            <span class="svc-table-pill">By Weight</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Best For</span>
+            <span>Busy households &amp; professionals</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Involvement</span>
+            <span>Drop off and pick up clean</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Time</span>
+            <span>Same-day or next-day</span>
+          </div>
+        </div>
+
+        <div class="svc-mcard">
+          <div class="svc-mcard-header">
+            <h4>Bulk &amp; Business</h4>
+            <span class="svc-table-pill">Contract Invoice</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Best For</span>
+            <span>Hotels, gyms, salons &amp; rentals</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Involvement</span>
+            <span>Fully managed service</span>
+          </div>
+          <div class="svc-mcard-row">
+            <span>Time</span>
+            <span>Agreed commercial schedule</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11. EXPERIENCE PROCESS ============ -->
+  <section class="section" aria-labelledby="flowHeading">
+    <div class="container" data-reveal>
+      <div style="text-align:center;max-width:620px;margin-inline:auto;">
+        <p class="eyebrow">Facility Experience</p>
+        <h2 id="flowHeading">From Laundry Bag to Fresh Load.</h2>
+        <p>Designed from the ground up to remove stress and waiting from your laundry visit.</p>
+      </div>
+
+      <div class="svc-flow-grid" role="list">
+        <div class="svc-flow-card" role="listitem">
+          <span class="svc-flow-num">01</span>
+          <h4>Arrive</h4>
+          <p>Step into an open, well-lit, climate-controlled center with plenty of carts and folding stations.</p>
+        </div>
+
+        <div class="svc-flow-card" role="listitem">
+          <span class="svc-flow-num">02</span>
+          <h4>Choose</h4>
+          <p>Find an available washer matching your load capacity and load detergent into the tray.</p>
+        </div>
+
+        <div class="svc-flow-card" role="listitem">
+          <span class="svc-flow-num">03</span>
+          <h4>Process</h4>
+          <p>Start your cycle with a card tap. Relax on our lounge seating or step out for coffee while it washes.</p>
+        </div>
+
+        <div class="svc-flow-card" role="listitem">
+          <span class="svc-flow-num">04</span>
+          <h4>Finish</h4>
+          <p>Move laundry to the dryer or fold directly on our stainless sanitised folding tables.</p>
+        </div>
+
+        <div class="svc-flow-card" role="listitem">
+          <span class="svc-flow-num">05</span>
+          <h4>Go</h4>
+          <p>Pack your crisp, warm clothes and head back into your week with zero laundry stress left behind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12. SERVICE FAQ ACCORDION ============ -->
+  <section class="section bg-secondary" id="faq" aria-labelledby="faqHeading">
+    <div class="container" data-reveal>
+      <div style="text-align:center;max-width:620px;margin-inline:auto;">
+        <p class="eyebrow">Common Questions</p>
+        <h2 id="faqHeading">Frequently Asked Questions.</h2>
+        <p>Everything you need to know about our machines, services, detergents, and payment methods.</p>
+      </div>
+
+      <div class="svc-faq-list" role="region" aria-label="Frequently Asked Questions">
+        <!-- FAQ 1 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq1Content">
+            <span>Do I need to bring my own detergent?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq1Content">
+            <p>You are welcome to bring your preferred laundry powder, pods, or liquid detergent. For your convenience, premium single-dose eco-friendly detergents and fabric softeners are also available via our on-site automated dispensing machines.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq2Content">
+            <span>How do I choose the correct machine size?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq2Content">
+            <p>All machines have clearly visible capacity indicators on the glass door. A good rule of thumb: your dry clothes should fill no more than three-quarters of the drum, leaving hand width at the top for proper agitation and water circulation.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq3Content">
+            <span>Can I use the dryers without washing on-site?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq3Content">
+            <p>Yes. You are completely free to bring home-washed, air-dried, or damp laundry solely to use our commercial dryers. You simply pay for the dryer time blocks you require.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq4Content">
+            <span>Do you offer drop-and-collect laundry at every location?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq4Content">
+            <p>Drop-and-collect services are available at all staffed WashHub centers during attended front-desk hours (typically 8:00 AM to 6:00 PM). Self-service washing and drying remain available 7 days a week until 11:00 PM.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq5Content">
+            <span>Can businesses request recurring bulk laundry services?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq5Content">
+            <p>Yes. We support local salons, Airbnb hosts, restaurants, gym facilities, and small clinics with recurring commercial accounts, volume pricing, and dedicated commercial processing slots.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq6Content">
+            <span>Can I process large or bulky items like king-size duvets?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq6Content">
+            <p>Absolutely. Our extra-large commercial washers and high-capacity dryers are built specifically to handle heavy duvets, woollen blankets, sleeping bags, and mattress covers that do not fit in domestic household washers.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="svc-faq-item">
+          <button class="svc-faq-btn" type="button" aria-expanded="false" aria-controls="faq7Content">
+            <span>What payment methods are accepted?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="svc-faq-content" id="faq7Content">
+            <p>We accept all major contactless credit and debit cards (Visa, Mastercard, Amex), Apple Pay, Google Pay, and our contactless WashHub loyalty app. Coin payment options are also supported at select locations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 13. FINAL CONVERSION CTA ============ -->
+  <section class="section-tight" aria-label="Call to Action">
+    <div class="container">
+      <div class="svc-final-cta" data-reveal>
+        <div class="svc-final-cta-inner">
+          <p class="eyebrow">Get Started</p>
+          <h2>Choose How You Want to Do Laundry.</h2>
+          <p>Self-service, fast commercial drying, drop-and-collect convenience or customized business accounts &mdash; start with the laundry option that fits your day.</p>
+          <div class="svc-final-cta-btns">
+            <a href="index.html#locations" class="btn btn-primary btn-lg">
+              Find a Location
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="index.html#pricing" class="btn btn-ghost-inverse btn-lg">View Pricing &amp; Plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="WashHub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
+            <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">WashHub</span></span>
+      </a>
+      <p>Clean spaces, modern machines and the freedom to wash on your terms.</p>
+      <ul class="social-links" aria-label="Social media">
+        <li><a href="#" aria-label="WashHub on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v6h3v-6h2.2l.8-3H14v-1.5A1 1 0 0 1 15 8Z"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10.5 9.5 5 2.5-5 2.5Z" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a href="#" aria-label="WashHub on LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M8 10.5V17M8 7.2v.1M12.2 17v-4a2 2 0 0 1 4 0v4"/></svg></a></li>
+      </ul>
+    </div>
+
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Our services">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#selfService">Self-Service Wash</a></li>
+        <li><a href="#drying">Dryer Use</a></li>
+        <li><a href="#dropCollect">Drop &amp; Collect</a></li>
+        <li><a href="#business">Business Laundry</a></li>
+        <li><a href="#sizeGuide">Machine Size Guide</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p class="hours">Mon &ndash; Sun<br>6:00 AM &ndash; 11:00 PM<br><span>(Varies by location)</span></p>
+      <div class="footer-contact-item" style="margin-block-start:var(--sp-4);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 6 9 7 9-7"/></svg>
+        <span>hello@washhub.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.5 22 2 14.5 2 7a2 2 0 0 1 2-2Z"/></svg>
+        <span>+1 234 567 8900</span>
+      </div>
+    </div>
+
+    <div class="footer-col footer-newsletter">
+      <h4>Stay Connected</h4>
+      <p style="font-size:13.5px;color:var(--text-secondary);">Get the latest news and offers.</p>
+      <form class="newsletter-form" aria-label="Newsletter signup" novalidate>
+        <label class="sr-only" for="svcNewsletterEmail">Email address</label>
+        <input id="svcNewsletterEmail" type="email" placeholder="Your email address" required autocomplete="email">
+        <button type="submit" aria-label="Subscribe to newsletter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <p class="newsletter-status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 WashHub. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+      <a href="#" class="back-to-top" aria-label="Back to top of page">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

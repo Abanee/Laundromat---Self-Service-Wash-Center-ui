@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | WashHub Laundromat &amp; Self-Service Wash Center</title>
+  <meta name="description" content="Sign in to your WashHub account to track wash cycles in real-time, view receipts, and manage contactless machine credits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ AUTH SCREEN CONTAINER ============ -->
+  <div class="auth-screen">
+
+    <!-- Top Utility Bar: Back to Home + Theme & RTL Toggles Only -->
+    <header class="auth-top-bar" aria-label="Page controls">
+      <a href="index.html" class="auth-home-btn" aria-label="Return to WashHub Homepage">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Back to Home</span>
+      </a>
+
+      <div class="auth-top-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+          <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+
+        <button class="icon-btn dir-toggle" id="dirToggle" type="button" aria-label="Switch to right-to-left layout">
+          <span class="dir-toggle-label">RTL</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Auth Card -->
+    <main class="auth-card" id="mainContent">
+      <div class="auth-brand-center">
+        <a href="index.html" class="brand" aria-label="WashHub home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="34" height="34" fill="none">
+              <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name" style="font-size:22px;">WashHub</span>
+            <span class="brand-sub">LAUNDROMAT &amp; SELF-SERVICE</span>
+          </span>
+        </a>
+
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Sign in to manage your wash credits and view active machines.</p>
+      </div>
+
+      <!-- Feedback alert -->
+      <div id="authAlert" style="display:none;margin-block-end:var(--sp-4);" role="alert"></div>
+
+      <!-- Form Section -->
+      <form class="auth-form" id="loginForm" novalidate>
+        <div class="auth-field">
+          <label class="auth-label" for="loginEmail">Email or Phone Number</label>
+          <div class="auth-input-wrap">
+            <span class="auth-field-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <input class="auth-input" type="text" id="loginEmail" name="loginEmail" placeholder="name@domain.com or phone" required autocomplete="username">
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <div class="auth-label">
+            <label for="loginPassword">Password</label>
+            <a href="#" class="auth-link" style="font-size:12px;">Forgot password?</a>
+          </div>
+          <div class="auth-input-wrap has-eye">
+            <span class="auth-field-icon" aria-hidden="true">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input class="auth-input" type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required autocomplete="current-password">
+            <button class="auth-eye-btn" type="button" data-target="loginPassword" aria-label="Show password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-row">
+          <label class="auth-checkbox">
+            <input type="checkbox" name="rememberMe" checked>
+            <span>Remember this device</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary auth-submit-btn">
+          Sign In
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <!-- Third-Party Section: Placed AFTER Login Button -->
+      <div class="auth-divider">
+        <span>Or continue with</span>
+      </div>
+
+      <div class="auth-sso-grid">
+        <!-- Official Multi-Color Google Button -->
+        <button type="button" class="auth-sso-btn" data-provider="Google" aria-label="Sign in with Google">
+          <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <!-- Official Apple Button -->
+        <button type="button" class="auth-sso-btn apple-btn" data-provider="Apple" aria-label="Sign in with Apple">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.65-.82 1.11-1.96.98-3.12-1.01.04-2.22.68-2.92 1.5-.61.7-.1.14-1.84 2.19 1.05-.04 2.29-.75 2.89-1.57z"/>
+          </svg>
+          <span>Continue with Apple</span>
+        </button>
+      </div>
+
+      <!-- Footer switch text -->
+      <div class="auth-footer-prompt">
+        <span>Don't have an account?</span>
+        <a href="signup.html" class="auth-link">Create a new account</a>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
