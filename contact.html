@@ -38,6 +38,7 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
         <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="contact.html" class="nav-link is-active" aria-current="page">Contact</a></li>
       </ul>
@@ -80,6 +81,7 @@
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html" class="is-active" aria-current="page">Contact</a></li>
   </ul>
@@ -99,70 +101,66 @@
 
 <main id="mainContent">
 
-  <!-- ============ 1. EDITORIAL CONTACT HERO ============ -->
-  <section class="cnt-hero-section" aria-labelledby="contactHeroTitle">
-    <div class="container">
-      <div class="cnt-hero-grid">
-        <div class="cnt-hero-copy">
-          <span class="eyebrow" style="color:var(--accent-primary);">Get In Touch</span>
-          <h1 class="cnt-hero-h1" id="contactHeroTitle">We're here when you need clean, fresh laundry.</h1>
-          <p class="cnt-hero-desc">
-            Whether you have questions regarding machine availability, need drop-and-collect order updates, or require a recurring commercial laundry contract, our team is readily reachable across digital and in-person desks.
-          </p>
-          <div class="cnt-hero-badges">
-            <span class="cnt-badge-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              3 Central Wash Centers
-            </span>
-            <span class="cnt-badge-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Open Daily 6:00 AM – 11:00 PM
-            </span>
-            <span class="cnt-badge-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              24/7 Terminal Support
-            </span>
-          </div>
-        </div>
+  <!-- ============ CONTACT HERO (UNIFIED) ============ -->
+  <section class="page-hero-unified" aria-labelledby="contactHeroTitle">
+    <div class="page-hero-bg">
+      <img
+        class="page-hero-bg-img"
+        src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=1600&q=85&auto=format&fit=crop"
+        alt="Welcoming modern laundromat storefront and service entrance"
+        width="1600" height="900"
+        loading="eager"
+      >
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-container">
+      <div class="page-hero-content" data-reveal>
+        <span class="page-hero-eyebrow">Get In Touch</span>
+        <h1 id="contactHeroTitle" class="page-hero-title">We're Here When You Need Help</h1>
+        <p class="page-hero-subtitle">Have questions about machine availability, drop &amp; collect orders, or custom commercial quotes? Our branch attendants and digital support team are ready to assist.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Live Service Snapshot Card -->
-        <div class="cnt-quick-card">
-          <div class="cnt-quick-head">
-            <span class="cnt-quick-title">
-              <span class="cnt-quick-dot" aria-hidden="true"></span>
-              Live Service Desk Status
-            </span>
-            <span style="font-size:12px;color:var(--text-muted);font-weight:500;">All Systems Operational</span>
+  <!-- ============ LIVE SERVICE DESK STRIP ============ -->
+  <section class="section-sm" style="background:var(--bg-secondary);border-block-end:1px solid var(--border-color);padding-block:var(--sp-6);">
+    <div class="container" style="max-width:960px;margin-inline:auto;">
+      <div class="cnt-quick-card" style="margin:0;">
+        <div class="cnt-quick-head">
+          <span class="cnt-quick-title">
+            <span class="cnt-quick-dot" aria-hidden="true"></span>
+            Live Service Desk Status
+          </span>
+          <span style="font-size:12px;color:var(--text-muted);font-weight:500;">All Wash Centers Active</span>
+        </div>
+        <div class="cnt-quick-list" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:var(--sp-4);">
+          <div class="cnt-quick-item" style="border:none;padding:0;">
+            <div>
+              <span class="cnt-qi-label">Digital Response</span>
+              <span class="cnt-qi-sub">General &amp; drop-off inquiries</span>
+            </div>
+            <span class="cnt-qi-val">&lt; 2 hours</span>
           </div>
-          <div class="cnt-quick-list">
-            <div class="cnt-quick-item">
-              <div>
-                <span class="cnt-qi-label">Digital Response</span>
-                <span class="cnt-qi-sub">General &amp; drop-off inquiries</span>
-              </div>
-              <span class="cnt-qi-val">&lt; 2 hours</span>
+          <div class="cnt-quick-item" style="border:none;padding:0;">
+            <div>
+              <span class="cnt-qi-label">On-Site Attendants</span>
+              <span class="cnt-qi-sub">All branch service desks</span>
             </div>
-            <div class="cnt-quick-item">
-              <div>
-                <span class="cnt-qi-label">On-Site Attendants</span>
-                <span class="cnt-qi-sub">Available at all branch counters</span>
-              </div>
-              <span class="cnt-qi-val">7 AM – 9 PM</span>
+            <span class="cnt-qi-val">7 AM – 9 PM</span>
+          </div>
+          <div class="cnt-quick-item" style="border:none;padding:0;">
+            <div>
+              <span class="cnt-qi-label">Machine Terminal Hotline</span>
+              <span class="cnt-qi-sub">Instant remote support</span>
             </div>
-            <div class="cnt-quick-item">
-              <div>
-                <span class="cnt-qi-label">Machine Terminal Hotline</span>
-                <span class="cnt-qi-sub">Instant remote restart / refunds</span>
-              </div>
-              <span class="cnt-qi-val">Immediate</span>
+            <span class="cnt-qi-val">Immediate</span>
+          </div>
+          <div class="cnt-quick-item" style="border:none;padding:0;">
+            <div>
+              <span class="cnt-qi-label">Commercial B2B</span>
+              <span class="cnt-qi-sub">Custom quotes &amp; pickup</span>
             </div>
-            <div class="cnt-quick-item">
-              <div>
-                <span class="cnt-qi-label">Commercial B2B Quotes</span>
-                <span class="cnt-qi-sub">Itemized wholesale proposal</span>
-              </div>
-              <span class="cnt-qi-val">Within 24 hours</span>
-            </div>
+            <span class="cnt-qi-val">Within 24h</span>
           </div>
         </div>
       </div>
@@ -623,6 +621,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

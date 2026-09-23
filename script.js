@@ -1272,10 +1272,10 @@
         url: "about.html"
       },
       {
-        title: "Home 2 Experience & Lounge",
-        desc: "Self-service freedom, comfortable seating, gigabit Wi-Fi.",
-        category: "Home 2",
-        url: "home-2.html"
+        title: "Photo Gallery & Facilities Tour",
+        desc: "Explore modern equipment, folding areas, lounges, and machines.",
+        category: "Gallery",
+        url: "gallery.html"
       }
     ];
 
@@ -1377,6 +1377,101 @@
   }
 
   /* ============================================================
+     GALLERY INTERACTIVE FILTERING & VIEW MORE
+     ============================================================ */
+
+  function initGallery() {
+    var galleryGrid = document.getElementById("galleryGrid");
+    if (!galleryGrid) return;
+
+    var filterBtns = document.querySelectorAll(".gallery-filter-btn");
+    var searchInput = document.getElementById("gallerySearchInput");
+    var loadMoreBtn = document.getElementById("galleryLoadMoreBtn");
+    var statusCounter = document.getElementById("galleryStatusCounter");
+    var cards = Array.from(galleryGrid.querySelectorAll(".gallery-card"));
+
+    var activeCategory = "all";
+    var searchQuery = "";
+    var isExpanded = false;
+
+    function updateGalleryDisplay() {
+      var matchingCards = cards.filter(function (card) {
+        var cardCat = card.getAttribute("data-category") || "";
+        var cardTitle = (card.getAttribute("data-title") || "").toLowerCase();
+        var cardDesc = (card.getAttribute("data-desc") || "").toLowerCase();
+
+        var matchesCategory = activeCategory === "all" || cardCat === activeCategory;
+        var matchesSearch = !searchQuery || cardTitle.indexOf(searchQuery) !== -1 || cardDesc.indexOf(searchQuery) !== -1;
+
+        return matchesCategory && matchesSearch;
+      });
+
+      cards.forEach(function (card) {
+        card.classList.add("is-hidden");
+      });
+
+      var visibleLimit = isExpanded || searchQuery ? matchingCards.length : Math.min(12, matchingCards.length);
+
+      for (var i = 0; i < visibleLimit; i++) {
+        matchingCards[i].classList.remove("is-hidden");
+      }
+
+      if (statusCounter) {
+        statusCounter.textContent = "Showing " + visibleLimit + " of " + matchingCards.length + " photos";
+      }
+
+      if (loadMoreBtn) {
+        if (matchingCards.length <= 12 || searchQuery) {
+          loadMoreBtn.style.display = "none";
+        } else {
+          loadMoreBtn.style.display = "inline-flex";
+          var span = loadMoreBtn.querySelector("span");
+          if (span) {
+            span.textContent = isExpanded ? "Show Less" : "View More Photos";
+          }
+          var svg = loadMoreBtn.querySelector("svg");
+          if (svg) {
+            svg.style.transform = isExpanded ? "rotate(180deg)" : "rotate(0deg)";
+          }
+        }
+      }
+    }
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        filterBtns.forEach(function (b) {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-selected", "true");
+        activeCategory = btn.getAttribute("data-filter") || "all";
+        isExpanded = false;
+        updateGalleryDisplay();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener("input", function () {
+        searchQuery = searchInput.value.trim().toLowerCase();
+        updateGalleryDisplay();
+      });
+    }
+
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", function () {
+        isExpanded = !isExpanded;
+        updateGalleryDisplay();
+        if (!isExpanded && galleryGrid) {
+          galleryGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+
+    updateGalleryDisplay();
+  }
+
+  /* ============================================================
      INIT
      ============================================================ */
 
@@ -1387,6 +1482,7 @@
   initDropCarousel();
   initHeroCarousel();
   initSearchModal();
+  initGallery();
 
 })();
 

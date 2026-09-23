@@ -35,6 +35,7 @@
         <li><a href="about.html" class="nav-link is-active" aria-current="page">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
         <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -77,6 +78,7 @@
     <li><a href="about.html" class="is-active" aria-current="page">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -96,45 +98,35 @@
 
 <main id="main">
 
-  <!-- ============ 4/5. ABOUT HERO ============ -->
-  <section class="about-hero">
-    <div class="container about-hero-grid">
-      <div class="about-hero-copy" data-reveal>
-        <p class="eyebrow">About the Laundromat</p>
-        <h1>Built Around Better Laundry Days.</h1>
-        <p>WashHub was designed to make everyday laundry simpler, cleaner and more predictable &mdash; modern facilities, reliable equipment and a comfortable space, built for real life.</p>
-        <div class="about-hero-actions">
-          <a href="#services" class="btn btn-primary">
-            Explore Our Services
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#locations" class="link-text">Find a Location
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <div class="about-stats">
-          <div><div class="stat-num">7+</div><div class="stat-label">Convenient Locations</div></div>
-          <div><div class="stat-num">1000+</div><div class="stat-label">Happy Customers</div></div>
-          <div><div class="stat-num">4.8</div><div class="stat-label">Average Rating</div></div>
-          <div><div class="stat-num">7 Days</div><div class="stat-label">Open Every Week</div></div>
-        </div>
+  <!-- ============ ABOUT HERO (UNIFIED) ============ -->
+  <section class="page-hero-unified" aria-labelledby="aboutHeroTitle">
+    <div class="page-hero-bg">
+      <img
+        class="page-hero-bg-img"
+        src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1600&q=85&auto=format&fit=crop"
+        alt="Interior of a modern WashHub self-service laundromat with clean commercial washing machines and folding tables"
+        width="1600" height="900"
+        loading="eager"
+      >
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-container">
+      <div class="page-hero-content" data-reveal>
+        <span class="page-hero-eyebrow">About WashHub</span>
+        <h1 id="aboutHeroTitle" class="page-hero-title">Built Around Better Laundry Days</h1>
+        <p class="page-hero-subtitle">WashHub was designed to make everyday laundry simpler, cleaner, and more predictable &mdash; modern facilities, reliable equipment, and a welcoming space built for real routines.</p>
       </div>
-      <div class="about-hero-media" data-reveal>
-        <img
-          src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1200&q=80&auto=format&fit=crop"
-          alt="Interior of a modern WashHub self-service laundromat with rows of commercial washing machines and folding tables."
-          width="1200" height="900"
-          loading="eager"
-        >
-        <div class="hero-badge-float">
-          <span class="badge-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-          </span>
-          <span>
-            <strong>Open 7 Days</strong>
-            <span>Everyday convenience</span>
-          </span>
-        </div>
+    </div>
+  </section>
+
+  <!-- ============ KEY STATS STRIP ============ -->
+  <section class="section-sm" style="background:var(--bg-surface);border-block-end:1px solid var(--border-color);padding-block:var(--sp-6);">
+    <div class="container">
+      <div class="about-stats" style="border:none;padding:0;display:flex;justify-content:space-around;flex-wrap:wrap;gap:var(--sp-5);text-align:center;">
+        <div><div class="stat-num">7+</div><div class="stat-label">Convenient Locations</div></div>
+        <div><div class="stat-num">1,000+</div><div class="stat-label">Happy Customers</div></div>
+        <div><div class="stat-num">4.8 ★</div><div class="stat-label">Average Rating</div></div>
+        <div><div class="stat-num">7 Days</div><div class="stat-label">Open Every Week</div></div>
       </div>
     </div>
   </section>
@@ -154,40 +146,99 @@
     </div>
   </section>
 
-  <!-- ============ 7. BRAND STORY TIMELINE ============ -->
-  <section class="section bg-secondary">
+  <!-- ============ 7. BRAND STORY TIMELINE (VERTICAL ZIG-ZAG) ============ -->
+  <section class="about-timeline-section" aria-labelledby="timelineHeading">
     <div class="container">
-      <div data-reveal>
-        <p class="eyebrow">Our Journey</p>
-        <h2>How we got here.</h2>
+      <div data-reveal class="center">
+        <p class="eyebrow" style="color:var(--accent-primary);">Our Journey</p>
+        <h2 id="timelineHeading">How we got here.</h2>
+        <p class="section-lede mx-auto" style="max-width:55ch;">A continuous focus on reducing friction, modernizing machinery, and elevating everyday laundry care.</p>
       </div>
-      <div class="about-timeline" data-reveal>
-        <div class="about-timeline-grid">
-          <div>
-            <div class="timeline-item">
-              <span class="timeline-num">01</span>
+
+      <div class="timeline-zigzag-wrap" data-reveal>
+        <div class="timeline-zigzag-spine" aria-hidden="true"></div>
+
+        <ul class="timeline-zigzag-list">
+          <!-- Milestone 1 (Left on desktop) -->
+          <li class="timeline-zigzag-item">
+            <span class="timeline-zigzag-node" aria-hidden="true">01</span>
+            <article class="timeline-zigzag-card">
+              <div class="timeline-card-meta">
+                <span class="timeline-year-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  2021
+                </span>
+                <span class="timeline-phase-label">Phase 1 &bull; The Spark</span>
+              </div>
               <h3>Starting with simplicity</h3>
-              <p>WashHub began with a single question: why does laundry feel more complicated than it needs to? The first facility was built to remove friction &mdash; clear machines, visible pricing, no guesswork.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-num">02</span>
+              <p>WashHub began with a single question: why does laundry feel more complicated than it needs to? The first facility was built to remove friction &mdash; clear machines, visible pricing, and no guesswork.</p>
+              <div class="timeline-card-highlights">
+                <span class="timeline-tag-pill">&check; First center opened</span>
+                <span class="timeline-tag-pill">&check; Clear pricing promise</span>
+              </div>
+            </article>
+          </li>
+
+          <!-- Milestone 2 (Right on desktop) -->
+          <li class="timeline-zigzag-item">
+            <span class="timeline-zigzag-node" aria-hidden="true">02</span>
+            <article class="timeline-zigzag-card">
+              <div class="timeline-card-meta">
+                <span class="timeline-year-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  2023
+                </span>
+                <span class="timeline-phase-label">Phase 2 &bull; Facility Evolution</span>
+              </div>
               <h3>Building a better facility</h3>
               <p>We turned attention to layout, machine spacing and everyday comfort &mdash; organizing each center around how people actually move through a laundry visit, from arrival to folding.</p>
-            </div>
-          </div>
-          <div>
-            <div class="timeline-item">
-              <span class="timeline-num">03</span>
+              <div class="timeline-card-highlights">
+                <span class="timeline-tag-pill">&check; Ergonomic folding bars</span>
+                <span class="timeline-tag-pill">&check; Lounge &amp; Wi-Fi zones</span>
+              </div>
+            </article>
+          </li>
+
+          <!-- Milestone 3 (Left on desktop) -->
+          <li class="timeline-zigzag-item">
+            <span class="timeline-zigzag-node" aria-hidden="true">03</span>
+            <article class="timeline-zigzag-card">
+              <div class="timeline-card-meta">
+                <span class="timeline-year-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  2024
+                </span>
+                <span class="timeline-phase-label">Phase 3 &bull; Full Flexibility</span>
+              </div>
               <h3>Adding flexible services</h3>
               <p>As customer needs grew, so did the offering. Drop-and-collect laundry gave people a way to hand off the task entirely, without losing the transparency they'd come to expect.</p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-num">04</span>
+              <div class="timeline-card-highlights">
+                <span class="timeline-tag-pill">&check; Drop &amp; Collect launch</span>
+                <span class="timeline-tag-pill">&check; SMS cycle notifications</span>
+              </div>
+            </article>
+          </li>
+
+          <!-- Milestone 4 (Right on desktop) -->
+          <li class="timeline-zigzag-item">
+            <span class="timeline-zigzag-node" aria-hidden="true">04</span>
+            <article class="timeline-zigzag-card">
+              <div class="timeline-card-meta">
+                <span class="timeline-year-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  2026 &bull; Present
+                </span>
+                <span class="timeline-phase-label">Phase 4 &bull; Community Scale</span>
+              </div>
               <h3>Serving more everyday needs</h3>
-              <p>Today WashHub supports households, students, professionals and growing businesses alike &mdash; with the same standard of clarity and care at every location.</p>
-            </div>
-          </div>
-        </div>
+              <p>Today WashHub supports households, students, professionals and growing businesses alike &mdash; with the same standard of clarity, hygiene, and care at every location.</p>
+              <div class="timeline-card-highlights">
+                <span class="timeline-tag-pill">&check; Multi-branch expansion</span>
+                <span class="timeline-tag-pill">&check; Smart inverter tech</span>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -436,6 +487,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

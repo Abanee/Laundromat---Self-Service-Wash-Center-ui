@@ -35,6 +35,7 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link is-active" aria-current="page">Services</a></li>
         <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -77,6 +78,7 @@
     <li><a href="about.html">About</a></li>
     <li><a href="services.html" class="is-active" aria-current="page">Services</a></li>
     <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -96,71 +98,42 @@
 
 <main id="main">
 
-  <!-- ============ 01. SERVICES HERO ============ -->
-  <section class="svc-hero" aria-label="Services Overview">
-    <div class="container svc-hero-grid">
-      <div class="svc-hero-copy" data-reveal>
-        <p class="eyebrow">Services</p>
-        <h1>Laundry That Fits Your Routine.</h1>
-        <p class="svc-hero-desc">Wash it yourself, dry it on-site, or let our team handle the entire process. Choose the service that fits around your schedule and textile care needs.</p>
-        <div class="svc-hero-actions">
-          <a href="#selfService" class="btn btn-primary btn-lg">
-            Explore Services
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="index.html#pricing" class="btn btn-secondary btn-lg">View Pricing</a>
-        </div>
-        <div class="svc-hero-badges">
-          <div class="svc-hero-mini-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>No Membership Required</span>
-          </div>
-          <div class="svc-hero-mini-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Open 7 Days a Week</span>
-          </div>
-          <div class="svc-hero-mini-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Contactless Card &amp; App Pay</span>
-          </div>
-        </div>
+  <!-- ============ SERVICES HERO (UNIFIED) ============ -->
+  <section class="page-hero-unified" aria-labelledby="servicesHeroTitle">
+    <div class="page-hero-bg">
+      <img
+        class="page-hero-bg-img"
+        src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=1600&q=85&auto=format&fit=crop"
+        alt="Commercial washing machine drums and express dryers in modern laundromat"
+        width="1600" height="900"
+        loading="eager"
+      >
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-container">
+      <div class="page-hero-content" data-reveal>
+        <span class="page-hero-eyebrow">Our Services</span>
+        <h1 id="servicesHeroTitle" class="page-hero-title">Laundry That Fits Your Routine</h1>
+        <p class="page-hero-subtitle">Wash it yourself with rapid commercial machines, or leave it with our drop &amp; collect team. Transparent pricing, no memberships, and reliable facilities open 7 days a week.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="svc-hero-collage" data-reveal>
-        <div class="svc-collage-main">
-          <img
-            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1000&q=80&auto=format&fit=crop"
-            alt="Modern commercial front-loading washing machines in a bright, clean laundromat center"
-            width="1000" height="800"
-            loading="eager"
-          >
-          <div class="svc-floating-label svc-float-1">
-            <span class="svc-status-dot" aria-hidden="true"></span>
-            <strong>SELF-SERVICE</strong>
-            <span>Open daily 6am &ndash; 11pm</span>
-          </div>
+  <!-- ============ SERVICE HIGHLIGHTS STRIP ============ -->
+  <section class="section-sm" style="background:var(--bg-surface);border-block-end:1px solid var(--border-color);padding-block:var(--sp-5);">
+    <div class="container">
+      <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:var(--sp-5);">
+        <div class="svc-hero-mini-badge" style="margin:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>No Membership Required</span>
         </div>
-        <div class="svc-collage-stack">
-          <div class="svc-collage-sub">
-            <img
-              src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=600&q=80&auto=format&fit=crop"
-              alt="High-capacity commercial dryers with digital controls"
-              width="600" height="400"
-              loading="eager"
-            >
-            <div class="svc-floating-label svc-float-2">
-              <strong>DROP &amp; COLLECT</strong>
-              <span>Convenient laundry care</span>
-            </div>
-          </div>
-          <div class="svc-collage-sub">
-            <img
-              src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?w=600&q=80&auto=format&fit=crop"
-              alt="Crisp, cleanly folded white cotton towels on a folding table"
-              width="600" height="400"
-              loading="lazy"
-            >
-          </div>
+        <div class="svc-hero-mini-badge" style="margin:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Open 7 Days a Week (6 AM – 11 PM)</span>
+        </div>
+        <div class="svc-hero-mini-badge" style="margin:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Contactless Tap &amp; Mobile Pay</span>
         </div>
       </div>
     </div>
@@ -930,6 +903,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>

@@ -38,6 +38,7 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
         <li><a href="pricing.html" class="nav-link is-active" aria-current="page">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li><a href="blog.html" class="nav-link">Blog</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -80,6 +81,7 @@
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="pricing.html" class="is-active" aria-current="page">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
@@ -99,88 +101,84 @@
 
 <main id="mainContent">
 
-  <!-- ============ 1. PRICING INTRODUCTION & LIVE SNAPSHOT ============ -->
-  <section class="prc-hero-section" aria-labelledby="prcHeroTitle">
-    <div class="container">
-      <div class="prc-hero-grid">
-        <div class="prc-hero-copy">
-          <span class="eyebrow" style="color:var(--accent-primary);">Simple Rates. No Guesswork.</span>
-          <h1 class="prc-hero-h1" id="prcHeroTitle">Know the exact cost before you start.</h1>
-          <p class="prc-hero-desc">
-            Pay strictly for the drum capacity you use or the dry weight of your drop-and-collect load. 
-            Every WashHub facility features contactless tap-to-pay, clear digital timers on every machine, and zero membership barriers.
-          </p>
-          <div class="prc-hero-badges">
-            <span class="prc-badge-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-              Card, UPI & Mobile Tap
-            </span>
-            <span class="prc-badge-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              No Minimum Load
-            </span>
-            <span class="prc-badge-pill">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-              Softened Water Included
-            </span>
-          </div>
-        </div>
+  <!-- ============ PRICING HERO (UNIFIED) ============ -->
+  <section class="page-hero-unified" aria-labelledby="prcHeroTitle">
+    <div class="page-hero-bg">
+      <img
+        class="page-hero-bg-img"
+        src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1600&q=85&auto=format&fit=crop"
+        alt="Freshly folded clean linens and towels in modern laundry environment"
+        width="1600" height="900"
+        loading="eager"
+      >
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="container page-hero-container">
+      <div class="page-hero-content" data-reveal>
+        <span class="page-hero-eyebrow">Transparent Pricing</span>
+        <h1 id="prcHeroTitle" class="page-hero-title">Know the Exact Cost Before You Start</h1>
+        <p class="page-hero-subtitle">Simple, honest laundry rates. Pay strictly for the drum capacity you choose or the dry weight of your drop-and-collect load. No memberships, no surprise fees.</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="prc-snapshot-card">
-          <div class="prc-snapshot-header">
-            <span class="prc-snapshot-title">
-              <span class="prc-live-dot" aria-hidden="true"></span>
-              Live Rate Snapshot
-            </span>
-            <span class="prc-snapshot-currency">INR (₹) / All Branches</span>
-          </div>
-          <div class="prc-snapshot-list">
-            <div class="prc-snapshot-item">
-              <div class="prc-snap-left">
-                <span class="prc-snap-label">Self-Service Wash</span>
-                <span class="prc-snap-sub">Standard 8 kg cycle (30 mins)</span>
-              </div>
-              <div class="prc-snap-right">
-                <span class="prc-snap-price">₹80</span>
-                <span class="prc-snap-unit"> / cycle</span>
-              </div>
-            </div>
-            <div class="prc-snapshot-item">
-              <div class="prc-snap-left">
-                <span class="prc-snap-label">Express Dryer</span>
-                <span class="prc-snap-sub">Standard 10 kg cycle (25 mins)</span>
-              </div>
-              <div class="prc-snap-right">
-                <span class="prc-snap-price">₹60</span>
-                <span class="prc-snap-unit"> / cycle</span>
-              </div>
-            </div>
-            <div class="prc-snapshot-item">
-              <div class="prc-snap-left">
-                <span class="prc-snap-label">Drop &amp; Collect</span>
-                <span class="prc-snap-sub">Washed, dried, and hand-folded</span>
-              </div>
-              <div class="prc-snap-right">
-                <span class="prc-snap-price">₹45</span>
-                <span class="prc-snap-unit"> / kg</span>
-              </div>
-            </div>
-            <div class="prc-snapshot-item">
-              <div class="prc-snap-left">
-                <span class="prc-snap-label">Commercial / Bulk</span>
-                <span class="prc-snap-sub">Hotels, salons &amp; weekly uniforms</span>
-              </div>
-              <div class="prc-snap-right">
-                <span class="prc-snap-price">Custom</span>
-                <span class="prc-snap-unit"> / quote</span>
-              </div>
-            </div>
-          </div>
-          <p class="prc-snapshot-note">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            All washers include automatic pre-wash drum sanitization and high-speed water extraction.
-          </p>
+  <!-- ============ LIVE RATE SNAPSHOT STRIP ============ -->
+  <section class="section-sm" style="background:var(--bg-secondary);border-block-end:1px solid var(--border-color);padding-block:var(--sp-7);">
+    <div class="container" style="max-width:860px;margin-inline:auto;">
+      <div class="prc-snapshot-card" style="margin:0;">
+        <div class="prc-snapshot-header">
+          <span class="prc-snapshot-title">
+            <span class="prc-live-dot" aria-hidden="true"></span>
+            Live Rate Snapshot
+          </span>
+          <span class="prc-snapshot-currency">INR (₹) / All Branches</span>
         </div>
+        <div class="prc-snapshot-list">
+          <div class="prc-snapshot-item">
+            <div class="prc-snap-left">
+              <span class="prc-snap-label">Self-Service Wash</span>
+              <span class="prc-snap-sub">Standard 8 kg cycle (30 mins)</span>
+            </div>
+            <div class="prc-snap-right">
+              <span class="prc-snap-price">₹80</span>
+              <span class="prc-snap-unit"> / cycle</span>
+            </div>
+          </div>
+          <div class="prc-snapshot-item">
+            <div class="prc-snap-left">
+              <span class="prc-snap-label">Express Dryer</span>
+              <span class="prc-snap-sub">Standard 10 kg cycle (25 mins)</span>
+            </div>
+            <div class="prc-snap-right">
+              <span class="prc-snap-price">₹60</span>
+              <span class="prc-snap-unit"> / cycle</span>
+            </div>
+          </div>
+          <div class="prc-snapshot-item">
+            <div class="prc-snap-left">
+              <span class="prc-snap-label">Drop &amp; Collect</span>
+              <span class="prc-snap-sub">Washed, dried, and hand-folded</span>
+            </div>
+            <div class="prc-snap-right">
+              <span class="prc-snap-price">₹45</span>
+              <span class="prc-snap-unit"> / kg</span>
+            </div>
+          </div>
+          <div class="prc-snapshot-item">
+            <div class="prc-snap-left">
+              <span class="prc-snap-label">Commercial / Bulk</span>
+              <span class="prc-snap-sub">Hotels, salons &amp; weekly uniforms</span>
+            </div>
+            <div class="prc-snap-right">
+              <span class="prc-snap-price">Custom</span>
+              <span class="prc-snap-unit"> / quote</span>
+            </div>
+          </div>
+        </div>
+        <p class="prc-snapshot-note">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          All washers include automatic pre-wash drum sanitization and high-speed water extraction.
+        </p>
       </div>
     </div>
   </section>
@@ -1148,6 +1146,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
