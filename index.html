@@ -43,7 +43,7 @@
     </nav>
 
     <div class="header-actions">
-      <button class="icon-btn" type="button" aria-label="Search">
+      <button class="icon-btn search-toggle" id="searchBtn" type="button" aria-label="Search WashHub">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       </button>
       <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
@@ -189,12 +189,50 @@
           </div>
         </div>
 
-        <!-- Right Column: Elevated Visual with Overlapping Status Card -->
+        <!-- Right Column: Elevated Visual Carousel with Overlapping Status Card -->
         <div class="hero-glass-right">
           <div class="hero-visual-wrap">
-            <div class="hero-machine-frame">
-              <img class="hero-machine-photo" src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=1200&q=85" alt="Pristine stainless steel front-load washing machines operating in a clean modern laundromat" loading="eager">
-              <div class="hero-machine-sheen" aria-hidden="true"></div>
+            <div class="hero-carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="WashHub Facility Highlights">
+              <div class="hero-carousel-slides">
+                <!-- Slide 1 -->
+                <div class="hero-carousel-slide is-active" data-hero-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 4: Folded fresh warm laundry">
+                  <img class="hero-machine-photo" src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=1200&q=85" alt="Clean, neatly folded fresh knitwear and warm laundry" loading="eager">
+                  <div class="hero-machine-sheen" aria-hidden="true"></div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-carousel-slide" data-hero-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 4: Front-load commercial washers">
+                  <img class="hero-machine-photo" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1200&q=85" alt="Pristine stainless steel front-load washing machines operating in a clean modern laundromat" loading="lazy">
+                  <div class="hero-machine-sheen" aria-hidden="true"></div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="hero-carousel-slide" data-hero-slide="2" role="group" aria-roledescription="slide" aria-label="3 of 4: Clean towels and folding area">
+                  <img class="hero-machine-photo" src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=85" alt="Fluffy fresh folded towels and laundry basket" loading="lazy">
+                  <div class="hero-machine-sheen" aria-hidden="true"></div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="hero-carousel-slide" data-hero-slide="3" role="group" aria-roledescription="slide" aria-label="4 of 4: Ready canvas laundry totes">
+                  <img class="hero-machine-photo" src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?auto=format&fit=crop&w=1200&q=85" alt="Spacious clean folding counter with eco canvas bags ready for collection" loading="lazy">
+                  <div class="hero-machine-sheen" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls: Indicators & Chevrons -->
+              <div class="hero-carousel-controls">
+                <div class="hero-carousel-dots" role="tablist" aria-label="Hero slide pagination">
+                  <button type="button" class="hero-carousel-dot is-active" data-slide-index="0" aria-label="Go to slide 1"></button>
+                  <button type="button" class="hero-carousel-dot" data-slide-index="1" aria-label="Go to slide 2"></button>
+                  <button type="button" class="hero-carousel-dot" data-slide-index="2" aria-label="Go to slide 3"></button>
+                  <button type="button" class="hero-carousel-dot" data-slide-index="3" aria-label="Go to slide 4"></button>
+                </div>
+                <div class="hero-carousel-arrows">
+                  <button type="button" class="hero-carousel-btn" id="heroPrevBtn" aria-label="Previous slide">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                  </button>
+                  <button type="button" class="hero-carousel-btn" id="heroNextBtn" aria-label="Next slide">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
             </div>
 
             <!-- Floating Machine Status / Location Card (Vector Icons, No Emojis) -->
@@ -225,44 +263,44 @@
   <section class="quick-actions" aria-label="Quick actions">
     <div class="container quick-actions-grid">
       <a class="quick-action" href="#locations">
-        <span class="qa-icon">
+        <span class="qa-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
         </span>
         <span class="qa-text">
           <strong>Find a Location</strong>
-          See centers near you with hours and directions
+          <span>See centers near you with hours and directions</span>
         </span>
-        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="quick-action" href="#availability">
-        <span class="qa-icon">
+        <span class="qa-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="12" cy="13.3" r="4.3"/></svg>
         </span>
         <span class="qa-text">
           <strong>Check Machines</strong>
-          View real-time availability before you go
+          <span>View real-time availability before you go</span>
         </span>
-        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="quick-action" href="#pricing">
-        <span class="qa-icon">
+        <span class="qa-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m20.6 12.3-8-8H4v8.6l8 8a1.4 1.4 0 0 0 2 0l6.6-6.6a1.4 1.4 0 0 0 0-2Z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg>
         </span>
         <span class="qa-text">
           <strong>View Pricing</strong>
-          Transparent rates with no hidden fees
+          <span>Transparent rates with no hidden fees</span>
         </span>
-        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="quick-action" href="#drop-collect">
-        <span class="qa-icon">
+        <span class="qa-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.4 11.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
         </span>
         <span class="qa-text">
           <strong>Drop &amp; Collect</strong>
-          Prefer to leave it to us? We'll handle the rest
+          <span>Prefer to leave it to us? We'll handle the rest</span>
         </span>
-        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <svg class="qa-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
   </section>
@@ -737,11 +775,11 @@
         </div>
       </div>
 
-      <div class="am-bento-grid">
-        <!-- Featured Card: Work & Lounge -->
-        <article class="am-card am-card-featured">
+      <div class="am-zigzag-list">
+        <!-- Amenity Row 1: Wi-Fi & Lounge (Copy Left, Image Right) -->
+        <article class="am-zigzag-card">
           <div class="am-featured-copy">
-            <span class="am-icon-badge">
+            <span class="am-icon-badge" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
             </span>
             <div>
@@ -755,67 +793,91 @@
             </div>
           </div>
           <div class="am-featured-photo">
-            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=700&q=80" alt="Clean modern coworking lounge with wooden tables and warm ambient lighting" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=800&q=80" alt="Clean modern coworking lounge with wooden tables and warm ambient lighting" loading="lazy">
           </div>
         </article>
 
-        <!-- Card 2: SMS Alerts -->
-        <article class="am-card">
-          <span class="am-icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </span>
-          <div>
-            <h3>Smart SMS "Cycle Done" Alerts</h3>
-            <p>Step out for groceries, take a walk, or grab lunch. Our machines send an automatic SMS notification to your phone 5 minutes before your cycle completes.</p>
+        <!-- Amenity Row 2: SMS Alerts (Image Left, Copy Right - Zig-Zag) -->
+        <article class="am-zigzag-card">
+          <div class="am-featured-copy">
+            <span class="am-icon-badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </span>
+            <div>
+              <h3>Smart SMS "Cycle Done" Alerts</h3>
+              <p>Step out for groceries, take a walk, or grab lunch. Our machines send an automatic SMS notification to your phone 5 minutes before your cycle completes so you never have to wait around.</p>
+            </div>
+            <div class="am-perk-chips">
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No Waiting In Line</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-Time Progress</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero App Download Required</span>
+            </div>
           </div>
-          <div class="am-perk-chips">
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No Waiting In Line</span>
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero App Download Required</span>
-          </div>
-        </article>
-
-        <!-- Card 3: Artisan Coffee & Refreshments -->
-        <article class="am-card">
-          <span class="am-icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8ZM6 1v3M10 1v3M14 1v3"/></svg>
-          </span>
-          <div>
-            <h3>Artisan Bean-to-Cup Coffee</h3>
-            <p>Enjoy freshly ground specialty espresso, cappuccinos, teas, and cold filtered hydration while your clothes are being cared for.</p>
-          </div>
-          <div class="am-perk-chips">
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fresh Ground Espresso</span>
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Filtered Water Station</span>
+          <div class="am-featured-photo">
+            <img src="https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=800&q=80" alt="Modern smartphone showing live digital notifications" loading="lazy">
           </div>
         </article>
 
-        <!-- Card 4: HEPA Air Sanitization -->
-        <article class="am-card">
-          <span class="am-icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
-          </span>
-          <div>
-            <h3>HEPA H14 Air Sanitization</h3>
-            <p>Our dedicated ventilation system runs medical-grade HEPA filters that continuously capture airborne lint, dust, and allergens, keeping the air fresh and odorless.</p>
+        <!-- Amenity Row 3: Artisan Coffee (Copy Left, Image Right - Zig-Zag) -->
+        <article class="am-zigzag-card">
+          <div class="am-featured-copy">
+            <span class="am-icon-badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8ZM6 1v3M10 1v3M14 1v3"/></svg>
+            </span>
+            <div>
+              <h3>Artisan Bean-to-Cup Coffee &amp; Refreshments</h3>
+              <p>Enjoy freshly ground specialty espresso, cappuccinos, organic herbal teas, and cold filtered hydration while your clothes are being cared for in our relaxing lounge space.</p>
+            </div>
+            <div class="am-perk-chips">
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fresh Ground Espresso</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Filtered Water Station</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cafe Seating</span>
+            </div>
           </div>
-          <div class="am-perk-chips">
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Continuous Airflow</span>
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 99.97% Allergen Removal</span>
+          <div class="am-featured-photo">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Artisan coffee machine in a clean modern cafe environment" loading="lazy">
           </div>
         </article>
 
-        <!-- Card 5: Cashless Contactless Payments -->
-        <article class="am-card">
-          <span class="am-icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          </span>
-          <div>
-            <h3>100% Cashless Tap &amp; Pay</h3>
-            <p>No loose quarters, no coin jams. Tap your credit card, debit card, Apple Pay, Google Pay, or WashHub keycard at any machine in under 2 seconds.</p>
+        <!-- Amenity Row 4: HEPA Air Sanitization (Image Left, Copy Right - Zig-Zag) -->
+        <article class="am-zigzag-card">
+          <div class="am-featured-copy">
+            <span class="am-icon-badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+            </span>
+            <div>
+              <h3>Medical-Grade HEPA H14 Air Sanitization</h3>
+              <p>Our dedicated ventilation system runs medical-grade HEPA filters that continuously capture airborne lint, dust, and micro-allergens, keeping the indoor atmosphere fresh, crisp, and 100% odorless.</p>
+            </div>
+            <div class="am-perk-chips">
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Continuous Airflow</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 99.97% Allergen Removal</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Clean Odorless Space</span>
+            </div>
           </div>
-          <div class="am-perk-chips">
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Contactless NFC</span>
-            <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instant Digital Receipts</span>
+          <div class="am-featured-photo">
+            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=800&q=80" alt="Bright and spotless laundromat interior with fresh clean atmosphere" loading="lazy">
+          </div>
+        </article>
+
+        <!-- Amenity Row 5: Cashless Contactless Payments (Copy Left, Image Right - Zig-Zag) -->
+        <article class="am-zigzag-card">
+          <div class="am-featured-copy">
+            <span class="am-icon-badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </span>
+            <div>
+              <h3>100% Cashless Contactless Payments</h3>
+              <p>No loose quarters, no coin jams, and no fuss. Tap your credit card, debit card, Apple Pay, Google Pay, or WashHub keycard at any machine in under 2 seconds with instant digital receipts.</p>
+            </div>
+            <div class="am-perk-chips">
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Contactless NFC &amp; UPI</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instant Digital Receipts</span>
+              <span class="am-perk-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero Coins Needed</span>
+            </div>
+          </div>
+          <div class="am-featured-photo">
+            <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=800&q=80" alt="Person paying with contactless terminal card" loading="lazy">
           </div>
         </article>
       </div>
@@ -1005,54 +1067,146 @@
   <section class="location-section" id="locations">
     <div class="container location-grid">
       <div class="location-intro">
-        <p class="eyebrow">Near you</p>
-        <h2>Your next wash is closer than you think.</h2>
-        <p class="section-lede">Find a clean, convenient and well-equipped center near you.</p>
-        <a href="#" class="btn btn-secondary">View All Locations</a>
+        <div class="location-intro-content">
+          <p class="eyebrow">Near you</p>
+          <h2>Your next wash is closer than you think.</h2>
+          <p class="section-lede">Find a clean, convenient and well-equipped wash center near you.</p>
+        </div>
+        <div class="location-intro-cta">
+          <a href="contact.html" class="btn btn-secondary">View All Locations</a>
+        </div>
       </div>
 
       <article class="location-card">
-        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=700&q=80" alt="Exterior storefront of a modern laundromat" loading="lazy">
-        <div class="location-card-body">
-          <h3>Downtown Center</h3>
-          <p class="location-address">123 Main Street, Business District<br>New York, NY 10001</p>
-          <ul class="location-meta">
-            <li class="is-open">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div class="location-media-wrap">
+          <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=800&q=80" alt="Exterior storefront of modern WashHub center" loading="lazy">
+          <div class="location-card-badges">
+            <span class="location-live-chip">
+              <span class="pulse-dot"></span>
               Open now · Closes 11:00 PM
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="12" cy="13.3" r="4.3"/></svg>
-              7 washers available · 5 dryers available
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
+            </span>
+            <span class="location-dist-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
               0.8 km away
+            </span>
+          </div>
+        </div>
+
+        <div class="location-card-body">
+          <div class="location-title-row">
+            <h3>Downtown Flagship Center</h3>
+            <p class="location-address">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              123 Main Street, Business District, New York, NY 10001
+            </p>
+          </div>
+
+          <div class="location-stats-row">
+            <div class="loc-stat-box">
+              <span class="loc-stat-val">7</span>
+              <span class="loc-stat-lbl">Washers Free</span>
+            </div>
+            <div class="loc-stat-box">
+              <span class="loc-stat-val">5</span>
+              <span class="loc-stat-lbl">Dryers Free</span>
+            </div>
+            <div class="loc-stat-box">
+              <span class="loc-stat-val">24/7</span>
+              <span class="loc-stat-lbl">Lounge Access</span>
+            </div>
+          </div>
+
+          <ul class="location-perks-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Free gigabit Wi-Fi &amp; quiet co-working bar
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Automatic eco detergent &amp; fabric conditioner included
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Contactless tap to pay (Apple Pay, Google Pay, Cards)
             </li>
           </ul>
-          <a href="#" class="btn btn-primary btn-compact">View Location</a>
+
+          <div class="location-card-actions">
+            <a href="contact.html" class="btn btn-primary">View Center Details</a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Get Directions
+            </a>
+          </div>
         </div>
       </article>
 
       <div class="testimonials">
-        <div class="testimonials-head">
-          <h3>What our customers say</h3>
-          <a href="#">View all</a>
+        <div class="testimonials-head-card">
+          <div>
+            <h3>What our customers say</h3>
+            <p class="testimonials-sub">Verified ratings from local wash center visitors.</p>
+          </div>
+          <div class="testimonials-rating-summary">
+            <span class="t-score">4.9</span>
+            <div class="t-stars-col">
+              <div class="t-stars-svg" aria-label="5 stars">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="t-reviews-count">380+ reviews</span>
+            </div>
+          </div>
         </div>
+
         <blockquote class="testimonial">
-          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-          <p>"Clean machines, straightforward pricing and no waiting around. My go-to laundry spot."</p>
+          <div class="t-card-top">
+            <div class="stars-svg-row" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-verified-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Verified Customer
+            </span>
+          </div>
+          <p>"Clean machines, straightforward pricing and no waiting around. I can set my wash, plug in my laptop at the lounge bar, and get real work done in peace."</p>
           <footer>
             <span class="avatar" aria-hidden="true">S</span>
-            <span><strong>Sarah M.</strong>Regular customer</span>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Weekly Regular · Downtown</span>
+            </div>
           </footer>
         </blockquote>
+
         <blockquote class="testimonial">
-          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-          <p>"Always clean, great service and super convenient hours. Highly recommended!"</p>
+          <div class="t-card-top">
+            <div class="stars-svg-row" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-verified-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Verified Customer
+            </span>
+          </div>
+          <p>"Always spotlessly clean, great mobile notifications when your dryer finishes, and super convenient hours. Best laundromat in the city hands down."</p>
           <footer>
             <span class="avatar" aria-hidden="true">J</span>
-            <span><strong>James T.</strong>Local resident</span>
+            <div>
+              <strong>James T.</strong>
+              <span>Local Resident · East Side</span>
+            </div>
           </footer>
         </blockquote>
       </div>
@@ -1170,6 +1324,35 @@
     </div>
   </div>
 </footer>
+
+<!-- ============ INTERACTIVE SEARCH MODAL ============ -->
+<div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search WashHub" hidden>
+  <div class="search-modal-backdrop" id="searchBackdrop"></div>
+  <div class="search-modal-container">
+    <div class="search-modal-box">
+      <div class="search-input-header">
+        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="siteSearchInput" class="site-search-input" placeholder="Search machines, pricing, locations, drop & collect..." autocomplete="off">
+        <button type="button" class="search-modal-close" id="searchCloseBtn" aria-label="Close search dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="search-quick-tags">
+        <span class="search-quick-label">Popular:</span>
+        <button type="button" class="search-tag-chip" data-search-term="machines">Check Machines</button>
+        <button type="button" class="search-tag-chip" data-search-term="pricing">View Pricing</button>
+        <button type="button" class="search-tag-chip" data-search-term="downtown">Downtown Center</button>
+        <button type="button" class="search-tag-chip" data-search-term="drop & collect">Drop &amp; Collect</button>
+        <button type="button" class="search-tag-chip" data-search-term="eco">Eco Washing</button>
+      </div>
+
+      <div class="search-results-list" id="searchResultsList" role="region" aria-live="polite">
+        <!-- Dynamically populated via script.js -->
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

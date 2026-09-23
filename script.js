@@ -1013,6 +1013,370 @@
   }
 
   /* ============================================================
+     HOME 2 — DROP & COLLECT CAROUSEL
+     ============================================================ */
+  function initDropCarousel() {
+    var carousel = document.getElementById("dropCarousel");
+    if (!carousel) return;
+
+    var slides = carousel.querySelectorAll(".h2-carousel-slide");
+    var dots = carousel.querySelectorAll(".h2-carousel-dot");
+    var prevBtn = document.getElementById("carouselPrevBtn");
+    var nextBtn = document.getElementById("carouselNextBtn");
+    var stageLabel = document.getElementById("carouselStageLabel");
+    var steps = document.querySelectorAll(".h2-drop-step");
+
+    if (!slides.length) return;
+
+    var currentIndex = 0;
+    var stages = [
+      "Stage 1 of 4 · Drop-off",
+      "Stage 2 of 4 · Eco Wash",
+      "Stage 3 of 4 · Dry & Fold",
+      "Stage 4 of 4 · Ready for Pickup"
+    ];
+    var timer = null;
+
+    function goToSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      currentIndex = index;
+
+      slides.forEach(function (slide, i) {
+        if (i === currentIndex) {
+          slide.classList.add("is-active");
+        } else {
+          slide.classList.remove("is-active");
+        }
+      });
+
+      dots.forEach(function (dot, i) {
+        if (i === currentIndex) {
+          dot.classList.add("is-active");
+        } else {
+          dot.classList.remove("is-active");
+        }
+      });
+
+      steps.forEach(function (step, i) {
+        if (i === currentIndex) {
+          step.classList.add("is-active");
+        } else {
+          step.classList.remove("is-active");
+        }
+      });
+
+      if (stageLabel && stages[currentIndex]) {
+        stageLabel.textContent = stages[currentIndex];
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        goToSlide(currentIndex - 1);
+        resetTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        goToSlide(currentIndex + 1);
+        resetTimer();
+      });
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        goToSlide(i);
+        resetTimer();
+      });
+    });
+
+    steps.forEach(function (step, i) {
+      step.addEventListener("click", function () {
+        goToSlide(i);
+        resetTimer();
+      });
+      step.addEventListener("mouseenter", function () {
+        goToSlide(i);
+        stopTimer();
+      });
+      step.addEventListener("mouseleave", function () {
+        startTimer();
+      });
+    });
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(function () {
+        goToSlide(currentIndex + 1);
+      }, 4500);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function resetTimer() {
+      stopTimer();
+      startTimer();
+    }
+
+    carousel.addEventListener("mouseenter", stopTimer);
+    carousel.addEventListener("mouseleave", startTimer);
+
+    startTimer();
+  }
+
+  /* ============================================================
+     HOME 1 — HERO CAROUSEL CONTROLLER
+     ============================================================ */
+  function initHeroCarousel() {
+    var carousel = document.getElementById("heroCarousel");
+    if (!carousel) return;
+
+    var slides = carousel.querySelectorAll(".hero-carousel-slide");
+    var dots = carousel.querySelectorAll(".hero-carousel-dot");
+    var prevBtn = document.getElementById("heroPrevBtn");
+    var nextBtn = document.getElementById("heroNextBtn");
+    var currentIndex = 0;
+    var timer = null;
+
+    if (!slides.length) return;
+
+    function goToSlide(index) {
+      if (index >= slides.length) index = 0;
+      if (index < 0) index = slides.length - 1;
+      currentIndex = index;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("is-active", i === currentIndex);
+      });
+
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("is-active", i === currentIndex);
+        dot.setAttribute("aria-selected", String(i === currentIndex));
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        goToSlide(currentIndex - 1);
+        resetTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        goToSlide(currentIndex + 1);
+        resetTimer();
+      });
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        goToSlide(i);
+        resetTimer();
+      });
+    });
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(function () {
+        goToSlide(currentIndex + 1);
+      }, 4200);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function resetTimer() {
+      stopTimer();
+      startTimer();
+    }
+
+    carousel.addEventListener("mouseenter", stopTimer);
+    carousel.addEventListener("mouseleave", startTimer);
+
+    startTimer();
+  }
+
+  /* ============================================================
+     GLOBAL SEARCH MODAL CONTROLLER
+     ============================================================ */
+  function initSearchModal() {
+    var searchBtns = document.querySelectorAll("#searchBtn, .search-toggle");
+    var modal = document.getElementById("searchModal");
+    if (!modal) return;
+
+    var backdrop = document.getElementById("searchBackdrop");
+    var closeBtn = document.getElementById("searchCloseBtn");
+    var input = document.getElementById("siteSearchInput");
+    var resultsList = document.getElementById("searchResultsList");
+    var tagChips = modal.querySelectorAll(".search-tag-chip");
+
+    var searchData = [
+      {
+        title: "Real-Time Machine Availability",
+        desc: "Live washer and dryer counts before you visit.",
+        category: "Machines",
+        url: "index.html#availability"
+      },
+      {
+        title: "Downtown Center Location",
+        desc: "452 Grand Avenue · Open 6am–11pm · 12 machines ready.",
+        category: "Locations",
+        url: "index.html#locations"
+      },
+      {
+        title: "Self-Service Wash Rates & Pricing",
+        desc: "Transparent washer, dryer, and detergent prices.",
+        category: "Pricing",
+        url: "pricing.html"
+      },
+      {
+        title: "Drop & Collect Service",
+        desc: "Drop off in 60 seconds; we wash, dry, fold & seal.",
+        category: "Services",
+        url: "services.html"
+      },
+      {
+        title: "Fabric & Load Advisor",
+        desc: "Get machine size & cycle recommendations for your load.",
+        category: "Tool",
+        url: "index.html#fabricAdvisor"
+      },
+      {
+        title: "Eco-Smart Technology & Washing",
+        desc: "High-efficiency commercial drums using 30% less water.",
+        category: "Eco",
+        url: "index.html#ecoSmart"
+      },
+      {
+        title: "Opening Hours & Contact Centers",
+        desc: "Open 7 days a week from 6:00 AM to 11:00 PM.",
+        category: "Hours",
+        url: "contact.html"
+      },
+      {
+        title: "WashHub About & Standards",
+        desc: "Our mission: making laundry seamless and stress-free.",
+        category: "About",
+        url: "about.html"
+      },
+      {
+        title: "Home 2 Experience & Lounge",
+        desc: "Self-service freedom, comfortable seating, gigabit Wi-Fi.",
+        category: "Home 2",
+        url: "home-2.html"
+      }
+    ];
+
+    function renderResults(query) {
+      if (!resultsList) return;
+      var q = (query || "").trim().toLowerCase();
+      var filtered = searchData.filter(function (item) {
+        if (!q) return true;
+        return item.title.toLowerCase().includes(q) ||
+               item.desc.toLowerCase().includes(q) ||
+               item.category.toLowerCase().includes(q);
+      });
+
+      if (!filtered.length) {
+        resultsList.innerHTML = '<div class="search-no-results">No results found for "' + escapeHtml(q) + '". Try searching for <strong>pricing</strong>, <strong>machines</strong>, or <strong>locations</strong>.</div>';
+        return;
+      }
+
+      var html = "";
+      filtered.forEach(function (item) {
+        html += '<a href="' + item.url + '" class="search-result-item">' +
+                  '<div class="search-res-left">' +
+                    '<div class="search-res-title">' + escapeHtml(item.title) + '</div>' +
+                    '<div class="search-res-desc">' + escapeHtml(item.desc) + '</div>' +
+                  '</div>' +
+                  '<span class="search-res-badge">' + escapeHtml(item.category) + '</span>' +
+                '</a>';
+      });
+      resultsList.innerHTML = html;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function openModal() {
+      modal.removeAttribute("hidden");
+      void modal.offsetWidth;
+      modal.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+      renderResults(input ? input.value : "");
+      if (input) {
+        setTimeout(function () { input.focus(); }, 50);
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      document.body.style.overflow = "";
+      setTimeout(function () {
+        modal.setAttribute("hidden", "true");
+      }, 250);
+    }
+
+    searchBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    if (backdrop) backdrop.addEventListener("click", closeModal);
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+    if (input) {
+      input.addEventListener("input", function () {
+        renderResults(input.value);
+      });
+    }
+
+    tagChips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var term = chip.getAttribute("data-search-term") || "";
+        if (input) {
+          input.value = term;
+          input.focus();
+        }
+        renderResults(term);
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        closeModal();
+      }
+    });
+
+    if (resultsList) {
+      resultsList.addEventListener("click", function (e) {
+        if (e.target.closest("a")) {
+          closeModal();
+        }
+      });
+    }
+  }
+
+  /* ============================================================
      INIT
      ============================================================ */
 
@@ -1020,6 +1384,9 @@
   initDir();
   initAuth();
   initFabricAssistant();
+  initDropCarousel();
+  initHeroCarousel();
+  initSearchModal();
 
 })();
 
