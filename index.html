@@ -12,8 +12,6 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
@@ -66,7 +64,7 @@
   </div>
 </header>
 
-<!-- ============ MOBILE NAV ============ -->
+<!-- ============ MOBILE NAV DRAWER ============ -->
 <div class="mobile-nav-scrim" id="mobileScrim" aria-hidden="true"></div>
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
   <div class="mobile-nav-head">
@@ -101,103 +99,124 @@
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="status-pill">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          Live machine status
-          <span class="status-pill-sep">Updated 2 minutes ago</span>
-        </p>
-        <h1 class="hero-heading">Fresh clothes.<br><span class="accent-ink">Brighter</span> days.</h1>
-        <p class="hero-sub">Modern self-service laundromat with real-time machine availability, fair pricing and clean, comfortable facilities.</p>
-        <div class="hero-actions">
-          <a href="#locations" class="btn btn-primary btn-lg">
-            Find a Wash Center
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#pricing" class="btn btn-secondary btn-lg">View Prices</a>
-        </div>
+  <!-- ============ EDITORIAL GLASSMORPHISM HERO SECTION ============ -->
+  <section class="hero-editorial" id="hero" aria-label="Welcome to WashHub">
+    <!-- Immersive Background Photography & Ambient Overlay -->
+    <div class="hero-bg-wrapper" aria-hidden="true">
+      <img class="hero-bg-img" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=2000&q=85" alt="" loading="eager" fetchpriority="high">
+      <div class="hero-bg-overlay"></div>
+    </div>
 
-        <ul class="hero-chips">
-          <li class="hero-chip">
-            <span class="chip-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M18.4 6l-2 2M22 13h-3M18.4 20l-2-2M12 22v-3M5.6 20l2-2M2 13h3M5.6 6l2 2"/><circle cx="12" cy="13" r="4"/></svg>
-            </span>
-            <span>
-              <strong>Clean facilities</strong>
-              A healthier wash for a brighter you
-            </span>
-          </li>
-          <li class="hero-chip">
-            <span class="chip-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-            </span>
-            <span>
-              <strong>Flexible hours</strong>
-              Wash on your schedule
-            </span>
-          </li>
-          <li class="hero-chip">
-            <span class="chip-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-            </span>
-            <span>
-              <strong>Fair pricing</strong>
-              No hidden fees
-            </span>
-          </li>
-          <li class="hero-chip">
-            <span class="chip-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
-            </span>
-            <span>
-              <strong>Multiple locations</strong>
-              Always near you
-            </span>
-          </li>
-        </ul>
-      </div>
+    <!-- Center Glassmorphism Content Panel -->
+    <div class="hero-glass-container">
 
-      <div class="hero-visual">
-        <figure class="hero-photo">
-          <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1400&q=80" alt="Row of modern commercial washing machines in a bright laundromat interior, with folded towels on a wooden table in front">
-          <span class="hero-photo-caption">Wash. Dry. Fold. Repeat.</span>
-          <span class="hero-photo-side">Good clothes.<br>Happier people.</span>
-        </figure>
+      <!-- Two-Column Editorial Body -->
+      <div class="hero-glass-body">
 
-        <div class="status-panel" role="group" aria-label="Live machine availability at Downtown Center">
-          <div class="status-panel-head">
-            <span class="status-panel-loc">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
-              Today at Downtown Center
-            </span>
-            <button type="button" class="status-panel-change">Change location <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <!-- Left Column: Copy, CTAs & 2x2 Feature Cards -->
+        <div class="hero-glass-left">
+          <!-- Live Status Badge (Pulse Dot, No Emojis) -->
+          <div class="hero-live-badge">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span class="badge-status-text">Machines Available</span>
+            <span class="badge-dot-divider" aria-hidden="true"></span>
+            <span class="badge-time-text">Updated 2 minutes ago</span>
           </div>
-          <div class="status-panel-body">
-            <div class="status-metric">
-              <span class="status-metric-icon washer-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="13" r="5"/><circle cx="8" cy="6.2" r=".9" fill="currentColor" stroke="none"/></svg>
+
+          <!-- Editorial Headline -->
+          <h1 class="hero-glass-headline">
+            Fresh clothes.<br>
+            <span class="hero-teal-word">Brighter</span> days.
+          </h1>
+
+          <!-- Description -->
+          <p class="hero-glass-desc">
+            Modern self-service laundry with real-time machine availability, simple pricing, and clean, comfortable facilities.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-glass-actions">
+            <a href="#locations" class="btn btn-hero-primary">
+              <span>Find a Wash Center</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#pricing" class="btn btn-hero-secondary">
+              <span>View Prices</span>
+            </a>
+          </div>
+
+          <!-- 2x2 Benefit Cards Grid (Vector Icons, No Emojis) -->
+          <div class="hero-benefit-grid">
+            <div class="hero-benefit-card">
+              <span class="hero-benefit-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M18.4 6l-2 2M22 13h-3M18.4 20l-2-2M12 22v-3M5.6 20l2-2M2 13h3M5.6 6l2 2"/><circle cx="12" cy="13" r="4"/></svg>
               </span>
-              <span class="status-metric-text">
-                <strong>Washers</strong>
-                <span class="status-metric-value">8 <em>Available</em></span>
-                <span class="status-metric-note">4 in use · 12 total</span>
-              </span>
+              <div class="hero-benefit-text">
+                <strong>Clean facilities</strong>
+                <span>A healthier wash for a brighter you</span>
+              </div>
             </div>
-            <div class="status-metric">
-              <span class="status-metric-icon dryer-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="13" r="5"/><path d="M12 10.2c1.6 0 2.8 1.3 2.8 2.8S13.6 15.8 12 15.8"/></svg>
+
+            <div class="hero-benefit-card">
+              <span class="hero-benefit-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
               </span>
-              <span class="status-metric-text">
-                <strong>Dryers</strong>
-                <span class="status-metric-value">5 <em>Available</em></span>
-                <span class="status-metric-note">3 in use · 8 total</span>
+              <div class="hero-benefit-text">
+                <strong>Flexible hours</strong>
+                <span>Wash on your schedule</span>
+              </div>
+            </div>
+
+            <div class="hero-benefit-card">
+              <span class="hero-benefit-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
               </span>
+              <div class="hero-benefit-text">
+                <strong>Fair pricing</strong>
+                <span>No hidden fees</span>
+              </div>
+            </div>
+
+            <div class="hero-benefit-card">
+              <span class="hero-benefit-icon" aria-hidden="true">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+              </span>
+              <div class="hero-benefit-text">
+                <strong>Multiple locations</strong>
+                <span>Always near you</span>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Right Column: Elevated Visual with Overlapping Status Card -->
+        <div class="hero-glass-right">
+          <div class="hero-visual-wrap">
+            <div class="hero-machine-frame">
+              <img class="hero-machine-photo" src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=1200&q=85" alt="Pristine stainless steel front-load washing machines operating in a clean modern laundromat" loading="eager">
+              <div class="hero-machine-sheen" aria-hidden="true"></div>
+            </div>
+
+            <!-- Floating Machine Status / Location Card (Vector Icons, No Emojis) -->
+            <div class="hero-floating-status" role="region" aria-label="Machine status at Downtown Center">
+              <div class="floating-status-header">
+                <span class="floating-pin-icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
+                </span>
+                <span class="floating-center-name">Today at Downtown Center</span>
+              </div>
+              <div class="floating-status-count">
+                <span class="count-number">12</span>
+                <span class="count-label">machines available</span>
+              </div>
+              <a href="#locations" class="floating-change-link">
+                <span>Change location</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -536,7 +555,7 @@
           <h2>Quick pricing snapshot</h2>
           <p class="section-lede">Great value for everyday laundry needs.</p>
         </div>
-        <a href="#" class="btn btn-secondary">See Full Pricing</a>
+        <a href="pricing.html" class="btn btn-secondary">See Full Pricing</a>
       </div>
 
       <div class="pricing-rows">
@@ -603,43 +622,51 @@
 
       <ol class="steps-row">
         <li class="step">
-          <span class="step-num">01</span>
-          <span class="step-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="12" cy="13.3" r="4.3"/></svg>
-          </span>
+          <div class="step-head">
+            <span class="step-num">01</span>
+            <span class="step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="12" cy="13.3" r="4.3"/></svg>
+            </span>
+          </div>
           <h3>Choose a machine</h3>
           <p>Check availability and pick a washer or dryer.</p>
-        </li>
-        <li class="step-arrow" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="step-arrow" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
         </li>
         <li class="step">
-          <span class="step-num">02</span>
-          <span class="step-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.4 11.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
-          </span>
+          <div class="step-head">
+            <span class="step-num">02</span>
+            <span class="step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.4 11.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8L4 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+            </span>
+          </div>
           <h3>Load &amp; start</h3>
           <p>Add your laundry and start the cycle.</p>
-        </li>
-        <li class="step-arrow" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="step-arrow" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
         </li>
         <li class="step">
-          <span class="step-num">03</span>
-          <span class="step-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M18.4 6l-2 2M22 13h-3M18.4 20l-2-2M12 22v-3M5.6 20l2-2M2 13h3M5.6 6l2 2"/><circle cx="12" cy="13" r="4"/></svg>
-          </span>
+          <div class="step-head">
+            <span class="step-num">03</span>
+            <span class="step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M18.4 6l-2 2M22 13h-3M18.4 20l-2-2M12 22v-3M5.6 20l2-2M2 13h3M5.6 6l2 2"/><circle cx="12" cy="13" r="4"/></svg>
+            </span>
+          </div>
           <h3>Wash or dry</h3>
           <p>Let our machines do the work.</p>
-        </li>
-        <li class="step-arrow" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="step-arrow" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
         </li>
         <li class="step">
-          <span class="step-num">04</span>
-          <span class="step-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
+          <div class="step-head">
+            <span class="step-num">04</span>
+            <span class="step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+          </div>
           <h3>Collect &amp; go</h3>
           <p>Take your fresh laundry and enjoy your day.</p>
         </li>
@@ -684,7 +711,7 @@
         <div class="dc-copy">
           <p class="eyebrow eyebrow-inverse">Drop &amp; collect</p>
           <h3>Leave it to us and get more time for what matters.</h3>
-          <a href="#" class="btn btn-inverse">
+          <a href="services.html#dropCollect" class="btn btn-inverse">
             Explore Drop &amp; Collect
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
@@ -802,33 +829,45 @@
       <h2>Trusted by our community</h2>
 
       <ul class="trust-grid">
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <li class="trust-item">
+          <span class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </span>
           <strong>24/7</strong>
           <span>Extended hours</span>
         </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="12" cy="13.3" r="4.3"/></svg>
+        <li class="trust-item">
+          <span class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="12" cy="13.3" r="4.3"/></svg>
+          </span>
           <strong>Commercial-grade</strong>
           <span>Machines</span>
         </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+        <li class="trust-item">
+          <span class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          </span>
           <strong>Multiple</strong>
           <span>Locations</span>
         </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m20.6 12.3-8-8H4v8.6l8 8a1.4 1.4 0 0 0 2 0l6.6-6.6a1.4 1.4 0 0 0 0-2Z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg>
+        <li class="trust-item">
+          <span class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m20.6 12.3-8-8H4v8.6l8 8a1.4 1.4 0 0 0 2 0l6.6-6.6a1.4 1.4 0 0 0 0-2Z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg>
+          </span>
           <strong>Clear</strong>
           <span>Pricing</span>
         </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+        <li class="trust-item">
+          <span class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+          </span>
           <strong>Fast</strong>
           <span>Turnaround</span>
         </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5L12 3Z"/></svg>
+        <li class="trust-item">
+          <span class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5L12 3Z"/></svg>
+          </span>
           <strong>Clean</strong>
           <span>Facilities</span>
         </li>
@@ -1021,7 +1060,7 @@
   </section>
 
   <!-- ============ FINAL CTA ============ -->
-  <section class="final-cta">
+  <section class="final-cta-section final-cta">
     <div class="container final-cta-inner">
       <div class="final-cta-copy">
         <h2>Ready for a cleaner load?</h2>
@@ -1043,13 +1082,17 @@
     <div class="footer-brand">
       <a href="index.html" class="brand" aria-label="WashHub home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
+          <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
             <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
             <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3"/>
           </svg>
         </span>
-        <span class="brand-text"><span class="brand-name">WashHub</span></span>
+        <span class="brand-text">
+          <span class="brand-name">WashHub</span>
+          <span class="brand-sub">LAUNDROMAT &amp; SELF-SERVICE</span>
+        </span>
       </a>
       <p>Clean spaces, modern machines and the freedom to wash on your terms.</p>
       <ul class="social-links" aria-label="Social media">

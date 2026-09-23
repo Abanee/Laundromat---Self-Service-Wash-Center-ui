@@ -100,76 +100,119 @@
 
   <!-- ============ 01 — EDITORIAL HERO ============ -->
   <section class="h2-hero" aria-label="Hero">
-    <div class="h2-hero-grid">
-      <!-- Left: Editorial copy -->
-      <div class="h2-hero-copy container" style="max-width:none;">
-        <span class="h2-eyebrow-pill">
-          <svg width="8" height="8" viewBox="0 0 8 8" fill="var(--accent-primary)" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
-          Fresh Spaces &bull; Brighter Days
+    <div class="h2-hero-inner container">
+
+      <!-- LEFT: Editorial copy column -->
+      <div class="h2-hero-copy">
+        <!-- Pill eyebrow -->
+        <span class="h2-eyebrow-pill" aria-label="Modern Machines, Clean Spaces, Brighter Days">
+          <svg width="7" height="7" viewBox="0 0 7 7" fill="var(--accent-primary)" aria-hidden="true"><circle cx="3.5" cy="3.5" r="3.5"/></svg>
+          Modern Machines
+          <svg width="4" height="4" viewBox="0 0 4 4" fill="var(--text-muted)" aria-hidden="true"><circle cx="2" cy="2" r="2"/></svg>
+          Clean Spaces
+          <svg width="4" height="4" viewBox="0 0 4 4" fill="var(--text-muted)" aria-hidden="true"><circle cx="2" cy="2" r="2"/></svg>
+          Brighter Days
         </span>
-        <h1>Laundry,<br>Without&nbsp;the<br>Waiting.</h1>
-        <p class="h2-hero-desc">Modern machines. Comfortable spaces.<br>Freedom to wash on your terms.</p>
+
+        <!-- Headline -->
+        <h1 class="h2-hero-headline">
+          Laundry,<br>
+          Now on <em class="h2-headline-accent">Your&nbsp;Terms.</em>
+        </h1>
+
+        <!-- Description -->
+        <p class="h2-hero-desc">
+          Premium self-service laundry with modern machines,
+          comfortable spaces and flexible hours. Clean clothes,
+          more time for what matters.
+        </p>
+
+        <!-- CTA buttons -->
         <div class="h2-hero-btns">
-          <a href="#" class="btn btn-primary btn-lg">
+          <a href="#" class="btn btn-primary btn-lg h2-cta-primary">
             Find Your Nearest Center
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a href="#timeline" class="h2-hero-btn-play">
-            <span class="play-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>
+            <span class="h2-play-circle" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg>
             </span>
             See How It Works
           </a>
         </div>
+
+        <!-- 4 Icon features -->
         <div class="h2-hero-features" role="list" aria-label="Key features">
           <div class="h2-hero-feat" role="listitem">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18l-2 13H5L3 6Z"/><path d="M3 6l1.5-3h15L21 6"/></svg>
+            <div class="h2-feat-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18l-2 13H5L3 6Z"/><path d="M3 6l1.5-3h15L21 6"/></svg>
+            </div>
             <strong>Clean Spaces</strong>
             <span>Always maintained</span>
           </div>
           <div class="h2-hero-feat" role="listitem">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4"/></svg>
+            <div class="h2-feat-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
             <strong>Easy to Use</strong>
             <span>Simple instructions</span>
           </div>
           <div class="h2-hero-feat" role="listitem">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div class="h2-feat-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </div>
             <strong>Your Schedule</strong>
-            <span>Open 7 days, every day</span>
+            <span>Open 7 days</span>
           </div>
           <div class="h2-hero-feat" role="listitem">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="h2-feat-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <strong>For Everyone</strong>
-            <span>Individuals, families, businesses</span>
+            <span>Individuals, families</span>
           </div>
         </div>
       </div>
 
-      <!-- Right: Photography -->
-      <div class="h2-hero-visual" aria-hidden="true">
-        <img
-          class="h2-hero-main-img"
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&auto=format&fit=crop"
-          alt="Modern laundromat interior with rows of commercial washing machines, warm lighting, and organised folding tables"
-          width="900" height="780"
-          loading="eager"
-        >
-        <div class="h2-hero-overlay-top">
-          <p>Today's hours</p>
-          <strong>Open until 11 PM</strong>
-        </div>
-        <div class="h2-hero-overlay-card">
-          <strong>More time for what matters.</strong>
-          <p>Clean clothes. A simpler day.</p>
+      <!-- RIGHT: Photo column -->
+      <div class="h2-hero-visual">
+        <!-- Main hero photograph with integrated overlay badge -->
+        <div class="h2-hero-photo-wrap">
+          <img
+            class="h2-hero-main-img"
+            src="Assets/h2-hero-laundromat.jpg"
+            alt="Bright modern laundromat interior with rows of silver washing machines, plants, and natural light"
+            width="900" height="600"
+            loading="eager"
+          >
+
+          <!-- Integrated location card -->
+          <div class="h2-location-card" role="complementary" aria-label="Location information">
+            <div class="h2-loc-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div class="h2-loc-text">
+              <strong>Downtown Center</strong>
+              <span>12 machines available</span>
+            </div>
+            <button class="h2-loc-change" type="button">
+              Change location
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+
+          <!-- Script watermark overlay -->
+          <span class="h2-hero-script" aria-hidden="true">Fresh<br>Spaces<br>Happier Days</span>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- ============ 02 — BRAND STATEMENT ============ -->
   <section class="h2-statement bordered-top" aria-labelledby="h2-statement-heading">
     <div class="container">
-      <div class="h2-statement-inner" data-reveal>
+      <div class="h2-statement-inner">
         <div>
           <span class="eyebrow-bar">Our Approach</span>
           <h2 id="h2-statement-heading">Designed around the way people actually live.</h2>
@@ -621,24 +664,23 @@
       <span class="eyebrow-bar">What Our Customers Say</span>
       <h2 id="h2-testimonials-heading" style="max-width:28ch;">Real experiences from real customers.</h2>
       <div class="h2-testimonials-grid" data-reveal>
-        <!-- Small testimonial (left) -->
-        <div class="h2-testimonial-side" style="justify-content:center;">
-          <div class="h2-testimonial-small">
-            <blockquote>"Always clean and well-maintained. Makes my weekly laundry run so much easier."</blockquote>
-            <div class="h2-testimonial-author">
-              <div class="h2-testimonial-avatar">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&q=80&auto=format&fit=crop&crop=face" alt="Portrait of Daniel K." width="80" height="80" loading="lazy">
-              </div>
-              <div>
-                <div class="h2-testimonial-name">Daniel K.</div>
-                <div class="h2-testimonial-meta">Riverside</div>
-              </div>
+        <!-- Testimonial 1 -->
+        <article class="h2-testimonial-card">
+          <div class="h2-quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>"Always clean and well-maintained. Makes my weekly laundry run so much easier."</blockquote>
+          <div class="h2-testimonial-author">
+            <div class="h2-testimonial-avatar">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&q=80&auto=format&fit=crop&crop=face" alt="Portrait of Daniel K." width="80" height="80" loading="lazy">
+            </div>
+            <div>
+              <div class="h2-testimonial-name">Daniel K.</div>
+              <div class="h2-testimonial-meta">Riverside</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Featured (centre) -->
-        <div class="h2-testimonial-featured">
+        <!-- Testimonial 2 (Featured) -->
+        <article class="h2-testimonial-card is-featured">
           <div class="h2-quote-mark" aria-hidden="true">&ldquo;</div>
           <blockquote>"Clean machines, friendly environment and so easy to use. It fits perfectly into my weekly routine — I genuinely look forward to laundry day now."</blockquote>
           <div class="h2-testimonial-author">
@@ -650,23 +692,22 @@
               <div class="h2-testimonial-meta">Downtown Center</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Small testimonial (right) -->
-        <div class="h2-testimonial-side" style="justify-content:center;">
-          <div class="h2-testimonial-small">
-            <blockquote>"Great space, modern machines and very convenient hours. Drop &amp; Collect has been a lifesaver."</blockquote>
-            <div class="h2-testimonial-author">
-              <div class="h2-testimonial-avatar">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&auto=format&fit=crop&crop=face" alt="Portrait of Priya S." width="80" height="80" loading="lazy">
-              </div>
-              <div>
-                <div class="h2-testimonial-name">Priya S.</div>
-                <div class="h2-testimonial-meta">Maplewood</div>
-              </div>
+        <!-- Testimonial 3 -->
+        <article class="h2-testimonial-card">
+          <div class="h2-quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>"Great space, modern machines and very convenient hours. Drop &amp; Collect has been a lifesaver."</blockquote>
+          <div class="h2-testimonial-author">
+            <div class="h2-testimonial-avatar">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80&auto=format&fit=crop&crop=face" alt="Portrait of Priya S." width="80" height="80" loading="lazy">
+            </div>
+            <div>
+              <div class="h2-testimonial-name">Priya S.</div>
+              <div class="h2-testimonial-meta">Maplewood</div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -699,14 +740,16 @@
     <div class="footer-brand">
       <a href="index.html" class="brand" aria-label="WashHub home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="28" height="28" fill="none">
+          <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
             <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="2"/>
             <path d="M8 22c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             <path d="M8 16c2 4 6 6 12 6s10-2 12-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="12" r="3" fill="currentColor" opacity=".3"/>
           </svg>
         </span>
         <span class="brand-text">
           <span class="brand-name">WashHub</span>
+          <span class="brand-sub">LAUNDROMAT &amp; SELF-SERVICE</span>
         </span>
       </a>
       <p>Clean spaces, modern machines and the freedom to wash on your terms.</p>
