@@ -267,10 +267,10 @@
       <div class="svc-size-grid" role="tablist" aria-label="Machine capacity selector">
         <!-- Small Load -->
         <div class="svc-size-card" role="tab" tabindex="0" aria-selected="false" data-capacity="small">
-          <div class="svc-size-drum" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
+          <div class="svc-size-media">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=700&q=80&auto=format&fit=crop" alt="Small load casual shirts and everyday wear" loading="lazy">
+            <span class="svc-size-pill">Single &bull; Daily</span>
           </div>
-          <span class="svc-size-pill">Single &bull; Daily</span>
           <h3>Small Load</h3>
           <p>Ideal for personal mid-week loads, gym attire, delicates, or light everyday apparel.</p>
           <ul role="list">
@@ -282,10 +282,10 @@
 
         <!-- Medium Load (Default Selected) -->
         <div class="svc-size-card is-selected" role="tab" tabindex="0" aria-selected="true" data-capacity="medium">
-          <div class="svc-size-drum" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          <div class="svc-size-media">
+            <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=700&q=80&auto=format&fit=crop" alt="Family wash load with fresh folded towels and linens" loading="lazy">
+            <span class="svc-size-pill is-pop">Most Popular &bull; Family</span>
           </div>
-          <span class="svc-size-pill">Most Popular &bull; Family</span>
           <h3>Medium Load</h3>
           <p>The everyday workhorse for couples and households. Perfect for regular weekly laundry hampers.</p>
           <ul role="list">
@@ -297,10 +297,10 @@
 
         <!-- Large Load -->
         <div class="svc-size-card" role="tab" tabindex="0" aria-selected="false" data-capacity="large">
-          <div class="svc-size-drum" aria-hidden="true">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/></svg>
+          <div class="svc-size-media">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700&q=80&auto=format&fit=crop" alt="Bulky king duvets and heavy blankets" loading="lazy">
+            <span class="svc-size-pill">Bulky &bull; Multi-Bedding</span>
           </div>
-          <span class="svc-size-pill">Bulky &bull; Multi-Bedding</span>
           <h3>Large Load</h3>
           <p>Heavy-duty capacity engineered specifically for thick comforters, duvets, blankets, and bulk items.</p>
           <ul role="list">
@@ -329,7 +329,7 @@
             </div>
             <div class="svc-pillar">
               <strong>Fast Cycles</strong>
-              <span>Powerful airflow delivers dry clothes in approximately 20&ndash;30 minutes.</span>
+              <span>Powerful airflow delivers dry clothes in approx20&ndash;30 minutes.</span>
             </div>
             <div class="svc-pillar">
               <strong>Easy Operation</strong>
@@ -373,60 +373,85 @@
         <p style="font-size:14px;color:var(--text-secondary);max-width:36ch;">A few simple habits prevent garment shrinkage, protect elastics, and cut drying time significantly.</p>
       </div>
 
-      <div class="svc-care-grid" role="list">
-        <div class="svc-care-item" role="listitem">
-          <div class="svc-care-top">
-            <div class="svc-care-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <div class="svc-care-layout">
+        <div class="svc-care-grid" role="list">
+          <div class="svc-care-item" role="listitem">
+            <div class="svc-care-top">
+              <div class="svc-care-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <span class="svc-care-num">01</span>
             </div>
-            <span class="svc-care-num">01</span>
+            <strong>Check Care Labels</strong>
+            <span>Verify tumble dry compatibility before transferring garments into the machine.</span>
           </div>
-          <strong>Check Care Labels</strong>
-          <span>Verify tumble dry compatibility before transferring garments into the machine.</span>
+
+          <div class="svc-care-item" role="listitem">
+            <div class="svc-care-top">
+              <div class="svc-care-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <span class="svc-care-num">02</span>
+            </div>
+            <strong>Separate Fabrics</strong>
+            <span>Dry lightweight synthetics separately from thick towels to avoid over-drying delicates.</span>
+          </div>
+
+          <div class="svc-care-item" role="listitem">
+            <div class="svc-care-top">
+              <div class="svc-care-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <span class="svc-care-num">03</span>
+            </div>
+            <strong>Avoid Overloading</strong>
+            <span>Leave sufficient space in the drum so hot air can circulate freely through every layer.</span>
+          </div>
+
+          <div class="svc-care-item" role="listitem">
+            <div class="svc-care-top">
+              <div class="svc-care-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <span class="svc-care-num">04</span>
+            </div>
+            <strong>Select Proper Heat</strong>
+            <span>Use Low heat for synthetics/sportswear and Medium/High for durable 100% cottons.</span>
+          </div>
+
+          <div class="svc-care-item" role="listitem">
+            <div class="svc-care-top">
+              <div class="svc-care-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="svc-care-num">05</span>
+            </div>
+            <strong>Remove Promptly</strong>
+            <span>Take laundry out when the cycle ends to prevent settling wrinkles and ease folding.</span>
+          </div>
         </div>
 
-        <div class="svc-care-item" role="listitem">
-          <div class="svc-care-top">
-            <div class="svc-care-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <div class="svc-care-showcase">
+          <div class="svc-care-visual">
+            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800&q=80&auto=format&fit=crop" alt="Commercial high-efficiency tumble dryers" loading="lazy">
+            <div class="svc-care-overlay">
+              <span class="svc-care-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Smart Sensor Drying
+              </span>
+              <h4>Even Airflow &bull; Zero Scorching</h4>
+              <p>Large-capacity commercial stainless drums give fabrics room to open up, reducing wrinkles and cut dry cycles by 35%.</p>
             </div>
-            <span class="svc-care-num">02</span>
           </div>
-          <strong>Separate Fabrics</strong>
-          <span>Dry lightweight synthetics separately from thick towels to avoid over-drying delicates.</span>
-        </div>
-
-        <div class="svc-care-item" role="listitem">
-          <div class="svc-care-top">
-            <div class="svc-care-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="svc-care-callout">
+            <div class="svc-care-callout-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
             </div>
-            <span class="svc-care-num">03</span>
-          </div>
-          <strong>Avoid Overloading</strong>
-          <span>Leave sufficient space in the drum so hot air can circulate freely through every layer.</span>
-        </div>
-
-        <div class="svc-care-item" role="listitem">
-          <div class="svc-care-top">
-            <div class="svc-care-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <div>
+              <strong>Staff Care Note: Clean Lint Screens</strong>
+              <p>Our lint traps are inspected and serviced between cycles, guaranteeing 100% unrestricted airflow and maximum thermal efficiency.</p>
             </div>
-            <span class="svc-care-num">04</span>
           </div>
-          <strong>Select Proper Heat</strong>
-          <span>Use Low heat for synthetics/sportswear and Medium/High for durable 100% cottons.</span>
-        </div>
-
-        <div class="svc-care-item" role="listitem">
-          <div class="svc-care-top">
-            <div class="svc-care-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <span class="svc-care-num">05</span>
-          </div>
-          <strong>Remove Promptly</strong>
-          <span>Take laundry out when the cycle ends to prevent settling wrinkles and ease folding.</span>
         </div>
       </div>
     </div>

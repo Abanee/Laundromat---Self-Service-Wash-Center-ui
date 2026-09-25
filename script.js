@@ -956,6 +956,14 @@
         light: { temp: "40°C Pet Refresh", spin: "1,200 RPM", duration: "32 min", tip: "Dedicated pet drum with specialized hair-trap drain avoids cross-contamination." },
         normal: { temp: "60°C Sanitizing", spin: "1,400 RPM", duration: "45 min", tip: "Thermal sanitation eradicates fleas, pet dander, and stubborn fur odors." },
         heavy: { temp: "60°C Ultra Deep", spin: "1,400 RPM", duration: "55 min", tip: "Dual pre-wash and heavy spin dislodges pet hair straight into our micro-filter." }
+      },
+      workwear: {
+        title: "Workwear & Heavy Denim",
+        drum: "14kg Heavy-Duty Drum",
+        machines: "W08, W09",
+        light: { temp: "40°C Standard Care", spin: "1,000 RPM", duration: "32 min", tip: "Turn jeans and uniforms inside out to prevent surface friction and color fade." },
+        normal: { temp: "50°C Deep Extraction", spin: "1,200 RPM", duration: "40 min", tip: "High-torque agitation lifts motor grease, cooking oil, and outdoor dirt easily." },
+        heavy: { temp: "60°C Heavy Sanitizing", spin: "1,400 RPM", duration: "52 min", tip: "Pre-wash cycle loosens embedded grime before the thermal wash cycle." }
       }
     };
 

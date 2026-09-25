@@ -408,8 +408,24 @@
       <figure class="availability-photo">
         <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=900&q=80" alt="Neatly folded stack of blue and white towels on a shelf in a laundromat">
         <figcaption>
-          <strong>Clean machines.<br>Happier you.</strong>
-          <span>Modern. Hygienic. Always ready.</span>
+          <div class="avail-photo-copy">
+            <strong>Clean machines.<br>Happier you.</strong>
+            <span>Modern. Hygienic. Always ready.</span>
+          </div>
+          <div class="avail-photo-features">
+            <span class="avail-feature-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Auto-Sanitized Drums
+            </span>
+            <span class="avail-feature-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Pure Softened Water
+            </span>
+            <span class="avail-feature-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Fast 25-Min Wash Cycles
+            </span>
+          </div>
         </figcaption>
       </figure>
 
@@ -484,6 +500,16 @@
                   <span class="fa-option-title">Pet Beds &amp; Rugs</span>
                 </div>
                 <span class="fa-option-desc">Pet blankets, heavy doormats &amp; rugs</span>
+              </button>
+
+              <button type="button" class="fa-option-btn" data-fabric="workwear" role="radio" aria-checked="false">
+                <div class="fa-option-head">
+                  <span class="fa-option-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                  </span>
+                  <span class="fa-option-title">Workwear &amp; Denim</span>
+                </div>
+                <span class="fa-option-desc">Heavy denim, uniforms, overalls &amp; jackets</span>
               </button>
             </div>
           </div>
@@ -1023,15 +1049,9 @@
             </span>
             <h3 class="eco-compare-title">Water Per Kg</h3>
           </div>
-          <div class="eco-metrics">
-            <div class="eco-metric-row is-washhub">
-              <span>WashHub Inverter</span>
-              <strong>6.2 Liters</strong>
-            </div>
-            <div class="eco-metric-row is-home">
-              <span>Home Machine</span>
-              <span>14.8 Liters</span>
-            </div>
+          <div class="eco-card-media">
+            <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=600&q=80&auto=format&fit=crop" alt="Water saving inverter commercial wash drum" loading="lazy">
+            <span class="eco-media-badge">6.2L vs 14.8L Home</span>
           </div>
           <p class="eco-compare-desc">Precision dynamic weighing fills only the exact water needed for each specific garment weight.</p>
         </article>
@@ -1043,15 +1063,9 @@
             </span>
             <h3 class="eco-compare-title">Drying Efficiency</h3>
           </div>
-          <div class="eco-metrics">
-            <div class="eco-metric-row is-washhub">
-              <span>WashHub Radial Dry</span>
-              <strong>24 Minutes</strong>
-            </div>
-            <div class="eco-metric-row is-home">
-              <span>Home Electric Dryer</span>
-              <span>75 Minutes</span>
-            </div>
+          <div class="eco-card-media">
+            <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=600&q=80&auto=format&fit=crop" alt="Radial airflow moisture-sensing tumble dryer drum" loading="lazy">
+            <span class="eco-media-badge">24m vs 75m Home</span>
           </div>
           <p class="eco-compare-desc">High-speed moisture sensors prevent over-drying, preserving fabric fibers and cutting power usage by 60%.</p>
         </article>
@@ -1063,15 +1077,9 @@
             </span>
             <h3 class="eco-compare-title">Micro-Plastic Filter</h3>
           </div>
-          <div class="eco-metrics">
-            <div class="eco-metric-row is-washhub">
-              <span>WashHub Filtration</span>
-              <strong>98% Captured</strong>
-            </div>
-            <div class="eco-metric-row is-home">
-              <span>Domestic Plumbing</span>
-              <span>0% (Direct Drain)</span>
-            </div>
+          <div class="eco-card-media">
+            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80&auto=format&fit=crop" alt="Microfiber and synthetic polymer filtration trap system" loading="lazy">
+            <span class="eco-media-badge">98% Microfibers Trapped</span>
           </div>
           <p class="eco-compare-desc">Industrial multi-stage traps catch microfibers and synthetic polymers before water enters municipal waterways.</p>
         </article>
@@ -1083,15 +1091,9 @@
             </span>
             <h3 class="eco-compare-title">Detergent Dosing</h3>
           </div>
-          <div class="eco-metrics">
-            <div class="eco-metric-row is-washhub">
-              <span>Automated Dosing</span>
-              <strong>Zero Waste</strong>
-            </div>
-            <div class="eco-metric-row is-home">
-              <span>Manual Measuring</span>
-              <span>30% Overuse</span>
-            </div>
+          <div class="eco-card-media">
+            <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=600&q=80&auto=format&fit=crop" alt="Eco plant-based automated concentrate detergent dosing" loading="lazy">
+            <span class="eco-media-badge">Zero Waste Automated Dosing</span>
           </div>
           <p class="eco-compare-desc">Eco-certified plant-based concentrates are dosed to the milliliter, eliminating residue and chemical runoff.</p>
         </article>
