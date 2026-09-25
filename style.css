@@ -1033,6 +1033,35 @@ p  { color: var(--text-secondary); }
   }
 }
 
+@media (max-width: 1024px) {
+  .hero-glass-left {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-live-badge {
+    align-self: center;
+    margin-inline: auto;
+  }
+  .hero-glass-headline {
+    text-align: center;
+  }
+  .hero-glass-desc {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .hero-glass-actions {
+    justify-content: center;
+    margin-inline: auto;
+    width: 100%;
+  }
+  .hero-benefit-grid {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 580px;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-nav-links {
     display: none;
@@ -3268,6 +3297,20 @@ p  { color: var(--text-secondary); }
   font-size: 11px;
   font-weight: 700;
   opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+  .svc-strip-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    gap: 10px 12px;
+    padding-inline: var(--sp-2);
+  }
+  .svc-strip-link {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
 }
 
 /* --- Svc: Feature Washing (40/60 Asymmetric) --- */
@@ -6158,6 +6201,19 @@ p  { color: var(--text-secondary); }
    ============================================================ */
 @media (max-width: 1024px) {
   .blg-hero-grid { grid-template-columns: 1fr; gap: var(--sp-8); }
+  .blg-cat-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    gap: 8px 10px;
+    padding-block: 6px;
+  }
+  .blg-cat-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 7px 14px;
+    font-size: 13px;
+  }
   .blg-featured-card { grid-template-columns: 1fr; }
   .blg-featured-info { padding: var(--sp-6); }
   .blg-card-horizontal { grid-column: span 12; }
@@ -6165,6 +6221,28 @@ p  { color: var(--text-secondary); }
   .blg-card-square { grid-column: span 6; }
   .blg-card-wide { grid-column: span 12; }
   .blg-card-textonly { grid-column: span 12; }
+  .blg-card-mini { grid-template-columns: 1fr; }
+  .blg-card-hero, .blg-side-stack, .blg-card-triplet {
+    grid-column: span 12 !important;
+  }
+  .blg-featured-img-wrap,
+  .blg-card-img-wrap,
+  .blg-card-hero .blg-card-img-wrap,
+  .blg-card-mini .blg-card-img-wrap,
+  .blg-card-triplet .blg-card-img-wrap,
+  .blg-card-horizontal .blg-card-img-wrap,
+  .blg-card-wide .blg-card-img-wrap {
+    height: 260px !important;
+    min-height: 260px !important;
+    max-height: 260px !important;
+    width: 100% !important;
+  }
+  .blg-featured-img-wrap img,
+  .blg-card-img-wrap img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
   .blg-spread-box { grid-template-columns: 1fr; gap: var(--sp-6); }
 }
 
@@ -6173,6 +6251,18 @@ p  { color: var(--text-secondary); }
   .blg-card-wide { grid-template-columns: 1fr; }
   .blg-card-vertical { grid-column: span 12; }
   .blg-card-square { grid-column: span 12; }
+  .blg-featured-img-wrap,
+  .blg-card-img-wrap,
+  .blg-card-hero .blg-card-img-wrap,
+  .blg-card-mini .blg-card-img-wrap,
+  .blg-card-triplet .blg-card-img-wrap,
+  .blg-card-horizontal .blg-card-img-wrap,
+  .blg-card-wide .blg-card-img-wrap {
+    height: 230px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+    width: 100% !important;
+  }
   .blg-cta-box { flex-direction: column; align-items: flex-start; }
   .blg-cta-actions { width: 100%; flex-direction: column; }
   .blg-cta-actions .btn { width: 100%; justify-content: center; }
@@ -6184,10 +6274,20 @@ p  { color: var(--text-secondary); }
   .blg-hero-section { padding-block: var(--sp-8) var(--sp-6); }
   .blg-hero-collage { grid-template-columns: 1fr; }
   .blg-collage-stack { display: none; }
-  .blg-featured-img-wrap { min-height: 240px; }
+  .blg-featured-img-wrap,
+  .blg-card-img-wrap,
+  .blg-card-hero .blg-card-img-wrap,
+  .blg-card-mini .blg-card-img-wrap,
+  .blg-card-triplet .blg-card-img-wrap,
+  .blg-card-horizontal .blg-card-img-wrap,
+  .blg-card-wide .blg-card-img-wrap {
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
+    width: 100% !important;
+  }
   .blg-featured-info { padding: var(--sp-5); }
   .blg-card-body { padding: var(--sp-5); }
-  .blg-card-img-wrap { min-height: 180px; }
   .blg-spread-statement { font-size: 24px; }
   .blg-habit-item { flex-direction: column; gap: var(--sp-2); }
 }
@@ -10237,29 +10337,40 @@ p  { color: var(--text-secondary); }
   border-bottom: none;
 }
 
-/* Responsive Behavior (<= 768px down to 360px) */
-@media (max-width: 768px) {
+/* Responsive Behavior (<= 1024px down to 360px) */
+@media (max-width: 1024px) {
   .timeline-zigzag-wrap {
-    padding-inline-start: 0;
+    padding-inline: var(--sp-2);
+    padding-block: var(--sp-4);
   }
   .timeline-zigzag-spine {
     left: 20px;
+    right: auto;
     transform: none;
   }
   .timeline-zigzag-node {
     left: 20px;
+    right: auto;
     transform: translate(-50%, -50%);
     width: 36px;
     height: 36px;
     font-size: 12px;
   }
+  .timeline-zigzag-item:hover .timeline-zigzag-node {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
   .timeline-zigzag-item {
     justify-content: flex-start !important;
-    padding-inline-start: 52px;
+    padding-inline-start: 56px !important;
+    padding-inline-end: 0 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
   }
   .timeline-zigzag-card {
     width: 100% !important;
-    padding: var(--sp-4);
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: clamp(16px, 3vw, 24px) !important;
   }
   .timeline-zigzag-card::after {
     left: -7px !important;
@@ -10272,15 +10383,21 @@ p  { color: var(--text-secondary); }
   [dir="rtl"] .timeline-zigzag-spine {
     right: 20px;
     left: auto;
+    transform: none;
   }
   [dir="rtl"] .timeline-zigzag-node {
     right: 20px;
     left: auto;
     transform: translate(50%, -50%);
   }
+  [dir="rtl"] .timeline-zigzag-item:hover .timeline-zigzag-node {
+    transform: translate(50%, -50%) scale(1.1);
+  }
   [dir="rtl"] .timeline-zigzag-item {
-    padding-inline-start: 0;
-    padding-inline-end: 52px;
+    justify-content: flex-start !important;
+    padding-inline-start: 56px !important;
+    padding-inline-end: 0 !important;
+    box-sizing: border-box !important;
   }
   [dir="rtl"] .timeline-zigzag-card::after {
     right: -7px !important;
