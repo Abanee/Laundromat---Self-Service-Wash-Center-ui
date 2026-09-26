@@ -249,6 +249,16 @@ p  { color: var(--text-secondary); }
 
 .btn-ghost-inverse { background: transparent; border-color: rgba(255,255,255,.35); color: #fff; }
 .btn-ghost-inverse:hover { border-color: rgba(255,255,255,.75); background: rgba(255,255,255,.08); }
+:root[data-theme="dark"] .btn-ghost-inverse {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.40);
+  color: #FFFFFF;
+}
+:root[data-theme="dark"] .btn-ghost-inverse:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
 
 .btn-inverse { background: var(--accent-secondary); color: #241304; }
 .btn-inverse:hover { filter: brightness(1.08); }
@@ -1678,6 +1688,46 @@ p  { color: var(--text-secondary); }
   color: #FFFFFF;
 }
 
+/* Dark Theme: Drop & Collect Card */
+:root[data-theme="dark"] .drop-collect-card {
+  background: #13222E;
+  color: #EBF2F0;
+  border: 1px solid rgba(72, 192, 186, 0.22);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+:root[data-theme="dark"] .drop-collect-card::before {
+  background: radial-gradient(circle at 10% 20%, rgba(72, 192, 186, 0.16), transparent 60%);
+}
+:root[data-theme="dark"] .dc-copy h3 {
+  color: #FFFFFF;
+}
+:root[data-theme="dark"] .dc-steps li {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+:root[data-theme="dark"] .dc-steps li:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+:root[data-theme="dark"] .dc-num {
+  background: rgba(72, 192, 186, 0.20);
+  border-color: rgba(72, 192, 186, 0.45);
+  color: #48C0BA;
+}
+:root[data-theme="dark"] .dc-steps li strong {
+  color: #FFFFFF;
+}
+:root[data-theme="dark"] .dc-steps li > span:not(.dc-num) {
+  color: #A4B8C2;
+}
+:root[data-theme="dark"] .drop-collect-card .btn-inverse {
+  background: #DCA660;
+  color: #1A1308;
+  font-weight: 700;
+}
+:root[data-theme="dark"] .drop-collect-card .eyebrow {
+  color: #DCA660;
+}
+
 /* ============================================================
    SHARED SECTION HEAD
    ============================================================ */
@@ -2462,6 +2512,25 @@ p  { color: var(--text-secondary); }
   max-width: 16ch; line-height: 1.4;
 }
 :root[data-theme="dark"] .final-cta-side { color: var(--border-color); }
+:root[data-theme="dark"] .final-cta-section,
+:root[data-theme="dark"] .final-cta {
+  background: #111E2A;
+  border-block: 1px solid var(--border-color);
+}
+:root[data-theme="dark"] .final-cta-copy h2 {
+  color: #FFFFFF;
+}
+:root[data-theme="dark"] .final-cta-copy p {
+  color: #A4B8C2;
+}
+:root[data-theme="dark"] .final-cta-copy .btn-inverse {
+  background: #DCA660;
+  color: #1A1308;
+  font-weight: 700;
+}
+:root[data-theme="dark"] .final-cta-side {
+  color: rgba(72, 192, 186, 0.35);
+}
 
 /* ============================================================
    FOOTER (Unified across all pages)
@@ -4420,6 +4489,25 @@ p  { color: var(--text-secondary); }
   gap: var(--sp-3);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Dark Theme: Services Final CTA */
+:root[data-theme="dark"] .svc-final-cta {
+  background: #13222E;
+  border: 1px solid rgba(72, 192, 186, 0.22);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+:root[data-theme="dark"] .svc-final-cta::before {
+  background: linear-gradient(135deg, rgba(72, 192, 186, 0.16) 0%, transparent 60%);
+}
+:root[data-theme="dark"] .svc-final-cta h2 {
+  color: #FFFFFF;
+}
+:root[data-theme="dark"] .svc-final-cta p {
+  color: #A4B8C2;
+}
+:root[data-theme="dark"] .svc-final-cta .eyebrow {
+  color: #DCA660;
 }
 
 /* ============================================================
@@ -9823,6 +9911,24 @@ p  { color: var(--text-secondary); }
   line-height: 1.35;
   pointer-events: none;
   user-select: none;
+}
+
+/* Dark Theme: Home 2 Final CTA */
+:root[data-theme="dark"] .h2-final-cta {
+  background: #111E2A;
+  border-block: 1px solid var(--border-color);
+}
+:root[data-theme="dark"] .h2-final-cta-inner h2 {
+  color: #FFFFFF;
+}
+:root[data-theme="dark"] .h2-final-cta-inner > p {
+  color: #A4B8C2;
+}
+:root[data-theme="dark"] .h2-final-cta-inner .eyebrow {
+  color: #DCA660;
+}
+:root[data-theme="dark"] .h2-final-script {
+  color: rgba(72, 192, 186, 0.35);
 }
 
 /* ============================================================
