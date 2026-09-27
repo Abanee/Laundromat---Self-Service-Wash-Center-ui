@@ -524,15 +524,17 @@ p {
   padding-block: 12px;
 }
 
-/* Brand / Logo */
+/* Brand / Logo - preserve brand identity lockup across all writing directions and pages */
 .brand,
 .site-logo {
-  display: flex;
-  align-items: center;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
   gap: 10px;
   flex: none;
   text-decoration: none;
-  text-align: left;
+  text-align: left !important;
+  direction: ltr !important;
 }
 
 .brand-mark {
@@ -555,15 +557,18 @@ p {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  text-align: left;
-  align-items: flex-start;
+  text-align: left !important;
+  align-items: flex-start !important;
   justify-content: center;
+  direction: ltr !important;
 }
 
 [dir="rtl"] .brand,
+[dir="rtl"] .site-logo,
 [dir="rtl"] .brand-text {
-  text-align: right;
-  align-items: flex-end;
+  direction: ltr !important;
+  text-align: left !important;
+  align-items: flex-start !important;
 }
 
 .brand-name {
@@ -4447,7 +4452,7 @@ p {
 
 .h2-hero-features {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-block-start: 1px solid var(--border-color);
   padding-block-start: var(--sp-5);
@@ -4456,8 +4461,10 @@ p {
 .h2-hero-feat {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  padding-inline-end: var(--sp-5);
+  align-items: flex-start;
+  text-align: start;
+  gap: 4px;
+  padding-inline: var(--sp-3);
   border-inline-end: 1px solid var(--border-color);
 }
 
@@ -4467,11 +4474,7 @@ p {
 
 .h2-hero-feat:last-child {
   border-inline-end: none;
-}
-
-[dir="rtl"] .h2-hero-feat {
   padding-inline-end: 0;
-  padding-inline-start: var(--sp-5);
 }
 
 .h2-hero-feat svg {
@@ -7008,24 +7011,20 @@ p {
   }
 
   .h2-hero-features {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-4);
   }
 
   .h2-hero-feat:nth-child(2),
   .h2-hero-feat:nth-child(4) {
     border-inline-end: none;
+    padding-inline-end: 0;
   }
 
+  .h2-hero-feat:nth-child(1),
   .h2-hero-feat:nth-child(3) {
     padding-inline-start: 0;
     border-inline-end: 1px solid var(--border-color);
-  }
-
-  [dir="rtl"] .h2-hero-feat:nth-child(3) {
-    padding-inline-start: var(--sp-5);
-    border-inline-end: none;
-    border-inline-start: 1px solid var(--border-color);
   }
 
   .h2-statement-inner {
@@ -11713,6 +11712,17 @@ textarea::placeholder {
   }
 }
 
+/* RTL Support — Auth Pages */
+[dir="rtl"] .auth-subtitle,
+[dir="rtl"] .auth-link,
+[dir="rtl"] .auth-footer-prompt {
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .auth-submit-btn svg {
+  transform: scaleX(-1);
+}
+
 /* ============================================================
    NEW EXCLUSIVE HOME SECTION 1: SMART WASH & FABRIC ASSISTANT
    ============================================================ */
@@ -12520,7 +12530,7 @@ textarea::placeholder {
 .h2-hero-features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--sp-3);
+  gap: 0;
   padding-block-start: var(--sp-4);
   border-block-start: 1px solid var(--border-color);
 }
@@ -12529,6 +12539,7 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: start;
   gap: 4px;
 }
 
@@ -12714,6 +12725,26 @@ textarea::placeholder {
 
 [dir="rtl"] .h2-hero-photo-wrap {
   border-radius: var(--radius-xl);
+}
+
+[dir="rtl"] .h2-hero-headline,
+[dir="rtl"] .h2-hero-desc {
+  text-align: start;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .h2-hero-features {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+[dir="rtl"] .h2-hero-feat {
+  align-items: flex-start;
+  text-align: start;
+}
+
+[dir="rtl"] .h2-cta-primary svg {
+  transform: scaleX(-1);
 }
 
 /* ============================================================
