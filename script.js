@@ -723,11 +723,16 @@
   var cntB2bExtra = document.getElementById("cntB2bExtra");
   var cntStatus = document.getElementById("cntFormStatus");
 
-  /* Custom Selects on Contact Form (Guarantees Menu is Exact Same Width as Dropdown) */
-  var cntSelects = document.querySelectorAll(".cnt-select");
+  /* Custom Selects (Guarantees Menu is Exact Same Width as Dropdown) */
+  var cntSelects = document.querySelectorAll(".cnt-select, .center-select select, #centerSelect");
   if (cntSelects.length > 0) {
     cntSelects.forEach(function (select) {
       if (select.closest(".cnt-custom-select")) return;
+
+      var parentCenterSelect = select.closest(".center-select");
+      if (parentCenterSelect) {
+        parentCenterSelect.classList.add("has-custom-select");
+      }
 
       var wrapper = document.createElement("div");
       wrapper.className = "cnt-custom-select";
