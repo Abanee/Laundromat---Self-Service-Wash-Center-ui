@@ -723,6 +723,139 @@
   var cntB2bExtra = document.getElementById("cntB2bExtra");
   var cntStatus = document.getElementById("cntFormStatus");
 
+  /* Custom Selects on Contact Form (Guarantees Menu is Exact Same Width as Dropdown) */
+  var cntSelects = document.querySelectorAll(".cnt-select");
+  if (cntSelects.length > 0) {
+    cntSelects.forEach(function (select) {
+      if (select.closest(".cnt-custom-select")) return;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "cnt-custom-select";
+      select.parentNode.insertBefore(wrapper, select);
+      wrapper.appendChild(select);
+
+      select.style.position = "absolute";
+      select.style.opacity = "0";
+      select.style.pointerEvents = "none";
+      select.style.width = "1px";
+      select.style.height = "1px";
+      select.style.margin = "-1px";
+      select.tabIndex = -1;
+
+      var trigger = document.createElement("button");
+      trigger.type = "button";
+      trigger.className = "cnt-select-trigger";
+      trigger.setAttribute("aria-haspopup", "listbox");
+      trigger.setAttribute("aria-expanded", "false");
+
+      var currentText = select.options[select.selectedIndex]
+        ? select.options[select.selectedIndex].text
+        : select.options[0].text;
+
+      trigger.innerHTML =
+        '<span class="cnt-trigger-text">' +
+        currentText +
+        "</span>" +
+        '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>';
+      wrapper.appendChild(trigger);
+
+      var menu = document.createElement("div");
+      menu.className = "cnt-select-options";
+      menu.setAttribute("role", "listbox");
+
+      Array.from(select.options).forEach(function (opt, idx) {
+        var item = document.createElement("div");
+        item.className =
+          "cnt-select-opt" + (idx === select.selectedIndex ? " is-selected" : "");
+        item.setAttribute("role", "option");
+        item.setAttribute(
+          "aria-selected",
+          idx === select.selectedIndex ? "true" : "false"
+        );
+        item.setAttribute("data-value", opt.value);
+        item.textContent = opt.text;
+
+        item.addEventListener("click", function (e) {
+          e.stopPropagation();
+          select.value = opt.value;
+          select.selectedIndex = idx;
+          trigger.querySelector(".cnt-trigger-text").textContent = opt.text;
+          menu.querySelectorAll(".cnt-select-opt").forEach(function (el) {
+            el.classList.remove("is-selected");
+            el.setAttribute("aria-selected", "false");
+          });
+          item.classList.add("is-selected");
+          item.setAttribute("aria-selected", "true");
+          wrapper.classList.remove("is-open");
+          trigger.setAttribute("aria-expanded", "false");
+          trigger.focus();
+          select.dispatchEvent(new Event("change", { bubbles: true }));
+        });
+
+        menu.appendChild(item);
+      });
+
+      wrapper.appendChild(menu);
+
+      trigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var isOpen = wrapper.classList.contains("is-open");
+        document.querySelectorAll(".cnt-custom-select.is-open").forEach(function (el) {
+          if (el !== wrapper) {
+            el.classList.remove("is-open");
+            el.querySelector(".cnt-select-trigger").setAttribute("aria-expanded", "false");
+          }
+        });
+        if (isOpen) {
+          wrapper.classList.remove("is-open");
+          trigger.setAttribute("aria-expanded", "false");
+        } else {
+          wrapper.classList.add("is-open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.addEventListener("click", function () {
+      document.querySelectorAll(".cnt-custom-select.is-open").forEach(function (el) {
+        el.classList.remove("is-open");
+        var tr = el.querySelector(".cnt-select-trigger");
+        if (tr) tr.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        document.querySelectorAll(".cnt-custom-select.is-open").forEach(function (el) {
+          el.classList.remove("is-open");
+          var tr = el.querySelector(".cnt-select-trigger");
+          if (tr) {
+            tr.setAttribute("aria-expanded", "false");
+            tr.focus();
+          }
+        });
+      }
+    });
+
+    if (cntForm) {
+      cntForm.addEventListener("reset", function () {
+        setTimeout(function () {
+          document.querySelectorAll(".cnt-custom-select").forEach(function (wrapper) {
+            var sel = wrapper.querySelector("select");
+            var tr = wrapper.querySelector(".cnt-trigger-text");
+            if (sel && tr && sel.options[sel.selectedIndex]) {
+              tr.textContent = sel.options[sel.selectedIndex].text;
+              wrapper.querySelectorAll(".cnt-select-opt").forEach(function (optEl, i) {
+                optEl.classList.toggle("is-selected", i === sel.selectedIndex);
+                optEl.setAttribute("aria-selected", i === sel.selectedIndex ? "true" : "false");
+              });
+            }
+          });
+        }, 10);
+      });
+    }
+  }
+
   if (cntTopic && cntB2bExtra) {
     cntTopic.addEventListener("change", function () {
       if (cntTopic.value === "business") {
