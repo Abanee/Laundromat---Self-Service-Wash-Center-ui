@@ -6038,8 +6038,18 @@ p {
   }
 
   .svc-drying-media {
-    min-height: 260px;
-    aspect-ratio: 16 / 10;
+    min-height: auto !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    box-sizing: border-box !important;
+  }
+
+  .svc-drying-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 }
 
@@ -7807,16 +7817,20 @@ p {
     display: flex !important;
     flex-direction: column !important;
     gap: var(--sp-4) !important;
+    width: 100% !important;
   }
 
   .svc-care-item {
-    flex: 0 0 100% !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
     max-width: 100% !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .svc-care-grid .svc-care-item:nth-child(5) {
     max-width: 100% !important;
+    width: 100% !important;
   }
 
   .svc-table-wrapper {
@@ -9749,11 +9763,26 @@ p {
 }
 
 @media (max-width: 960px) {
+  .blg-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--sp-5) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 
   .blg-card-hero,
   .blg-side-stack,
-  .blg-card-triplet {
-    grid-column: span 12 !important;
+  .blg-card-triplet,
+  .blg-card-horizontal,
+  .blg-card-vertical,
+  .blg-card-square,
+  .blg-card-wide,
+  .blg-card-textonly {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .blg-card-mini {
@@ -10281,6 +10310,15 @@ p {
     min-height: 200px !important;
     max-height: 200px !important;
     width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .blg-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .blg-featured-info {
@@ -10431,27 +10469,36 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--sp-3);
+  padding: 12px 16px;
   background: var(--bg-primary);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-color);
   border-radius: var(--rad-md);
+  gap: 12px;
 }
 
 .cnt-qi-label {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
+  display: block;
 }
 
 .cnt-qi-sub {
   font-size: 12px;
   color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
 }
 
 .cnt-qi-val {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12.5px;
+  font-weight: 700;
   color: var(--accent-primary);
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--accent-primary) 12%, transparent);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
 }
 
 /* --- Inquiry & Direct Contact Layout --- */
@@ -10519,6 +10566,8 @@ p {
 .cnt-select,
 .cnt-textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 12px 14px;
   border: 1px solid var(--border-color);
   border-radius: var(--rad-md);
@@ -10528,6 +10577,11 @@ p {
   font-family: inherit;
   outline: none;
   transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.cnt-select {
+  cursor: pointer;
+  text-overflow: ellipsis;
 }
 
 .cnt-input:focus,
@@ -10985,7 +11039,55 @@ p {
   }
 
   .cnt-form-card {
-    padding: var(--sp-5);
+    padding: var(--sp-5) var(--sp-4);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .cnt-quick-card {
+    padding: var(--sp-5) var(--sp-4) !important;
+  }
+
+  .cnt-quick-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--sp-2) !important;
+  }
+
+  .cnt-quick-item {
+    padding: 12px 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 10px !important;
+  }
+
+  .cnt-qi-label {
+    font-size: 13.5px !important;
+  }
+
+  .cnt-qi-sub {
+    font-size: 11px !important;
+  }
+
+  .cnt-qi-val {
+    font-size: 12px !important;
+    padding: 3px 8px !important;
+  }
+
+  .cnt-input,
+  .cnt-select,
+  .cnt-textarea {
+    font-size: 13px !important;
+    padding: 10px 12px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .cnt-select option {
+    font-size: 12.5px !important;
+    max-width: 100% !important;
   }
 
   .cnt-info-card {
