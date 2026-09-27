@@ -3790,14 +3790,21 @@ p {
 /* About intro */
 .intro-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1fr;
-  gap: clamp(24px, 5vw, 60px);
-  align-items: start;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .intro-grid h2 {
-  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+  font-size: clamp(1.85rem, 1.35rem + 1.8vw, 2.55rem);
   line-height: 1.22;
+  letter-spacing: -0.02em;
 }
 
 .intro-copy {
@@ -3808,7 +3815,74 @@ p {
 
 .intro-copy p {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.72;
+  color: var(--text-secondary);
+}
+
+.intro-media-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  background: var(--bg-surface);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.intro-image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12);
+}
+
+.intro-image-card img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-floating-badge {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 26, 34, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.01em;
+}
+
+.intro-badge-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+[dir="rtl"] .intro-floating-badge {
+  left: auto;
+  right: 18px;
 }
 
 /* About timeline */
@@ -12169,6 +12243,69 @@ textarea::placeholder {
   position: relative;
 }
 
+.eco-hero-showcase {
+  margin-block-end: var(--sp-6);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+  position: relative;
+  background: var(--bg-surface);
+}
+
+.eco-hero-media {
+  position: relative;
+  width: 100%;
+  height: clamp(280px, 36vw, 460px);
+}
+
+.eco-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.eco-hero-overlay-tag {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 26, 34, 0.84);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #a7f3d0;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.eco-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: ecoPulse 2s infinite;
+}
+
+@keyframes ecoPulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+[dir="rtl"] .eco-hero-overlay-tag {
+  left: auto;
+  right: 18px;
+}
+
 .eco-banner {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(0, 114, 206, 0.08));
   border: 1.5px solid rgba(16, 185, 129, 0.28);
@@ -14814,6 +14951,46 @@ textarea::placeholder {
     margin-inline: auto;
   }
 
+  /* About Why We Exist (1024px) */
+  .intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--sp-6) !important;
+    text-align: center;
+  }
+
+  .intro-content {
+    align-items: center;
+    max-width: 680px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .intro-content .eyebrow,
+  .intro-content h2,
+  .intro-copy p {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .intro-media-wrap {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .intro-image-card {
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .intro-image-card img {
+    height: 380px;
+  }
+
+  /* Home Commercial Eco-Intelligence (1024px) */
+  .eco-hero-media {
+    height: 360px;
+  }
+
   /* Section 8 — Customer Principles: Cohesive Alignment */
   .split-60-40 {
     grid-template-columns: 1fr !important;
@@ -15071,6 +15248,59 @@ textarea::placeholder {
     max-width: 340px;
     width: 100%;
   }
+
+  /* About Why We Exist (768px) */
+  .intro-grid {
+    gap: var(--sp-5) !important;
+  }
+
+  .intro-grid h2 {
+    font-size: clamp(1.6rem, 1.25rem + 1.8vw, 2.1rem);
+  }
+
+  .intro-copy p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .intro-image-card img {
+    height: 300px;
+  }
+
+  .intro-floating-badge {
+    bottom: 14px;
+    left: 14px;
+    padding: 6px 14px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .intro-badge-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  [dir="rtl"] .intro-floating-badge {
+    left: auto;
+    right: 14px;
+  }
+
+  /* Home Commercial Eco-Intelligence (768px) */
+  .eco-hero-media {
+    height: 300px;
+  }
+
+  .eco-hero-overlay-tag {
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  [dir="rtl"] .eco-hero-overlay-tag {
+    left: auto;
+    right: 12px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -15133,6 +15363,88 @@ textarea::placeholder {
 
   .eco-counter-val {
     font-size: 26px;
+  }
+
+  /* Eco Showcase (Mobile) */
+  .eco-hero-showcase {
+    margin-block-end: var(--sp-5) !important;
+    border-radius: var(--radius-lg) !important;
+  }
+
+  .eco-hero-media {
+    height: 220px !important;
+  }
+
+  .eco-hero-overlay-tag {
+    bottom: 10px !important;
+    left: 10px !important;
+    padding: 6px 12px !important;
+    font-size: 11.5px !important;
+    max-width: calc(100% - 20px) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  [dir="rtl"] .eco-hero-overlay-tag {
+    left: auto !important;
+    right: 10px !important;
+  }
+
+  /* About Why We Exist (Mobile) */
+  .intro-section {
+    padding-block: var(--sp-7) !important;
+  }
+
+  .intro-grid {
+    gap: var(--sp-5) !important;
+  }
+
+  .intro-grid h2 {
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+    word-break: break-word;
+  }
+
+  .intro-copy {
+    gap: 12px !important;
+  }
+
+  .intro-copy p {
+    font-size: 14px !important;
+    line-height: 1.62 !important;
+  }
+
+  .intro-image-card {
+    border-radius: var(--radius-lg) !important;
+    max-width: 100% !important;
+  }
+
+  .intro-image-card img {
+    height: 240px !important;
+  }
+
+  .intro-floating-badge {
+    bottom: 10px !important;
+    left: 10px !important;
+    padding: 6px 12px !important;
+    font-size: 11.5px !important;
+    gap: 6px !important;
+  }
+
+  .intro-badge-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .intro-badge-icon svg {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  [dir="rtl"] .intro-floating-badge {
+    left: auto !important;
+    right: 10px !important;
   }
 
   .footer-bottom-inner ul {
@@ -16381,5 +16693,92 @@ textarea::placeholder {
 
   .h2-values-intro .h2-values-sub {
     max-width: 100%;
+  }
+}
+
+/* ============================================================
+   EXACT 360PX VIEWPORT TARGETING FOR INTRO & ECO SHOWCASE
+   ============================================================ */
+@media (max-width: 360px) {
+  .intro-section {
+    padding-block: var(--sp-6) !important;
+  }
+
+  .intro-grid {
+    gap: 16px !important;
+  }
+
+  .intro-grid h2 {
+    font-size: 1.38rem !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.01em;
+  }
+
+  .intro-copy {
+    gap: 10px !important;
+  }
+
+  .intro-copy p {
+    font-size: 13px !important;
+    line-height: 1.56 !important;
+  }
+
+  .intro-image-card {
+    border-radius: var(--radius-md) !important;
+  }
+
+  .intro-image-card img {
+    height: 195px !important;
+  }
+
+  .intro-floating-badge {
+    bottom: 8px !important;
+    left: 8px !important;
+    padding: 4px 9px !important;
+    font-size: 10.5px !important;
+    gap: 5px !important;
+  }
+
+  .intro-badge-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .intro-badge-icon svg {
+    width: 9px !important;
+    height: 9px !important;
+  }
+
+  [dir="rtl"] .intro-floating-badge {
+    left: auto !important;
+    right: 8px !important;
+  }
+
+  .eco-hero-showcase {
+    margin-block-end: var(--sp-4) !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .eco-hero-media {
+    height: 185px !important;
+  }
+
+  .eco-hero-overlay-tag {
+    bottom: 8px !important;
+    left: 8px !important;
+    padding: 4px 8px !important;
+    font-size: 10px !important;
+    gap: 5px !important;
+    max-width: calc(100% - 16px) !important;
+  }
+
+  .eco-pulse-dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  [dir="rtl"] .eco-hero-overlay-tag {
+    left: auto !important;
+    right: 8px !important;
   }
 }
