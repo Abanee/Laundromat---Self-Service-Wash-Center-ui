@@ -6864,6 +6864,17 @@ p {
   .experience-photo {
     order: -1;
     aspect-ratio: 16/9;
+    min-height: auto !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .experience-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 
   .drop-collect-card {
@@ -7143,6 +7154,10 @@ p {
     order: -1;
     aspect-ratio: 16/10;
     max-height: 360px;
+    width: 100%;
+    max-width: 580px;
+    margin-inline: auto;
+    justify-self: center;
   }
 
   .svc-biz-grid {
@@ -7177,6 +7192,10 @@ p {
     aspect-ratio: 16/10;
     max-height: 320px;
     margin-block-end: var(--sp-4);
+    width: 100%;
+    max-width: 580px;
+    margin-inline: auto;
+    justify-self: center;
   }
 
   .svc-flow-grid {
@@ -7251,9 +7270,7 @@ p {
     padding: var(--sp-5);
   }
 
-  .machine-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 
   .location-grid {
     grid-template-columns: 1fr;
@@ -7416,6 +7433,22 @@ p {
   }
 }
 
+/* Tablet (iPad Mini 768px) Machine Grid Centering */
+@media (min-width: 561px) and (max-width: 860px) {
+  .machine-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sp-2);
+  }
+
+  .machine-grid .machine-card {
+    flex: 0 0 calc((100% - 2 * var(--sp-2)) / 3);
+    max-width: calc((100% - 2 * var(--sp-2)) / 3);
+    box-sizing: border-box;
+  }
+}
+
 /* ============================================================
    RESPONSIVE — 560px (Mobile)
    ============================================================ */
@@ -7506,17 +7539,32 @@ p {
   }
 
   .machine-grid {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 110px;
-    overflow-x: auto;
-    padding-block-end: var(--sp-2);
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    overflow-x: visible !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-block-end: 0 !important;
+    scroll-snap-type: none !important;
   }
 
+  .machine-grid .machine-card,
   .machine-card {
-    scroll-snap-align: start;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 6px !important;
+    border-radius: var(--radius-md) !important;
+    text-align: center !important;
+    scroll-snap-align: none !important;
   }
 
   .steps-row {
@@ -14853,29 +14901,71 @@ textarea::placeholder {
   }
 
   .machine-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 6px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    overflow-x: visible !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-block-end: 0 !important;
+    scroll-snap-type: none !important;
   }
 
+  .machine-grid .machine-card,
   .machine-card {
-    padding: 10px 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 6px !important;
+    border-radius: var(--radius-md) !important;
+    text-align: center !important;
+    scroll-snap-align: none !important;
   }
 
   .machine-card .m-id {
-    font-size: 12px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-block-end: 3px !important;
   }
 
   .machine-card .m-status {
-    font-size: 10px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    line-height: 1.2 !important;
   }
 
   .machine-card .m-time {
-    font-size: 9.5px !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+    margin-block-start: 3px !important;
   }
 
   .machine-legend {
-    gap: var(--sp-2) var(--sp-3) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px 12px !important;
     font-size: 11px !important;
+    padding-block-start: var(--sp-3) !important;
+    border-block-start: 1px solid var(--border-color) !important;
+    margin-block-start: var(--sp-3) !important;
+  }
+
+  .machine-legend span {
+    white-space: nowrap !important;
   }
 
   /* 2. Quick Pricing Snapshot (1-Column Card Layout at 360px) */
