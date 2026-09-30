@@ -596,7 +596,7 @@ p {
 
 .nav-link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-secondary);
   padding: 6px 10px;
   border-radius: var(--radius-sm);
@@ -611,7 +611,7 @@ p {
 
 .nav-link.is-active {
   color: var(--accent-primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-link.is-active::after {
@@ -828,7 +828,7 @@ p {
   display: block;
   padding: 12px var(--sp-3);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-secondary);
   border-radius: var(--radius-md);
   transition: color var(--dur), background var(--dur);
@@ -837,7 +837,7 @@ p {
 .mobile-nav ul a.is-active {
   color: var(--accent-primary);
   background: var(--accent-tint);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mobile-nav ul a:hover {
@@ -872,15 +872,15 @@ p {
    SECTION RHYTHM
    ============================================================ */
 .section {
-  padding-block: clamp(60px, 9vw, 112px);
+  padding-block: clamp(46px, 6vw, 82px);
 }
 
 .section-sm {
-  padding-block: clamp(40px, 6vw, 72px);
+  padding-block: clamp(32px, 4vw, 54px);
 }
 
 .section-tight {
-  padding-block: clamp(32px, 5vw, 56px);
+  padding-block: clamp(22px, 3vw, 40px);
 }
 
 .bg-secondary {
@@ -3242,9 +3242,15 @@ p {
    ============================================================ */
 .trust-strip,
 .trust-section {
-  padding-block: var(--sp-9);
+  padding-block: clamp(40px, 5vw, 64px);
   background: var(--bg-secondary);
   border-block: 1px solid var(--border-color);
+}
+
+.trust-strip .eyebrow,
+.trust-strip h2 {
+  text-align: center;
+  margin-inline: auto;
 }
 
 .trust-strip h2 {
@@ -3483,20 +3489,24 @@ p {
 }
 
 .social-links a {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
+  background: var(--bg-surface);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  transition: color var(--dur), border-color var(--dur);
+  transition: all var(--dur) var(--ease);
 }
 
 .social-links a:hover {
-  color: var(--accent-primary);
+  color: #fff;
+  background: var(--accent-primary);
   border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(26, 143, 139, 0.25);
 }
 
 .footer-col h4 {
@@ -4425,27 +4435,99 @@ p {
   font-size: 13.5px;
 }
 
-/* About trust / CTA */
-.trust-statement {
-  max-width: 700px;
+/* Human grid spacing */
+.human-grid .link-text {
+  margin-block-start: 22px;
+  display: inline-flex;
 }
 
-.trust-statement h2 {
-  margin-block-end: 16px;
+/* Redesigned About Closing Section & CTA */
+.about-closing-section {
+  padding-block: clamp(48px, 6vw, 80px);
+  border-block-start: 1px solid var(--border-color);
 }
 
-.about-final-cta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(24px, 5vw, 60px);
-  align-items: center;
-}
-
-.final-cta-actions {
+.about-closing-wrapper {
   display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 48px);
+}
+
+.about-promise-header {
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.about-promise-header h2 {
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.25;
+  margin-block: var(--sp-2) var(--sp-3);
+  text-align: center;
+}
+
+.about-promise-header p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.about-cta-banner {
+  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-secondary) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: clamp(28px, 4vw, 44px) clamp(24px, 4vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.about-cta-content {
+  max-width: 580px;
+}
+
+.about-cta-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  color: var(--text-primary);
+  margin-block-end: var(--sp-2);
+}
+
+.about-cta-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-cta-actions {
+  display: flex;
+  align-items: center;
   gap: var(--sp-3);
+  flex-shrink: 0;
   flex-wrap: wrap;
-  margin-block-start: 24px;
+}
+
+@media (max-width: 768px) {
+  .about-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* About footer contact list */
@@ -5172,16 +5254,26 @@ p {
 
 /* --- H2: Lifestyle --- */
 .h2-lifestyle {
-  padding-block: clamp(56px, 8vw, 104px);
+  padding-block: clamp(42px, 5.5vw, 76px);
 }
 
-.h2-lifestyle h2 {
+.h2-lifestyle .eyebrow-bar {
+  margin-inline: auto;
+  display: inline-flex;
+}
+
+.h2-lifestyle h2,
+.h2-lifestyle > .container > h2 {
+  text-align: center;
+  margin-inline: auto;
   margin-block-end: var(--sp-3);
 }
 
-.h2-lifestyle>.container>p {
+.h2-lifestyle > .container > p {
+  text-align: center;
   font-size: 16px;
   max-width: 52ch;
+  margin-inline: auto;
   margin-block-end: var(--sp-8);
 }
 
@@ -5364,8 +5456,19 @@ p {
 
 /* --- H2: Testimonials --- */
 .h2-testimonials {
-  padding-block: clamp(56px, 8vw, 104px);
+  padding-block: clamp(42px, 5.5vw, 76px);
   background: var(--bg-secondary);
+}
+
+.h2-testimonials .eyebrow-bar {
+  margin-inline: auto;
+  display: inline-flex;
+}
+
+.h2-testimonials h2,
+.h2-testimonials > .container > h2 {
+  text-align: center;
+  margin-inline: auto;
 }
 
 .h2-testimonials-grid {
@@ -5466,7 +5569,7 @@ p {
 .h2-final-cta {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(72px, 11vw, 140px);
+  padding-block: clamp(40px, 5.5vw, 68px);
   background: var(--bg-inverse);
 }
 
@@ -13962,9 +14065,14 @@ textarea::placeholder {
    HOME 2 — LIFESTYLE (08)
    ============================================================ */
 .h2-lifestyle {
-  padding-block: var(--sp-11);
+  padding-block: clamp(42px, 5.5vw, 76px);
   background: var(--bg-surface);
   border-block-start: 1px solid var(--border-color);
+}
+
+.h2-lifestyle .eyebrow-bar {
+  margin-inline: auto;
+  display: inline-flex;
 }
 
 .h2-lifestyle>.container>h2,
@@ -13976,15 +14084,18 @@ textarea::placeholder {
   letter-spacing: -0.02em;
   line-height: 1.15;
   margin-block: var(--sp-3) var(--sp-3);
+  text-align: center;
+  margin-inline: auto;
 }
 
-.h2-lifestyle>.container>p,
 .h2-lifestyle>.container>p {
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.7;
   max-width: 52ch;
   margin-block-end: var(--sp-8);
+  text-align: center;
+  margin-inline: auto;
 }
 
 .h2-lifestyle-grid {
@@ -14258,8 +14369,13 @@ textarea::placeholder {
    HOME 2 — TESTIMONIALS (11)
    ============================================================ */
 .h2-testimonials {
-  padding-block: var(--sp-11);
+  padding-block: clamp(42px, 5.5vw, 76px);
   background: var(--bg-primary);
+}
+
+.h2-testimonials .eyebrow-bar {
+  margin-inline: auto;
+  display: inline-flex;
 }
 
 .h2-testimonials>.container>h2 {
@@ -14269,6 +14385,8 @@ textarea::placeholder {
   color: var(--text-primary);
   letter-spacing: -0.02em;
   margin-block: var(--sp-3) var(--sp-8);
+  text-align: center;
+  margin-inline: auto;
 }
 
 .h2-testimonials-grid {
@@ -14369,7 +14487,7 @@ textarea::placeholder {
    HOME 2 — FINAL CTA (12)
    ============================================================ */
 .h2-final-cta {
-  padding-block: var(--sp-12);
+  padding-block: clamp(40px, 5.5vw, 68px);
   background: var(--bg-inverse);
 }
 
