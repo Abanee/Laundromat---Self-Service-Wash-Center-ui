@@ -109,8 +109,28 @@
     if (lastFocused) lastFocused.focus();
   }
 
-  if (menuBtn)    menuBtn.addEventListener("click", openMobileNav);
-  if (mobileClose) mobileClose.addEventListener("click", closeMobileNav);
+  if (menuBtn) menuBtn.addEventListener("click", openMobileNav);
+
+  if (mobileClose) {
+    mobileClose.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMobileNav();
+    });
+    mobileClose.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMobileNav();
+    });
+  }
+
+  // Delegation fallback for close button
+  document.addEventListener("click", function (e) {
+    if (e.target && (e.target.closest("#mobileClose") || e.target.closest("#mobileScrim"))) {
+      closeMobileNav();
+    }
+  });
+
   if (mobileScrim) mobileScrim.addEventListener("click", closeMobileNav);
 
   document.addEventListener("keydown", function (e) {
