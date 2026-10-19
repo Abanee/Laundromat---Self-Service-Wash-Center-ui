@@ -1556,9 +1556,115 @@
     var statusCounter = document.getElementById("galleryStatusCounter");
     var cards = Array.from(galleryGrid.querySelectorAll(".gallery-card"));
 
+    /* Lightbox elements */
+    var lightbox = document.getElementById("galleryLightbox");
+    var lightboxBackdrop = document.getElementById("galleryLightboxBackdrop");
+    var lightboxClose = document.getElementById("galleryLightboxClose");
+    var lightboxPrev = document.getElementById("galleryLightboxPrev");
+    var lightboxNext = document.getElementById("galleryLightboxNext");
+    var lightboxImg = document.getElementById("galleryLightboxImg");
+    var lightboxBadge = document.getElementById("galleryLightboxBadge");
+    var lightboxCounter = document.getElementById("galleryLightboxCounter");
+    var lightboxTitle = document.getElementById("galleryLightboxTitle");
+    var lightboxDesc = document.getElementById("galleryLightboxDesc");
+
     var activeCategory = "all";
     var searchQuery = "";
     var isExpanded = false;
+    var currentActiveCards = [];
+    var currentLightboxIndex = -1;
+
+    function openLightbox(index) {
+      if (!lightbox || !currentActiveCards.length) return;
+      if (index < 0) index = currentActiveCards.length - 1;
+      if (index >= currentActiveCards.length) index = 0;
+      currentLightboxIndex = index;
+
+      var card = currentActiveCards[currentLightboxIndex];
+      var img = card.querySelector(".gallery-card-img");
+      var title = card.getAttribute("data-title") || (card.querySelector(".gallery-card-title") ? card.querySelector(".gallery-card-title").textContent : "");
+      var desc = card.getAttribute("data-desc") || (card.querySelector(".gallery-card-desc") ? card.querySelector(".gallery-card-desc").textContent : "");
+      var badge = card.querySelector(".gallery-card-badge") ? card.querySelector(".gallery-card-badge").textContent : (card.getAttribute("data-category") || "");
+
+      if (lightboxImg && img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || title;
+      }
+      if (lightboxTitle) lightboxTitle.textContent = title;
+      if (lightboxDesc) lightboxDesc.textContent = desc;
+      if (lightboxBadge) lightboxBadge.textContent = badge;
+      if (lightboxCounter) lightboxCounter.textContent = (currentLightboxIndex + 1) + " of " + currentActiveCards.length;
+
+      lightbox.removeAttribute("hidden");
+      document.body.style.overflow = "hidden";
+      if (lightboxClose) lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.setAttribute("hidden", "");
+      document.body.style.overflow = "";
+    }
+
+    function nextLightbox() {
+      openLightbox(currentLightboxIndex + 1);
+    }
+
+    function prevLightbox() {
+      openLightbox(currentLightboxIndex - 1);
+    }
+
+    /* Attach click & keyboard listeners to each card media */
+    cards.forEach(function (card) {
+      var media = card.querySelector(".gallery-card-media");
+      if (media) {
+        media.setAttribute("role", "button");
+        media.setAttribute("tabindex", "0");
+        media.setAttribute("aria-label", "View larger image");
+
+        media.addEventListener("click", function () {
+          var idx = currentActiveCards.indexOf(card);
+          if (idx !== -1) {
+            openLightbox(idx);
+          }
+        });
+
+        media.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            var idx = currentActiveCards.indexOf(card);
+            if (idx !== -1) {
+              openLightbox(idx);
+            }
+          }
+        });
+      }
+    });
+
+    /* Lightbox controls */
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", closeLightbox);
+    }
+    if (lightboxBackdrop) {
+      lightboxBackdrop.addEventListener("click", closeLightbox);
+    }
+    if (lightboxPrev) {
+      lightboxPrev.addEventListener("click", prevLightbox);
+    }
+    if (lightboxNext) {
+      lightboxNext.addEventListener("click", nextLightbox);
+    }
+
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox || lightbox.hasAttribute("hidden")) return;
+      if (e.key === "Escape") {
+        closeLightbox();
+      } else if (e.key === "ArrowLeft") {
+        prevLightbox();
+      } else if (e.key === "ArrowRight") {
+        nextLightbox();
+      }
+    });
 
     function updateGalleryDisplay() {
       var matchingCards = cards.filter(function (card) {
@@ -1581,6 +1687,8 @@
       for (var i = 0; i < visibleLimit; i++) {
         matchingCards[i].classList.remove("is-hidden");
       }
+
+      currentActiveCards = matchingCards.slice(0, visibleLimit);
 
       if (statusCounter) {
         statusCounter.textContent = "Showing " + visibleLimit + " of " + matchingCards.length + " photos";

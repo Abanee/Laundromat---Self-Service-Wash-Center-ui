@@ -725,6 +725,38 @@
   </div>
 </div>
 
+<!-- ============ INTERACTIVE GALLERY LIGHTBOX MODAL ============ -->
+<div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Photo preview" hidden>
+  <div class="gallery-lightbox-backdrop" id="galleryLightboxBackdrop"></div>
+  <div class="gallery-lightbox-wrapper">
+    <div class="gallery-lightbox-content">
+      <button type="button" class="gallery-lightbox-close" id="galleryLightboxClose" aria-label="Close preview">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <button type="button" class="gallery-lightbox-nav prev" id="galleryLightboxPrev" aria-label="Previous photo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="gallery-lightbox-nav next" id="galleryLightboxNext" aria-label="Next photo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <div class="gallery-lightbox-stage">
+        <img id="galleryLightboxImg" src="" alt="" class="gallery-lightbox-img">
+      </div>
+
+      <div class="gallery-lightbox-info">
+        <div class="gallery-lightbox-meta">
+          <span class="gallery-lightbox-badge" id="galleryLightboxBadge">Facilities</span>
+          <span class="gallery-lightbox-counter" id="galleryLightboxCounter">1 of 24</span>
+        </div>
+        <h3 class="gallery-lightbox-title" id="galleryLightboxTitle">Photo Title</h3>
+        <p class="gallery-lightbox-desc" id="galleryLightboxDesc">Photo Description</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
